@@ -50,10 +50,10 @@
       key-positions = <10 11>; //a r
       bindings = <&kp SEMI>;
     };
-    combo_amp {
+    combo_qmark {
       timeout-ms = <20>;
       key-positions = <18 19>; // i o
-      bindings = <&kp QUES>;
+      bindings = <&kp QMARK>;
     };
 
     // brackets
