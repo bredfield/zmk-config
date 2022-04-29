@@ -35,11 +35,6 @@
       key-positions = <17 18>; // e i
       bindings = <&kp GRAVE>;
     };
-    combo_screen {
-      timeout-ms = <20>;
-      key-positions = <10 20>; //a z
-      bindings = <&kp LG(LS(N4))>;
-    };
     combo_equal {
       timeout-ms = <20>;
       key-positions = <12 13>; //s t
@@ -55,10 +50,10 @@
       key-positions = <10 11>; //a r
       bindings = <&kp SEMI>;
     };
-    combo_semi {
+    combo_amp {
       timeout-ms = <20>;
-      key-positions = <10 11>; //a r
-      bindings = <&kp SEMI>;
+      key-positions = <18 19>; // i o
+      bindings = <&kp QUES>;
     };
 
     // brackets
@@ -99,10 +94,10 @@
       key-positions = <21 22>; // . /
       bindings = <&kp Z>;
     };
-    combo_b {
+    combo_v {
       timeout-ms = <20>;
-      key-positions = <2 3>; // f p
-      bindings = <&kp B>;
+      key-positions = <22 23>; // c d
+      bindings = <&kp V>;
     };
     combo_j {
       timeout-ms = <20>;
