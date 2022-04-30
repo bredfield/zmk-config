@@ -60,10 +60,10 @@
       key-positions = <11 12>; //r s
       bindings = <&kp BSLH>;
     };
-    combo_quote {
+    combo_dqt {
       timeout-ms = <20>;
       key-positions = <7 8>; // u y
-      bindings = <&kp BSLH>;
+      bindings = <&kp DQT>;
     };
     combo_semi {
       timeout-ms = <20>;
