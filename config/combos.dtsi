@@ -15,99 +15,33 @@
             layers = <LAYERS>; \
         };
 
+#define COMBO_TIMEOUT_MS = 20
+
 / {
   combos {
     compatible = "zmk,combos";
-    combo_capsword {
-      timeout-ms = <50>;
-      key-positions = <13 16>; // t n
-      bindings = <&caps_word>;
-    };
+    COMBO("capsword", <13 16>, <&caps_word>, 50); // t n
 
     // common symbols 
-    combo_minus {
-      timeout-ms = <20>;
-      key-positions = <16 17>; // n e
-      bindings = <&kp MINUS>;
-    };
-    combo_grave {
-      timeout-ms = <20>;
-      key-positions = <17 18>; // e i
-      bindings = <&kp GRAVE>;
-    };
-    combo_equal {
-      timeout-ms = <20>;
-      key-positions = <12 13>; //s t
-      bindings = <&kp EQUAL>;
-    };
-    combo_bslh {
-      timeout-ms = <20>;
-      key-positions = <11 12>; //r s
-      bindings = <&kp BSLH>;
-    };
-    combo_semi {
-      timeout-ms = <20>;
-      key-positions = <10 11>; //a r
-      bindings = <&kp SEMI>;
-    };
-    combo_qmark {
-      timeout-ms = <20>;
-      key-positions = <18 19>; // i o
-      bindings = <&kp QMARK>;
-    };
+    COMBO("minus", <16 17>, <&kp MINUS>, COMBO_TIMEOUT_MS); // n e
+    COMBO("grave", <17 18>, <&kp GRAVE>, COMBO_TIMEOUT_MS); // e i
+    COMBO("equal", <12 13, <&kp EQUAL>, COMBO_TIMEOUT_MS);  //s t
+    COMBO("bslh", <11 12, <&kp BSLH>, COMBO_TIMEOUT_MS);  //r s
+    COMBO("semi", <10 11, <&kp SEMI>, COMBO_TIMEOUT_MS);  //a r
+    COMBO("qmark", <18 19>, <&kp QMARK>, COMBO_TIMEOUT_MS); // i o
 
     // brackets
-    combo_lbkt {
-      timeout-ms = <20>;
-      key-positions = <2 12>; // s f
-      bindings = <&kp LBKT>;
-    };
-    combo_lpar {
-      timeout-ms = <20>;
-      key-positions = <3 13>; // p t
-      bindings = <&kp LPAR>;
-    };
-    combo_rpar {
-      timeout-ms = <20>;
-      key-positions = <6 16>; // l n
-      bindings = <&kp RPAR>;
-    };
-    combo_rbkt {
-      timeout-ms = <20>;
-      key-positions = <7 17>; // u e
-      bindings = <&kp RBKT>;
-    };
+    COMBO("lbkt", <2 12>, <&kp LBKT>, COMBO_TIMEOUT_MS); // s f
+    COMBO("lpar", <3 13>, <&kp LPAR>, COMBO_TIMEOUT_MS); // p t
+    COMBO("rpar", <6 16>, <&kp RPAR>, COMBO_TIMEOUT_MS); // l n
+    COMBO("rbkt", <7 17>, <&kp RBKT>, COMBO_TIMEOUT_MS); // u e
     
     // 30 key
-    combo_tab {
-      timeout-ms = <20>;
-      key-positions = <11 13>; // r t
-      bindings = <&kp TAB>;
-    };
-    combo_del {
-      timeout-ms = <20>;
-      key-positions = <16 18>; // n i
-      bindings = <&kp DEL>;
-    };
-    combo_z {
-      timeout-ms = <20>;
-      key-positions = <21 22>; // . /
-      bindings = <&kp Z>;
-    };
-    combo_v {
-      timeout-ms = <20>;
-      key-positions = <22 23>; // c d
-      bindings = <&kp V>;
-    };
-    combo_j {
-      timeout-ms = <20>;
-      key-positions = <6 7>; // l u
-      bindings = <&kp J>;
-    };
-    combo_slash {
-      timeout-ms = <20>;
-      key-positions = <27 28>; // , .
-      bindings = <&kp SLASH>;
-    };
+    COMBO("tab", <11 13>, <&kp TAB>, COMBO_TIMEOUT_MS); // r t
+    COMBO("del", <16 18>, <&kp DEL>, COMBO_TIMEOUT_MS); // n i
+    COMBO("z", <21 22>, <&kp Z>, COMBO_TIMEOUT_MS); // . /
+    COMBO("v", <22 23>, <&kp V>, COMBO_TIMEOUT_MS); // c d
+    COMBO("j", <6 7>, <&kp J>, COMBO_TIMEOUT_MS); // l u
+    COMBO("slash", <27 28>, <&kp SLASH>, COMBO_TIMEOUT_MS); // , .
   };
 };
