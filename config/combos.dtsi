@@ -17,7 +17,9 @@
 
 / {
   combos {
-    compatible = "zmk,combos";
+    compatible = "zmk,combos"
+
+    // functions
     combo_capsword {
       timeout-ms = <50>;
       key-positions = <13 16>; // t n
@@ -27,6 +29,28 @@
       timeout-ms = <50>;
       key-positions = <14 24>; // b g
       bindings = <&key_repeat>;
+    };
+
+    // clipboard + history
+    combo_cut {
+      timeout-ms = <50>;
+      key-positions = <11 21>; // r x
+      bindings = <U_CUT>;
+    };
+    combo_copy {
+      timeout-ms = <50>;
+      key-positions = <12 22>; // s c
+      bindings = <U_COPY>;
+    };
+    combo_paste {
+      timeout-ms = <50>;
+      key-positions = <13 23>; // t d
+      bindings = <U_CUT>;
+    };
+    combo_undo {
+      timeout-ms = <50>;
+      key-positions = <0 10>; // q a
+      bindings = <U_UND>;
     };
 
     // common symbols 
@@ -74,6 +98,11 @@
       timeout-ms = <20>;
       key-positions = <18 19>; // i o
       bindings = <&kp QMARK>;
+    };
+    combo_hash {
+      timeout-ms = <20>;
+      key-positions = <26 27>; // h ,
+      bindings = <&kp HASH>;
     };
 
     // brackets
