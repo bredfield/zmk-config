@@ -23,8 +23,23 @@
       key-positions = <13 16>; // t n
       bindings = <&caps_word>;
     };
+    combo_repeat {
+      timeout-ms = <50>;
+      key-positions = <14 24>; // b g
+      bindings = <&key_repeat>;
+    };
 
     // common symbols 
+    combo_excl {
+      timeout-ms = <20>;
+      key-positions = <1 2>; // w f
+      bindings = <&kp EXCL>;
+    };
+    combo_at {
+      timeout-ms = <20>;
+      key-positions = <2 3>; // f p
+      bindings = <&kp AT>;
+    };
     combo_minus {
       timeout-ms = <20>;
       key-positions = <16 17>; // n e
@@ -43,6 +58,11 @@
     combo_bslh {
       timeout-ms = <20>;
       key-positions = <11 12>; //r s
+      bindings = <&kp BSLH>;
+    };
+    combo_quote {
+      timeout-ms = <20>;
+      key-positions = <7 8>; // u y
       bindings = <&kp BSLH>;
     };
     combo_semi {
@@ -101,7 +121,7 @@
     };
     combo_j {
       timeout-ms = <20>;
-      key-positions = <2 3>; // l u
+      key-positions = <6 7>; // l u
       bindings = <&kp J>;
     };
     combo_slash {
