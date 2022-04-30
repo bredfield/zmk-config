@@ -11,12 +11,16 @@
 #define MED 4
 
 // Desktop and tab navigation shortcuts
-#define SS_TARGETED  &kp LG(LS(N4))
-#define U_RDO &kp LS(LG(Z))
-#define U_PST &kp LG(V)
-#define U_CPY &kp LG(C)
-#define U_CUT &kp LG(X)
-#define U_UND &kp LG(Z)
+#define SS_TARGETED &kp LG(LS(N4))
+#define SS_FULL     &kp LG(LS(N3))
+#define WIN_LEFT    &kp LA(LC(LEFT))
+#define WIN_RIGHT   &kp LA(LC(RIGHT))
+#define WIN_FULL    &kp LA(LC(RET))
+#define U_RDO       &kp LS(LG(Z))
+#define U_PST       &kp LG(V)
+#define U_CPY       &kp LG(C)
+#define U_CUT       &kp LG(X)
+#define U_UND       &kp LG(Z)
 
 #include "combos.dtsi"
 
@@ -95,11 +99,11 @@
             label = "NAV";
             bindings = <
 // ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮   ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮
-     &none         &kp BSPC      &kp DEL      &kp RET        &none             &none         &kp HOME      &kp UP        &kp END       &kp PG_UP
+     &none         &kp E         &kp BSPC     &kp DEL        &none             &none         &kp HOME      &kp UP        &kp END       &kp PG_UP
 // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-     &kp LGUI      &kp LALT      &kp LCTRL    &kp LSHFT      &kp TAB           &kp CAPS      &kp LEFT      &kp DOWN      &kp RIGHT     &kp PG_DN         
+     &sk LGUI      &sk LALT      &sk LCTRL    &sk LSHFT      &kp RET           &kp D         &kp LEFT      &kp DOWN      &kp RIGHT     &kp PG_DN         
 // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-     &none         SS_TARGETED   &kp E        &kp D          &kp SPACE         U_UND         U_PST         U_CPY         U_CUT         &none             
+     &none         SS_TARGETED   SS_FULL      &none          &kp SPACE         &none         WIN_LEFT      WIN_FULL      WIN_RIGHT     &none             
 // ╰─────────────┴─────────────┴─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┴─────────────┴─────────────╯
                                  &none        &none          &none             &none         &trans        &trans
 //                             ╰─────────────┴─────────────┴─────────────╯   ╰─────────────┴─────────────┴─────────────╯
@@ -110,7 +114,7 @@
             label = "FUN";
             bindings = <
 // ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮   ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮
-     &none         &none         &none         &none         &none              &none         &kp F7        &kp F8        &kp F9        &none
+     &none         &none         &none         &none         &none              &kp CAPS         &kp F7        &kp F8        &kp F9        &none
 // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
      &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 3       &kp F12       &kp F4        &kp F5        &kp F6        &kp F10
 // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
