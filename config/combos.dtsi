@@ -17,7 +17,7 @@
 
 / {
   combos {
-    compatible = "zmk,combos"
+    compatible = "zmk,combos";
 
     // functions
     combo_capsword {
