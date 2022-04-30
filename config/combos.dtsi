@@ -101,7 +101,7 @@
     };
     combo_j {
       timeout-ms = <20>;
-      key-positions = <6 7>; // l u
+      key-positions = <2 3>; // l u
       bindings = <&kp J>;
     };
     combo_slash {
