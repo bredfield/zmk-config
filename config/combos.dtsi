@@ -40,12 +40,12 @@
     combo_copy {
       timeout-ms = <50>;
       key-positions = <12 22>; // s c
-      bindings = <U_COPY>;
+      bindings = <U_CPY>;
     };
     combo_paste {
       timeout-ms = <50>;
       key-positions = <13 23>; // t d
-      bindings = <U_CUT>;
+      bindings = <U_PST>;
     };
     combo_undo {
       timeout-ms = <50>;
