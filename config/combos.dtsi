@@ -35,7 +35,7 @@
     COMBO(cut, U_CUT, 11 21, COMBO_TERM_SLOW, COL SYM NAV) // r x
     COMBO(copy, U_CPY, 12 22, COMBO_TERM_SLOW, COL SYM NAV) // s c
     COMBO(paste, U_PST, 13 23, COMBO_TERM_SLOW, COL SYM NAV) // t d
-    COMBO(undo, U_UND, 21 23, COMBO_TERM_SLOW, COL SYM NAV) // q a
+    COMBO(undo, U_UND, 21 23, COMBO_TERM_SLOW, COL SYM NAV) // x d
     COMBO(repeat, &key_repeat, 16 26, COMBO_TERM_SLOW, COL SYM NAV) // h ,
 
     // common symbols 
@@ -46,8 +46,8 @@
     COMBO(equal, &kp EQUAL, 12 1, COMBO_TERM_NORMAL, COL SYM NAV) //s t
     COMBO(bslh, &kp BSLH, 11 1, COMBO_TERM_NORMAL, COL SYM NAV) //r s
     COMBO(dqt, &kp DQT, 7 8, COMBO_TERM_NORMAL, COL SYM NAV) // u y
-    COMBO(semi, &kp SEMI, 10 1, COMBO_TERM_NORMAL, COL SYM NAV) //a r
-    COMBO(qmark, &kp QMARK, 18 19, COMBO_TERM_NORMAL, COL SYM NAV) // i o
+    COMBO(semi, &kp SEMI, 17 27, COMBO_TERM_NORMAL, COL SYM NAV) // , e
+    COMBO(qmark, &kp QMARK, 18 28, COMBO_TERM_NORMAL, COL SYM NAV) // . i
     COMBO(hash, &kp HASH, 26 27, COMBO_TERM_NORMAL, COL SYM NAV) // h ,
     COMBO(slash, &kp SLASH, 27 28, COMBO_TERM_NORMAL, COL SYM NAV) // , .
 
