@@ -24,7 +24,7 @@
 
     // missing alphas 
     COMBO(z,        &kp Z,       21 22, COL SYM NAV, COMBO_TERM_NORMAL) // x c
-    COMBO(q,        &kp W,       1 2,   COL SYM NAV, COMBO_TERM_NORMAL) // w f
+    COMBO(q,        &kp Q,       1 2,   COL SYM NAV, COMBO_TERM_NORMAL) // w f
     COMBO(j,        &kp J,       2 3,   COL SYM NAV, COMBO_TERM_NORMAL) // f p
 
 
