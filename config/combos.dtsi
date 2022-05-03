@@ -43,8 +43,8 @@
     COMBO(at,       &kp AT,      22 23, COL SYM NAV, COMBO_TERM_NORMAL) // c d
     COMBO(minus,    &kp MINUS,   16 17, COL SYM NAV, COMBO_TERM_NORMAL) // n e
     COMBO(grave,    &kp GRAVE,   17 18, COL SYM NAV, COMBO_TERM_NORMAL) // e i
-    COMBO(equal,    &kp EQUAL,   12 1,  COL SYM NA,  COMBO_TERM_NORMAL) //s t
-    COMBO(bslh,     &kp BSLH,    11 1,  COL SYM NA,  COMBO_TERM_NORMAL) //r s
+    COMBO(equal,    &kp EQUAL,   12 1,  COL SYM NAV, COMBO_TERM_NORMAL) //s t
+    COMBO(bslh,     &kp BSLH,    11 1,  COL SYM NAV, COMBO_TERM_NORMAL) //r s
     COMBO(dqt,      &kp DQT,     7 8,   COL SYM NAV, COMBO_TERM_NORMAL) // u y
     COMBO(semi,     &kp SEMI,    17 27, COL SYM NAV, COMBO_TERM_NORMAL) // , e
     COMBO(qmark,    &kp QMARK,   18 28, COL SYM NAV, COMBO_TERM_NORMAL) // . i
