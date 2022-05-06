@@ -74,7 +74,7 @@
         compatible = "zmk,keymap";
 
         colemak_layer {
-            label = "COL"
+            label = "COL";
             bindings = <
 // ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮   ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮
      &kp X         &kp W         &kp F         &kp P         &kp B             &kp M         &kp L         &kp U         &kp Y         &kp SQT
