@@ -22,9 +22,9 @@
 #define U_CUT       &kp LG(X)
 #define U_UND       &kp LG(Z)
 
-#include "combos.dtsi"
+#include "36-key-combos.dtsi"
 
-#define TAPPING_TERM 200
+#define TAPPING_TERM 180
 
 &mt {
     flavor = "hold-preferred";
@@ -62,6 +62,17 @@
         };
     };
 
+    / {
+    macros {
+        triple_grave: triple_grave {
+            label = "triple_grave";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&macro_tap &kp ` &kp ` &kp `>;
+        };
+    };
+};
+
     keymap {
         compatible = "zmk,keymap";
 
@@ -75,7 +86,7 @@
 // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
      &none         &kp V         &kp C         &kp D         &kp G             &kp K         &kp H         &kp COMMA     &kp DOT       &none
 // ╰─────────────┴─────────────┴─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┴─────────────┴─────────────╯
-                                 &lt FUN ESC   &lt NAV SPC   &none             &none       &mt LSHIFT BSPC &lt SYM RET 
+                                 &lt SYM ESC   &lt NAV SPC   &none             &none       &mt LSHIFT BSPC &lt FUN RET 
 //                             ╰─────────────┴─────────────┴─────────────╯   ╰─────────────┴─────────────┴─────────────╯
             >;
         };
@@ -84,13 +95,13 @@
             label = "SYM";
             bindings = <
 // ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮   ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮
-     &none         &none         &none         &none         &none             &none         &kp N7        &kp N8        &kp N9        &none
+     &none         &kp PRCNT     &triple_grave  &kp CARET    &none             &none         &kp N7        &kp N8        &kp N9        &kp COMMA
 // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-     &kp PRCNT     &kp STAR      &kp AMPS      &kp CARET     &none             &kp DOT       &kp N4        &kp N5        &kp N6        &kp N0
+     &none         &kp STAR      &kp AMPS       &kp DOLLAR   &kp RET           &none         &kp N1        &kp N2        &kp N3        &kp DOT
 // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-     &none         &none         &none          &none        &none             &kp COMMA     &kp N1        &kp N2        &kp N3        &none
+     &none         &none         &none          &none        &kp SPC           &none         &kp N4        &kp N5        &kp N6        &none
 // ╰─────────────┴─────────────┴─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┴─────────────┴─────────────╯
-                                 &trans         &trans       &none             &none         &none         &none
+                                 &trans         &trans       &none             &none         &none         &kp N0
 //                             ╰─────────────┴─────────────┴─────────────╯   ╰─────────────┴─────────────┴─────────────╯
             >;
         };
@@ -101,7 +112,7 @@
 // ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮   ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮
      &none         &kp E         &kp BSPC     &kp DEL        &none             &none         &kp HOME      &kp UP        &kp END       &kp PG_UP
 // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-     &kp LGUI      &kp LALT      &kp LCTRL    &kp LSHFT      &kp RET           &kp D         &kp LEFT      &kp DOWN      &kp RIGHT     &kp PG_DN         
+     &kp LGUI      &kp LALT      &kp LCTRL    &kp LSHFT      &kp RET           &kp LG(D)     &kp LEFT      &kp DOWN      &kp RIGHT     &kp PG_DN         
 // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
      &none         SS_TARGETED   SS_FULL      &none          &kp SPACE         &none         WIN_LEFT      WIN_FULL      WIN_RIGHT     &none             
 // ╰─────────────┴─────────────┴─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┴─────────────┴─────────────╯
