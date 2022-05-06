@@ -64,7 +64,7 @@
         ZMK_MACRO(triple_grave,
             wait-ms = <0>;
             tap-ms = <0>;
-            bindings = <&macro_tap &kp ` &kp ` &kp `>
+            bindings = <&macro_tap &kp GRAVE &kp GRAVE &kp GRAVE>
         )
     };
 
