@@ -17,10 +17,9 @@
 
 #define COMBO_TERM_NORMAL 20
 #define COMBO_TERM_SLOW 50
-
 / {
   combos {
-    compatible = "zmk,combos";
+    compatible = "zmk,combos"; 
 
     // missing alphas 
     COMBO(j,        &kp J,       1 2,   COL SYM NAV, COMBO_TERM_NORMAL) // f p
@@ -34,7 +33,7 @@
     COMBO(del,      &kp DEL,     16 18, COL SYM NAV, COMBO_TERM_NORMAL) // n i
     COMBO(cut,      U_CUT,       11 20, COL SYM NAV, COMBO_TERM_SLOW)   // r x
     COMBO(copy,     U_CPY,       12 21, COL SYM NAV, COMBO_TERM_SLOW)   // s c
-    COMBO(paste,    U_PST,       13 22, COL SYM NAV, COMBO_TERM_SLOW)   // t d
+    COMBO(paste,    U_PST,       13 22, COL SYM NAV, COMBO_TERM_SLOW)   // t d 
     COMBO(undo,     U_UND,       20 22, COL SYM NAV, COMBO_TERM_SLOW)   // x d
     COMBO(repeat,   &key_repeat, 23 25, COL SYM NAV, COMBO_TERM_SLOW)   // h ,
 
@@ -60,4 +59,4 @@
     COMBO(rpar,     &kp RPAR,    7 17,  COL SYM NAV, COMBO_TERM_NORMAL) // l n
     COMBO(rbkt,     &kp RBKT,    8 18,  COL SYM NAV, COMBO_TERM_NORMAL) // y i
   };
-};
+}
