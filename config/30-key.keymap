@@ -22,7 +22,7 @@
 #define U_CUT       &kp LG(X)
 #define U_UND       &kp LG(Z)
 
-#include "36-key-combos.dtsi"
+#include "30-key-combos.dtsi"
 
 #define TAPPING_TERM 180
 
