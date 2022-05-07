@@ -38,7 +38,7 @@
     COMBO(repeat,   &key_repeat, 23 25, COL SYM NAV, COMBO_TERM_SLOW)   // h ,
 
     // common symbols 
-    COMBO(excl,     &kp EXCL,    5 6,   COL SYM NAV, COMBO_TERM_NORMAL) // l u
+    COMBO(excl,     &kp EXCL,    6 7,   COL SYM NAV, COMBO_TERM_NORMAL) // l u
     COMBO(at,       &kp AT,      2 3,   COL SYM NAV, COMBO_TERM_NORMAL) // c d
     COMBO(minus,    &kp MINUS,   16 17, COL SYM NAV, COMBO_TERM_NORMAL) // n e
     COMBO(grave,    &kp GRAVE,   17 18, COL SYM NAV, COMBO_TERM_NORMAL) // e i
