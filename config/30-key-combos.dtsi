@@ -35,9 +35,9 @@
     COMBO(esc,      &kp ESC,      1 3,   COL SYM NAV, COMBO_TERM_NORMAL) // w p
     COMBO(ret,      &kp RET,      11 13, COL SYM NAV, COMBO_TERM_NORMAL) // r t
     COMBO(tab,      &kp TAB,      16 18, COL SYM NAV, COMBO_TERM_NORMAL) // n i
-    COMBO(cut,      CUT,          11 20, COL SYM NAV, COMBO_TERM_SLOW)   // r x
-    COMBO(copy,     CPY,          12 21, COL SYM NAV, COMBO_TERM_SLOW)   // s c
-    COMBO(paste,    PST,          13 22, COL SYM NAV, COMBO_TERM_SLOW)   // t d 
+    COMBO(cut,      U_CUT,        11 20, COL SYM NAV, COMBO_TERM_SLOW)   // r x
+    COMBO(copy,     U_CPY,        12 21, COL SYM NAV, COMBO_TERM_SLOW)   // s c
+    COMBO(paste,    U_PST,        13 22, COL SYM NAV, COMBO_TERM_SLOW)   // t d 
     COMBO(undo,     UND,          20 22, COL SYM NAV, COMBO_TERM_SLOW)   // x d
     COMBO(repeat,   &key_repeat,  23 25, COL SYM NAV, COMBO_TERM_SLOW)   // h ,
  
