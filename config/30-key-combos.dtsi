@@ -53,4 +53,4 @@
     COMBO(rpar,     &kp RPAR,     7 17,  COL SYM NAV, COMBO_TERM_NORMAL) // l n
     COMBO(rbkt,     &kp RBKT,     8 18,  COL SYM NAV, COMBO_TERM_NORMAL) // y i
   }; 
-}; 
+};
