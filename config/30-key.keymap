@@ -91,7 +91,7 @@
             bindings = <&kp>, <&sk>;
         };
 
-        zs: zero_space {
+        zerospace: zero_space {
             compatible = "zmk,behavior-mod-morph";
             label = "ZERO_SPACE";
             #binding-cells = <0>;
@@ -152,13 +152,13 @@
             label = "SYM";
             bindings = <
 // ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮   ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮
-     &kp EQUAL      &kp N7        &kp N8        &kp N9       &kp BSLH          &kp COMMA     &kp AMPS      &kp PIPE      &kp GRAVE     &codeblock
+     &kp EQUAL      &kp N7        &kp N8        &kp N9       &kp BSLH          &kp COMMA     &kp AMPS      &kp PIPE      &kp GRAVE     &kp DLLR
 // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-     &kp PLUS       &kp N4        &kp N5        &kp N6       &kp DLLR          &kp DOT       SK(RSHFT)     SK(RCTRL)     SK(RALT)      SK(RGUI)
+     &kp PLUS       &kp N4        &kp N5        &kp N6       &kp STAR          &kp DOT       SK(RSHFT)     SK(RCTRL)     SK(RALT)      SK(RGUI)
 // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
                     &kp N1        &kp N2        &kp N3                                       &kp HASH      &kp SEMI      &kp COLON               
 // ╰─────────────┴─────────────┴─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┴─────────────┴─────────────╯
-                                                &trans       &zs               &trans        &trans
+                                                &trans       &zerospace        &trans        &trans
 //                             ╰─────────────┴─────────────┴─────────────╯   ╰─────────────┴─────────────┴─────────────╯
             >;
         };
