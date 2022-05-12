@@ -93,7 +93,7 @@
 
         zs: zero_space {
             compatible = "zmk,behavior-mod-morph";
-            label = "";
+            label = "ZERO_SPACE";
             #binding-cells = <0>;
             bindings = <&kp N0>, <&kp SPC>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
@@ -152,18 +152,18 @@
             label = "SYM";
             bindings = <
 // ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮   ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮
-     &kp EQUAL      &kp N7        &kp N8        &kp N9       &kp BSLH          &none         &kp COMMA     &kp DOT       &codeblock    &none
+     &kp EQUAL      &kp N7        &kp N8        &kp N9       &kp BSLH          &kp COMMA     &kp AMPS      &kp PIPE      &kp GRAVE     codeblock
 // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-     &kp MINUS      &kp N4        &kp N5        &kp N6       &kp GRAVE         &none         SK(RSHFT)     SK(RCTRL)     SK(RALT)      SK(RGUI)
+     &kp PLUS       &kp N4        &kp N5        &kp N6       &kp DLLR          &kp DOT       SK(RSHFT)     SK(RCTRL)     SK(RALT)      SK(RGUI)
 // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-                    &kp N1        &kp N2        &kp N3                                       &none         &none         &none               
+                    &kp N1        &kp N2        &kp N3                                       &kp HASH      &kp SEMI      &kp COLON               
 // ╰─────────────┴─────────────┴─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┴─────────────┴─────────────╯
                                                 &trans       &zs               &trans        &trans
 //                             ╰─────────────┴─────────────┴─────────────╯   ╰─────────────┴─────────────┴─────────────╯
             >;
         };
 
-        function_layer {
+        function_layer { 
             label = "FUN";
             bindings = <
 // ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮   ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮
