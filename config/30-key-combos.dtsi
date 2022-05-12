@@ -25,7 +25,6 @@
     COMBO(j,        &kp J,        1 2,   COL SYM NAV, COMBO_TERM_NORMAL) // f p
     COMBO(z,        &kp Z,        21 22, COL SYM NAV, COMBO_TERM_NORMAL) // v c
     COMBO(q,        &kp Q,        20 21, COL SYM NAV, COMBO_TERM_NORMAL) // w f
- 
 
     // functions + clipboard + hi story
     COMBO(repeat,   &key_repeat,  1 3,   COL SYM NAV, COMBO_TERM_SLOW)   // h ,
