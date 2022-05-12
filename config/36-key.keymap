@@ -30,9 +30,9 @@
 #define ALFRED      &kp LG(SPC)
 #define DUPLICATE   &kp LG(D)
 
+#define SK(KEY) &nk KEY KEY
 #include "36-key-combos.dtsi"
 
-#define SK(KEY) &nk KEY KEY
 
 &caps_word {
     continue-list = <BACKSPACE UNDERSCORE MINUS N1 N2 N3 N4 N5 N6 N7 N8 N9 N0>;
@@ -91,9 +91,9 @@
             bindings = <&kp>, <&sk>;
         };
 
-        zs: zero_space {
+        zerospace: zero_space {
             compatible = "zmk,behavior-mod-morph";
-            label = "";
+            label = "ZERO_SPACE";
             #binding-cells = <0>;
             bindings = <&kp N0>, <&kp SPC>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
@@ -152,13 +152,13 @@
             label = "SYM";
             bindings = <
 // ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮   ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮
-     &kp EQUAL      &kp N7        &kp N8        &kp N9       &none             &none         &kp COMMA     &kp DOT       &codeblock    &none
+     &kp EQUAL      &kp N7        &kp N8        &kp N9       &none             &none         &kp AMPS      &kp PIPE      &kp GRAVE     &kp DLLR
 // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-     &kp MINUS      &kp N4        &kp N5        &kp N6       &kp BSLH          &none         SK(RSHFT)     SK(RCTRL)     SK(RALT)      SK(RGUI)
+     &kp PLUS       &kp N4        &kp N5        &kp N6       &kp BSLH          &kp COMMA     SK(RSHFT)     SK(RCTRL)     SK(RALT)      SK(RGUI)
 // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-     &none          &kp N1        &kp N2        &kp N3       &kp GRAVE         &none         &none         &none         &none         &none                 
+     &none          &kp N1        &kp N2        &kp N3       &kp STAR          &kp DOT       &kp HASH      &kp SEMI      &kp COLON     &none                 
 // ╰─────────────┴─────────────┴─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┴─────────────┴─────────────╯
-                                  &trans        &zs          &none             &none         &trans        &trans
+                                  &trans        &zerospace   &none             &none         &trans        &trans
 //                             ╰─────────────┴─────────────┴─────────────╯   ╰─────────────┴─────────────┴─────────────╯
             >;
         };
