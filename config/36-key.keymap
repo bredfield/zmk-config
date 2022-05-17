@@ -18,6 +18,7 @@
 #define WIN_RIGHT   &kp LA(LC(RIGHT))
 #define WIN_FULL    &kp LA(LC(RET))
 #define SELECT_ALL  &kp LG(A)
+#define NEW_TAB     &kp LG(T)
 #define U_UNDO      &kp LG(Z)
 #define U_REDO      &kp LS(LG(Z))
 #define U_PST       &kp LG(V)
@@ -141,7 +142,7 @@
 // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
      SK(LGUI)      SK(LALT)      SK(LCTRL)     SK(LSHFT)     SS_TARGETED       &kp PG_UP     &kp LEFT      &kp DOWN      &kp RIGHT     &kp END         
 // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-     &none         U_UNDO        U_REDO        SELECT_ALL    &kp SPC           &kp PG_DN     &kp BSPC      &kp RET       &kp TAB       &none                             
+     &none         U_UNDO        U_REDO        SELECT_ALL    NEW_TAB           &kp PG_DN     &kp BSPC      &kp RET       &kp TAB       &none                             
 // ╰─────────────┴─────────────┴─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┴─────────────┴─────────────╯
                                  &trans        &trans        &none             &none         &kp SPC       &trans
 //                             ╰─────────────┴─────────────┴─────────────╯   ╰─────────────┴─────────────┴─────────────╯
