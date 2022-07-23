@@ -5,7 +5,7 @@
 
 // Layer aliases
 #define COL 0
-#define HD  1
+#define ALT  1
 #define NAV 2
 #define SYM 3
 #define FUN 4
@@ -41,6 +41,7 @@
 
 &sk {
   release-after-ms = <60000>;
+  quick-release;
 };
 
 / {
@@ -92,12 +93,15 @@
             bindings = <&kp>, <&sk>;
         };
 
-        zerospace: zero_space {
-            compatible = "zmk,behavior-mod-morph";
-            label = "ZERO_SPACE";
-            #binding-cells = <0>;
-            bindings = <&kp N0>, <&kp SPC>;
-            mods = <(MOD_LSFT|MOD_RSFT)>;
+        blt: base_layer_hold_tap {
+            compatible = "zmk,behavior-hold-tap";
+            label = "BASE_LAYER_HOLD_TAP";
+            #binding-cells = <2>;
+            flavor = "tap-preferred";
+            tapping-term-ms = <200>;
+            quick-tap-ms = <50>;
+            global-quick-tap;
+            bindings = <&mo>, <&kp>;
         };
     };
 
@@ -114,25 +118,26 @@
 // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
      &kp Z         &kp X         &kp C         &kp D         &kp V             &kp K         &kp H         &kp COMMA     &kp DOT       &kp SLASH              
 // ╰─────────────┴─────────────┴─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┴─────────────┴─────────────╯
-                                 &mo_nav       &kp SPC       &none             &none         SK(LSHIFT)    &mo_sym 
+                                 &mo_nav       &blt NAV SPC  &none             &none         SK(LSHIFT)    &mo_sym 
 //                             ╰─────────────┴─────────────┴─────────────╯   ╰─────────────┴─────────────┴─────────────╯
             >;
         };   
-
-        handsdown_layer {
-            label = "HD";
+ 
+    // APTex-DH
+    alt_layer {
+            label = "ALT";
             bindings = <
 // ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮   ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮
-     &kp W         &kp F         &kp M         &kp P         &none             &none         &kp U         &kp O         &kp Y         &kp SQT
+     &kp DASH      &kp W         &kp M         &kp V         &kp Q             &kp Z         &kp Y         &kp O         &kp U         &kp SEMI
 // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-     &kp R         &kp S         &kp N         &kp T         &kp B             &kp K         &kp A         &kp E         &kp I         &kp H
+     &kp R         &kp S         &kp T         &kp H         &kp B             &kp P         &kp N         &kp A         &kp I         &kp L
 // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-     &none         &kp C         &kp L         &kp D         &kp G             &kp J         &kp X         &kp COMMA     &kp DOT       &none    
+     &kp X         &kp C         &kp G         &kp D         &kp K             &kp J         &kp F         &kp SQT       &kp COMMA     &kp DOT
 // ╰─────────────┴─────────────┴─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┴─────────────┴─────────────╯
-                                 &mo_nav       &kp SPC       &none             &none         SK(LSHIFT)    &mo_sym 
+                                 &mo_nav       &kp SPC       &none             &none         &sk LSHIFT    &mo_sym 
 //                             ╰─────────────┴─────────────┴─────────────╯   ╰─────────────┴─────────────┴─────────────╯
             >;
-        };   
+        };
 
         nav_layer {
             label = "NAV";
@@ -172,7 +177,7 @@
 // ├─────────────┼───────────┼─────────────┼───────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
      &kp F11       &kp F1        &kp F2        &kp F3        &kp F12           &kp C_VOL_UP  SK(RSHFT)     SK(RCTRL)     SK(RALT)      SK(RGUI)
 // ├─────────────┼───────────┼─────────────┼───────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-     &none         &kp F4        &kp F5        &kp F6        &none             &kp C_VOL_DN  &to COL       &to HD        &to KEY       &none                         
+     &none         &kp F4        &kp F5        &kp F6        &none             &kp C_VOL_DN  &to COL       &to ALT       &to KEY       &none                         
 // ├─────────────┼─────────────┼─────────────┴─────────────┴─────────────╯   ├─────────────┼─────────────┼─────────────┴─────────────┴─────────────╯
                                  &trans        &trans        &none             &none         &trans        &trans             
 //                             ╰─────────────┴─────────────┴─────────────╯   ╰─────────────┴─────────────┴─────────────╯
