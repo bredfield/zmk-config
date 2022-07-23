@@ -44,13 +44,6 @@
   quick-release;
 };
 
-&mt {
-    flavor = "balanced";
-    retro-tap;
-    quick-tap-ms = <125>;
-    tapping_term_ms = <175>;
-};
-
 / {
     conditional_layers {
         compatible = "zmk,conditional-layers";
@@ -106,12 +99,10 @@
             #binding-cells = <2>;
             flavor = "tap-preferred";
             tapping-term-ms = <200>;
-            quick-tap-ms = <50>;
+            quick-tap-ms = <100>;
             global-quick-tap;
             bindings = <&mo>, <&kp>;
         };
-
-        
     };
 
     keymap {
@@ -127,7 +118,7 @@
 // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
      &kp Z         &kp X         &kp C         &kp D         &kp V             &kp K         &kp H         &kp COMMA     &kp DOT       &kp SLASH              
 // ╰─────────────┴─────────────┴─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┴─────────────┴─────────────╯
-                                 &mo_nav       &mt NAV SPC   &none             &none         SK(LSHIFT)    &mo_sym 
+                                 &mo_nav       &blt NAV SPC   &none             &none         SK(LSHIFT)    &mo_sym 
 //                             ╰─────────────┴─────────────┴─────────────╯   ╰─────────────┴─────────────┴─────────────╯
             >;
         };   
@@ -143,7 +134,7 @@
 // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
      &kp X         &kp C         &kp G         &kp D         &kp K             &kp J         &kp F         &kp SQT       &kp COMMA     &kp DOT
 // ╰─────────────┴─────────────┴─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┴─────────────┴─────────────╯
-                                 &sk LSHIFT    &mt NAV SPC   &key_repeat       &key_repeat   &mt LSHIFT E  &mo_sym 
+                                 &sk LSHIFT    &blt NAV SPC   &key_repeat       &key_repeat   &blt LSHIFT E  &mo_sym 
 //                             ╰─────────────┴─────────────┴─────────────╯   ╰─────────────┴─────────────┴─────────────╯
             >;
         };
