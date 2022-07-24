@@ -19,6 +19,8 @@
 #define WIN_FULL    &kp LA(LC(RET))
 #define SELECT_ALL  &kp LG(A)
 #define NEW_TAB     &kp LG(T)
+#define UNTAB       &kp LS(TAB)
+#define COMMAND     &kp LG(K)
 #define U_UNDO      &kp LG(Z)
 #define U_REDO      &kp LS(LG(Z))
 #define U_PST       &kp LG(V)
@@ -42,6 +44,10 @@
 &sk {
   release-after-ms = <60000>;
   quick-release;
+};
+
+&mt {
+ tapping-term-ms = <200>;
 };
 
 / {
@@ -118,7 +124,7 @@
 // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
      &kp Z         &kp X         &kp C         &kp D         &kp V             &kp K         &kp H         &kp COMMA     &kp DOT       &kp SLASH              
 // ╰─────────────┴─────────────┴─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┴─────────────┴─────────────╯
-                                 &mo_nav       &blt NAV SPC   &none             &none         SK(LSHIFT)    &mo_sym 
+                                 &mo_nav       &mt NAV SPC   &key_repeat       &key_repeat   &sk LSHIFT    &mo_sym 
 //                             ╰─────────────┴─────────────┴─────────────╯   ╰─────────────┴─────────────┴─────────────╯
             >;
         };   
@@ -134,7 +140,7 @@
 // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
      &kp X         &kp C         &kp G         &kp D         &kp K             &kp J         &kp F         &kp SQT       &kp COMMA     &kp DOT
 // ╰─────────────┴─────────────┴─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┴─────────────┴─────────────╯
-                                 &sk LSHIFT    &blt NAV SPC   &key_repeat       &key_repeat   &blt LSHIFT E  &mo_sym 
+                                 &sk LSHIFT    &mt NAV SPC   &key_repeat       &key_repeat   &mt LSHIFT E  &mo_sym 
 //                             ╰─────────────┴─────────────┴─────────────╯   ╰─────────────┴─────────────┴─────────────╯
             >;
         };
@@ -143,13 +149,13 @@
             label = "NAV";
             bindings = <
 // ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮   ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮
-     &kp ESC       CLOSE         APP_SWAP      ALFRED        &none             &none         &kp DEL       &kp UP        DUPLICATE     &kp HOME
+     &kp ESC       CLOSE         APP_SWAP      ALFRED        NEW_TAB           &kp PG_UP     &kp DEL       &kp UP        DUPLICATE     &kp HOME
 // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-     SK(LGUI)      SK(LALT)      SK(LCTRL)     SK(LSHFT)     SS_TARGETED       &kp PG_UP     &kp LEFT      &kp DOWN      &kp RIGHT     &kp END         
+     SK(LGUI)      SK(LALT)      SK(LCTRL)     SK(LSHFT)     SS_TARGETED       &kp PG_DN     &kp LEFT      &kp DOWN      &kp RIGHT     &kp END         
 // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-     &none         U_UNDO        U_REDO        SELECT_ALL    NEW_TAB           &kp PG_DN     &kp BSPC      &kp RET       &kp TAB       &none                             
+     U_UNDO        U_CPY         U_CUT         U_PST         U_REDO            COMMAND       &kp BSPC      &kp RET       &kp TAB       UNTAB                             
 // ╰─────────────┴─────────────┴─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┴─────────────┴─────────────╯
-                                 &trans        &trans        &none             &none         &kp SPC       &trans
+                                 &trans        &trans        &trans             &trans       &kp SPC       &trans
 //                             ╰─────────────┴─────────────┴─────────────╯   ╰─────────────┴─────────────┴─────────────╯
             >;
         };
@@ -164,7 +170,7 @@
 // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
      &none          &kp N1        &kp N2        &kp N3       &kp DOT           &kp BSLH      &kp HASH      &kp SEMI      &kp COLON     &none                 
 // ╰─────────────┴─────────────┴─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┴─────────────┴─────────────╯
-                                  &trans        &kp N0       &none             &none         &trans        &trans
+                                  &trans        &kp N0       &trans            &trans        &trans        &trans
 //                             ╰─────────────┴─────────────┴─────────────╯   ╰─────────────┴─────────────┴─────────────╯
             >;
         };
