@@ -99,12 +99,12 @@
             bindings = <&kp>, <&sk>;
         };
 
-        blt: base_layer_hold_tap {
+        lal: layer-alpha {
             compatible = "zmk,behavior-hold-tap";
-            label = "BASE_LAYER_HOLD_TAP";
+            label = "LAYER_ALPHA";
             #binding-cells = <2>;
             flavor = "tap-preferred";
-            tapping-term-ms = <200>;
+            tapping-term-ms = <180>;
             quick-tap-ms = <100>;
             global-quick-tap;
             bindings = <&mo>, <&kp>;
@@ -124,10 +124,10 @@
 // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
      &kp Z         &kp X         &kp C         &kp D         &kp V             &kp K         &kp H         &kp COMMA     &kp DOT       &kp SLASH              
 // ╰─────────────┴─────────────┴─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┴─────────────┴─────────────╯
-                                 &mo_nav       &lt NAV SPC   &key_repeat       &key_repeat   &sk LSHIFT    &mo_sym 
+                                 &mo_nav       &lal NAV SPC  &key_repeat       &key_repeat   &sk LSHIFT    &mo_sym 
 //                             ╰─────────────┴─────────────┴─────────────╯   ╰─────────────┴─────────────┴─────────────╯
             >;
-        };   
+        };
  
     // APTex-DH
     alt_layer {
@@ -140,7 +140,7 @@
 // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
      &kp X         &kp C         &kp G         &kp D         &kp K             &kp J         &kp F         &kp SQT       &kp COMMA     &kp DOT
 // ╰─────────────┴─────────────┴─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┴─────────────┴─────────────╯
-                                 &sk LSHIFT    &lt NAV SPC   &key_repeat       &key_repeat   &mt LSHIFT E  &mo_sym 
+                                 &sk LSHIFT    &lal NAV SPC  &key_repeat       &key_repeat   &mt LSHIFT E  &mo_sym 
 //                             ╰─────────────┴─────────────┴─────────────╯   ╰─────────────┴─────────────┴─────────────╯
             >;
         };
