@@ -43,11 +43,12 @@
 
 &sk {
   release-after-ms = <60000>;
-
+  quick-release;
 };
 
-&mt {
- tapping-term-ms = <200>;
+&lt {
+ tapping-term-ms = <150>;
+ flavor = "balanced";
 };
 
 / {
@@ -104,7 +105,7 @@
             label = "LAYER_ALPHA";
             #binding-cells = <2>;
             flavor = "balanced";
-            tapping-term-ms = <180>;
+            tapping-term-ms = <150>;
             quick-tap-ms = <100>;
             global-quick-tap;
             bindings = <&mo>, <&kp>;
@@ -124,7 +125,7 @@
 // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
      &kp Z         &kp X         &kp C         &kp D         &kp V             &kp K         &kp H         &kp COMMA     &kp DOT       &kp SLASH              
 // ╰─────────────┴─────────────┴─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┴─────────────┴─────────────╯
-                                 &mo_nav       &lal NAV SPC  &key_repeat       &key_repeat   &sk LSHIFT    &mo_sym 
+                                 &mo_nav       &lt NAV SPC   &key_repeat       &key_repeat   &sk LSHIFT    &mo_sym 
 //                             ╰─────────────┴─────────────┴─────────────╯   ╰─────────────┴─────────────┴─────────────╯
             >;
         };
