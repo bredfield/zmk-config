@@ -51,6 +51,11 @@
  flavor = "balanced";
 };
 
+&mt {
+ tapping-term-ms = <150>;
+ flavor = "balanced";
+};
+
 / {
     conditional_layers {
         compatible = "zmk,conditional-layers";
@@ -61,7 +66,7 @@
     };
 };
 
-/ {
+/ { 
     behaviors {
         ZMK_MACRO(codeblock,
             wait-ms = <0>;
@@ -99,14 +104,6 @@
             flavor = "tap-preferred";
             bindings = <&kp>, <&sk>;
         };
-
-        zerospace: zero_space {
-            compatible = "zmk,behavior-mod-morph";
-            label = "ZERO_SPACE";
-            #binding-cells = <0>;
-            bindings = <&kp N0>, <&kp SPC>;
-            mods = <(MOD_LSFT|MOD_RSFT)>;
-        };
     };
 
     keymap {
@@ -131,7 +128,7 @@
         // r s t h k   j n a i o 
         //   c f p       k , .
 
-        handsdown_layer {
+        alt_layer {
             label = "ALT";
             bindings = <
 // ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮   ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮
@@ -161,6 +158,7 @@
             >;
         };
 
+        sym_layer { 
             label = "SYM";
             bindings = <
 // ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮   ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮
