@@ -5,7 +5,7 @@
 
 // Layer aliases
 #define COL 0
-#define HD  1
+#define ALT  1
 #define NAV 2
 #define SYM 3
 #define FUN 4
@@ -19,6 +19,8 @@
 #define WIN_FULL    &kp LA(LC(RET))
 #define SELECT_ALL  &kp LG(A)
 #define NEW_TAB     &kp LG(T)
+#define FIND        &kp LG(F)
+#define COMMAND     &kp LG(K)
 #define U_UNDO      &kp LG(Z)
 #define U_REDO      &kp LS(LG(Z))
 #define U_PST       &kp LG(V)
@@ -125,17 +127,21 @@
             >;
         };   
 
+        // v w g d b   q l u y '
+        // r s t h k   j n a i o 
+        //   c f p       k , .
+
         handsdown_layer {
-            label = "HD";
+            label = "ALT";
             bindings = <
 // ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮   ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮
-     &kp W         &kp F         &kp M         &kp P         &kp G             &kp K         &kp U         &kp O         &kp Y         &kp SQT
+     &kp V         &kp W         &kp G         &kp D         &kp B             &kp Q         &kp L         &kp U         &kp Y         &kp SQT
 // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-     &kp R         &kp S         &kp N         &kp T         &kp B             &kp J         &kp A         &kp E         &kp I         &kp H
+     &kp R         &kp S         &kp T         &kp H         &kp K             &kp J         &kp N         &kp A         &kp I         &kp O
 // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-                   &kp C         &kp L         &kp D                                         &kp X         &kp COMMA     &kp DOT
+                   &kp C         &kp F         &kp P                                         &kp M         &kp COMMA     &kp DOT
 // ╰─────────────┴─────────────┴─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┴─────────────┴─────────────╯
-                                               &mo_nav       &kp SPC           SK(LSHIFT)    &mo_sym 
+                                               &key_repeat   &lt NAV SPC       &mt LSHIFT E  &mo_sym 
 //                             ╰─────────────┴─────────────┴─────────────╯   ╰─────────────┴─────────────┴─────────────╯
             >;
         };   
@@ -144,28 +150,27 @@
             label = "NAV";
             bindings = <
 // ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮   ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮
-     &kp ESC       CLOSE         APP_SWAP      ALFRED        SS_TARGETED       &kp PG_UP     &kp DEL       &kp UP        DUPLICATE     &kp HOME
+     &kp ESC       U_UNDO        U_REDO        SELECT_ALL    NEW_TAB           COMMAND       &kp DEL       &kp UP        DUPLICATE     WIN_SWAP
 // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-     SK(LGUI)      SK(LALT)      SK(LCTRL)     SK(LSHFT)     NEW_TAB           &kp PG_DN     &kp LEFT      &kp DOWN      &kp RIGHT     &kp END         
+     SK(LGUI)      SK(LALT)      SK(LCTRL)     SK(LSHFT)     CLOSE             FIND          &kp LEFT      &kp DOWN      &kp RIGHT     APP_SWAP        
 // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-                   U_UNDO        U_REDO        SELECT_ALL                                    &kp BSPC      &kp RET       &kp TAB                           
+                   U_CPY         U_CUT         U_PST                                         &kp BSPC      &kp RET       &kp TAB                           
 // ╰─────────────┴─────────────┴─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┴─────────────┴─────────────╯
-                                               &trans        &trans            &kp SPC       &trans
+                                               &trans        &trans            &kp SPC       ALFRED
 //                             ╰─────────────┴─────────────┴─────────────╯   ╰─────────────┴─────────────┴─────────────╯
             >;
         };
 
-        symbol_layer {
             label = "SYM";
             bindings = <
 // ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮   ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮
-     &kp EQUAL      &kp N7        &kp N8        &kp N9       &kp COMMA         &kp STAR      &kp AMPS      &kp PIPE      &kp GRAVE     &kp TILDE
+     &kp PLUS       &kp N7        &kp N8        &kp N9       &kp LBKT          &kp LPAR      &kp MINUS     &kp UNDER     &kp PIPE      &kp TILDE
 // ├─────────────┼─────────────┼─────────────┼─────────────┼ ────────────┤   ├──────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-     &kp MINUS      &kp N4        &kp N5        &kp N6       &kp DOT           &kp BSLH      SK(RSHFT)     SK(RCTRL)     SK(RALT)      SK(RGUI)
+     &kp EQUAL      &kp N4        &kp N5        &kp N6       &kp RBKT          &kp RPAR      SK(RSHFT)     SK(RCTRL)     SK(RALT)      SK(RGUI)
 // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-                    &kp N1        &kp N2        &kp N3                                       &kp HASH      &kp SEMI      &kp COLON               
+                    &kp N1        &kp N2        &kp N3                                       &kp COLON     &kp SEMI      &kp BSLS               
 // ╰─────────────┴─────────────┴─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┴─────────────┴─────────────╯
-                                                &trans       &zerospace        &trans        &trans
+                                                &kp DOT      &kp N0            &trans        &trans
 //                             ╰─────────────┴─────────────┴─────────────╯   ╰─────────────┴─────────────┴─────────────╯
             >;
         };
@@ -176,9 +181,9 @@
 // ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮   ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮
      &kp F10       &kp F7        &kp F8        &kp F9        &kp F12           &kp C_VOL_UP  &kp C_PREV    &kp C_PP      &kp C_NEXT    &kp C_MUTE
 // ├─────────────┼───────────┼─────────────┼───────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-     &kp F11       &kp F1        &kp F2        &kp F3        &none             &kp C_VOL_DN  SK(RSHFT)     SK(RCTRL)     SK(RALT)      SK(RGUI)
+     &kp F11       &kp F1        &kp F2        &kp F3        SS_TARGETED       &kp C_VOL_DN  SK(RSHFT)     SK(RCTRL)     SK(RALT)      SK(RGUI)
 // ├─────────────┼───────────┼─────────────┼───────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-                   &kp F4        &kp F5        &kp F6                                        &to COL       &to HD        &to KEY                     
+                   &kp F4        &kp F5        &kp F6                                        &to COL       &to ALT        &to KEY                     
 // ├─────────────┼─────────────┼─────────────┴─────────────┴─────────────╯   ├─────────────┼─────────────┼─────────────┴─────────────┴─────────────╯
                                                &trans        &trans            &trans        &trans             
 //                             ╰─────────────┴─────────────┴─────────────╯   ╰─────────────┴─────────────┴─────────────╯
