@@ -73,6 +73,12 @@
             tap-ms = <0>;
             bindings = <&macro_tap &kp GRAVE &kp GRAVE &kp GRAVE>;
         )
+        
+        ZMK_MACRO(func,
+            wait-ms = <0>;
+            tap-ms = <0>;
+            bindings = <&macro_tap &kp EQUAL &kp GT>;
+        )
 
         ZMK_MACRO(mo_nav,
             wait-ms = <0>;
@@ -104,6 +110,15 @@
             flavor = "tap-preferred";
             bindings = <&kp>, <&sk>;
         };
+
+        lr: layer_repeat {
+            compatible = "zmk,behavior-hold-tap";
+            label = "LAYER_REPEAT";
+            #binding-cells = <2>;
+            tapping_term_ms = <150>;
+            flavor = "balanced";
+            bindings = <&mo>, <&key_repeat>;
+        };
     };
 
     keymap {
@@ -119,7 +134,7 @@
 // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
                    &kp V         &kp C         &kp D                                         &kp H         &kp COMMA     &kp DOT             
 // ╰─────────────┴─────────────┴─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┴─────────────┴─────────────╯
-                                               &key_repeat   &lt NAV SPC       &sk LSHIFT    &mo_sym 
+                                               &lr FUN       &lt NAV SPC       &sk LSHIFT    &mo_sym 
 //                             ╰─────────────┴─────────────┴─────────────╯   ╰─────────────┴─────────────┴─────────────╯
             >;
         };   
@@ -162,13 +177,13 @@
             label = "SYM";
             bindings = <
 // ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮   ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮
-     &kp GRAVE      &kp N7        &kp N8        &kp N9       &kp LBKT          &kp LPAR      &kp MINUS     &kp UNDER     &kp PIPE      &kp TILDE
+     &kp GRAVE      &kp N7        &kp N8        &kp N9       &kp COMM          &codeblock    &kp PLUS      &kp UNDER     &kp PIPE      &kp TILDE
 // ├─────────────┼─────────────┼─────────────┼─────────────┼ ────────────┤   ├──────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-     &kp EQUAL      &kp N4        &kp N5        &kp N6       &kp RBKT          &kp RPAR      SK(RSHFT)     SK(RCTRL)     SK(RALT)      SK(RGUI)
+     &kp EQUAL      &kp N4        &kp N5        &kp N6       &kp DOT           &func         SK(RSHFT)     SK(RCTRL)     SK(RALT)      SK(RGUI)
 // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
                     &kp N1        &kp N2        &kp N3                                       &kp COLON     &kp SEMI      &kp BSLH               
 // ╰─────────────┴─────────────┴─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┴─────────────┴─────────────╯
-                                                &kp DOT      &kp N0            &trans        &trans
+                                                &trans       &kp N0            &trans        &trans
 //                             ╰─────────────┴─────────────┴─────────────╯   ╰─────────────┴─────────────┴─────────────╯
             >;
         };
