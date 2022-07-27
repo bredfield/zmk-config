@@ -5,7 +5,7 @@
 
 // Layer aliases
 #define COL 0
-#define ALT  1
+#define ALT 1
 #define NAV 2
 #define SYM 3
 #define FUN 4
@@ -54,16 +54,6 @@
 &mt {
  tapping-term-ms = <150>;
  flavor = "balanced";
-};
-
-/ {
-    conditional_layers {
-        compatible = "zmk,conditional-layers";
-        tri_layer {
-            if-layers = <NAV SYM>;
-            then-layer = <FUN>;
-        };
-    };
 };
 
 / { 
