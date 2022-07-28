@@ -110,7 +110,7 @@
             bindings = <&mo>, <&key_repeat>;
         };
 
-        spcminus: grave_escape {
+        spcminus: spcminus {
             compatible = "zmk,behavior-mod-morph";
             label = "SPACE_MINUS";
             #binding-cells = <0>;
