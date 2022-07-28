@@ -109,6 +109,14 @@
             flavor = "balanced";
             bindings = <&mo>, <&key_repeat>;
         };
+
+        spcminus: grave_escape {
+            compatible = "zmk,behavior-mod-morph";
+            label = "SPACE_MINUS";
+            #binding-cells = <0>;
+            bindings = <&kp SPC>, <&kp MINUS>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
     };
 
     keymap {
@@ -124,7 +132,7 @@
 // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
                    &kp V         &kp C         &kp D                                         &kp H         &kp COMMA     &kp DOT             
 // ╰─────────────┴─────────────┴─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┴─────────────┴─────────────╯
-                                               &lr FUN 0     &lt NAV SPC       &sk LSHIFT    &mo_sym 
+                                               &lr FUN 0     &lt NAV spcminus       &sk LSHIFT    &mo_sym 
 //                             ╰─────────────┴─────────────┴─────────────╯   ╰─────────────┴─────────────┴─────────────╯
             >;
         };   
@@ -148,9 +156,9 @@
             label = "NAV";
             bindings = <
 // ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮   ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮
-     &kp ESC       U_UNDO        U_REDO        SELECT_ALL    CLOSE             COMMAND       &kp DEL       &kp UP        DUPLICATE     WIN_SWAP
+     &kp ESC       CLOSE         NEW_TAB       U_UNDO        U_REDO            COMMAND       &kp DEL       &kp UP        DUPLICATE     WIN_SWAP
 // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-     SK(LGUI)      SK(LALT)      SK(LCTRL)     SK(LSHFT)     NEW_TAB           FIND          &kp LEFT      &kp DOWN      &kp RIGHT     APP_SWAP        
+     SK(LGUI)      SK(LALT)      SK(LCTRL)     SK(LSHFT)     SELECT_ALL        FIND          &kp LEFT      &kp DOWN      &kp RIGHT     APP_SWAP        
 // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
                    U_CUT         U_CPY         U_PST                                         &kp BSPC      &kp RET       &kp TAB                           
 // ╰─────────────┴─────────────┴─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┴─────────────┴─────────────╯
