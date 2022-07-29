@@ -109,30 +109,30 @@
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
-        lru: layer_repeat_under {
+        lr: layer_repeat {
             compatible = "zmk,behavior-hold-tap";
-            label = "LAYER_REPEAT_UNDER";
+            label = "LAYER_REPEAT";
             #binding-cells = <2>;
             tapping_term_ms = <150>;
             flavor = "balanced";
             bindings = <&mo>, <&repeatunder>;
         };
 
-        sm: space_minus {
+        sm: space_under {
             compatible = "zmk,behavior-mod-morph";
-            label = "SPACE_MINUS";
+            label = "SPACE_UNDER";
             #binding-cells = <0>;
-            bindings = <&kp SPC>, <&kp MINUS>;
+            bindings = <&kp SPC>, <&kp UNDER>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
-        ltsm: layer_tap_space_minus {
+        ltsu: layer_tap_space_under {
             compatible = "zmk,behavior-hold-tap";
-            label = "LAYER_TAP_SPACE_MINUS";
+            label = "LAYER_TAP_SPACE";
             #binding-cells = <2>;
             tapping_term_ms = <150>;
             flavor = "balanced";
-            bindings = <&lt>, <&spcminus>;
+            bindings = <&lt>, <&spcunder>;
         };
     };
 
@@ -149,7 +149,7 @@
 // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
                    &kp V         &kp C         &kp D                                         &kp H         &kp COMMA     &kp DOT             
 // ╰─────────────┴─────────────┴─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┴─────────────┴─────────────╯
-                                               &lru FUN 0    &ltsm NAV 0       &sk LSHIFT    &mo_sym 
+                                               &lr FUN 0     &ltsu NAV 0       &sk LSHIFT    &lt SYM MINUS 
 //                             ╰─────────────┴─────────────┴─────────────╯   ╰─────────────┴─────────────┴─────────────╯
             >;
         };   
@@ -164,7 +164,7 @@
 // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
                    &kp C         &kp G         &kp D                                         &kp M         &kp COMMA     &kp DOT
 // ╰─────────────┴─────────────┴─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┴─────────────┴─────────────╯
-                                               &lru FUN 0    &ltsm NAV 0       &mt LSHIFT E  &mo_sym 
+                                               &lr FUN 0     &ltsu NAV 0       &mt LSHIFT E  &lt SYM MINUS 
 //                             ╰─────────────┴─────────────┴─────────────╯   ╰─────────────┴─────────────┴─────────────╯
             >;
         };   
