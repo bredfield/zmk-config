@@ -100,14 +100,6 @@
             flavor = "tap-preferred";
             bindings = <&kp>, <&sk>;
         };
-        
-        repeatunder: repeatunder {
-            compatible = "zmk,behavior-mod-morph";
-            label = "REPEAT_UNDER";
-            #binding-cells = <0>;
-            bindings = <&key_repeat>, <&kp UNDER>;
-            mods = <(MOD_LSFT|MOD_RSFT)>;
-        };
 
         lr: layer_repeat {
             compatible = "zmk,behavior-hold-tap";
@@ -115,10 +107,10 @@
             #binding-cells = <2>;
             tapping_term_ms = <150>;
             flavor = "balanced";
-            bindings = <&mo>, <&repeatunder>;
+            bindings = <&mo>, <&key_repeat>;
         };
 
-        sm: space_under {
+        spaceunder: space_under {
             compatible = "zmk,behavior-mod-morph";
             label = "SPACE_UNDER";
             #binding-cells = <0>;
