@@ -124,7 +124,7 @@
             #binding-cells = <2>;
             tapping_term_ms = <150>;
             flavor = "balanced";
-            bindings = <&lt>, <&spcunder>;
+            bindings = <&lt>, <&spaceunder>;
         };
     };
 
