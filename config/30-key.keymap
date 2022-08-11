@@ -47,13 +47,17 @@
 };
 
 &lt {
- tapping-term-ms = <150>;
  flavor = "balanced";
+ tapping-term-ms = <280>;
+ quick-tap-ms = <175>;
+ global-quick-tap;
 };
 
 &mt {
- tapping-term-ms = <150>;
  flavor = "balanced";
+ tapping-term-ms = <280>;
+ quick-tap-ms = <175>;
+ global-quick-tap;
 };
 
 / { 
@@ -122,8 +126,10 @@
             compatible = "zmk,behavior-hold-tap";
             label = "LAYER_TAP_SPACE";
             #binding-cells = <2>;
-            tapping_term_ms = <150>;
             flavor = "balanced";
+            tapping-term-ms = <280>;
+            quick-tap-ms = <175>;
+            global-quick-tap;
             bindings = <&mo>, <&spaceunder>;
         };
     };
