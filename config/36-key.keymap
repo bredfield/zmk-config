@@ -37,6 +37,15 @@
 #define SK(KEY) &nk KEY KEY
 #include "36-key-combos.dtsi"
 
+/ {
+    conditional_layers {
+        compatible = "zmk,conditional-layers";
+        tri_layer {
+            if-layers = <NAV SYM>;
+            then-layer = <FUN>;
+        };
+    };
+};
 
 &caps_word {
     continue-list = <BACKSPACE UNDERSCORE MINUS N1 N2 N3 N4 N5 N6 N7 N8 N9 N0>;
@@ -48,13 +57,13 @@
 };
 
 &lt {
- tapping-term-ms = <150>;
- flavor = "balanced";
+ tapping-term-ms = <200>;
+ flavor = "tap-preferred";
 };
 
 &mt {
- tapping-term-ms = <150>;
- flavor = "balanced";
+ tapping-term-ms = <200>;
+ flavor = "tap-preferred";
 };
 
 / {
@@ -111,24 +120,6 @@
             flavor = "balanced";
             bindings = <&mo>, <&key_repeat>;
         };
-
-        spaceunder: space_under {
-            compatible = "zmk,behavior-mod-morph";
-            label = "SPACE_UNDER";
-            #binding-cells = <0>;
-            bindings = <&kp SPC>, <&kp UNDER>;
-            mods = <(MOD_LSFT|MOD_RSFT)>;
-        };
-
-        ltsu: layer_tap_space_under {
-            compatible = "zmk,behavior-hold-tap";
-            label = "LAYER_TAP_SPACE";
-            #binding-cells = <2>;
-            tapping_term_ms = <200>;
-            quick-tap-ms = <175>;
-            flavor = "balanced";
-            bindings = <&mo>, <&spaceunder>;
-        };
     };
 
     keymap {
@@ -153,13 +144,13 @@
             label = "ALT";
             bindings = <
 // ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮   ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮
-     &kp X         &kp W         &kp F         &kp P         &kp B             &kp J         &kp L         &kp U         &kp Y         &kp SQT
+     &kp X         &kp W         &kp F         &kp G         &kp B             &kp J         &kp L         &kp U         &kp Y         &kp SQT
 // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-     &kp N         &kp R         &kp S         &kp T         &kp G             &kp K         &kp H         &kp A         &kp I         &kp O
+     &kp N         &kp R         &kp S         &kp T         &kp P             &kp K         &kp H         &kp A         &kp I         &kp O
 // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
      &kp COLON     &kp V         &kp C         &kp D         &kp MINUS         &kp UNDER     &kp M         &kp COMMA     &kp DOT       &kp SEMI
 // ╰─────────────┴─────────────┴─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┴─────────────┴─────────────╯
-                                 &mo_nav       &kp SPC       &key_repeat       &sk LSHIFT    &kp E         &mo_sym 
+                                 &mo_nav       &lt NAV SPC   &key_repeat       &sk LSHIFT    &mt LSHIFT E  &mo_sym 
 //                             ╰─────────────┴─────────────┴─────────────╯   ╰─────────────┴─────────────┴─────────────╯
             >;
    };
