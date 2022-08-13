@@ -43,7 +43,7 @@
     COMBO(colon,    &kp COLON,    16 26, COL ALT SYM NAV, COMBO_TERM_NORMAL) // n h
     COMBO(semi,     &kp SEMI,     17 27, COL ALT SYM NAV, COMBO_TERM_NORMAL) // , e
     COMBO(minus,    &kp MINUS,    26 27, COL SYM NAV, COMBO_TERM_NORMAL) // h ,
-    COMBO(slash,    &kp SLASH,    27 28, COL SYM NAV, COMBO_TERM_NORMAL) // , .
+    COMBO(slash,    &kp SLASH,    27 28, COL ALT SYM NAV, COMBO_TERM_NORMAL) // , .
  
     // brackets 
     COMBO(lbkt,     &kp LBKT,     1 11,  COL ALT SYM NAV, COMBO_TERM_NORMAL) // w r
