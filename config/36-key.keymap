@@ -37,16 +37,6 @@
 #define SK(KEY) &nk KEY KEY
 #include "36-key-combos.dtsi"
 
-/ {
-    conditional_layers {
-        compatible = "zmk,conditional-layers";
-        tri_layer {
-            if-layers = <NAV SYM>;
-            then-layer = <FUN>;
-        };
-    };
-};
-
 &caps_word {
     continue-list = <BACKSPACE UNDERSCORE MINUS N1 N2 N3 N4 N5 N6 N7 N8 N9 N0>;
 };
@@ -150,7 +140,7 @@
 // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
      &kp COLON     &kp V         &kp C         &kp D         &kp MINUS         &kp UNDER     &kp M         &kp COMMA     &kp DOT       &kp SEMI
 // ╰─────────────┴─────────────┴─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┴─────────────┴─────────────╯
-                                 &mo_nav       &lt NAV SPC   &key_repeat       &key_repeat   &mt LSHIFT E  &mo_sym 
+                                 &sk LSHIFT    &lt NAV SPC   &lr FUN 0         &lr FUN 0     &mt LSHIFT E  &mo_sym 
 //                             ╰─────────────┴─────────────┴─────────────╯   ╰─────────────┴─────────────┴─────────────╯
             >;
    };
@@ -163,7 +153,7 @@
 // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
      SK(LGUI)      SK(LALT)      SK(LCTRL)     SK(LSHFT)     SELECT_ALL        FIND          &kp LEFT      &kp DOWN      &kp RIGHT     APP_SWAP        
 // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-     &none         U_CPY         U_CUT         U_PST         SS_TARGETED       &none         &kp BSPC      &kp RET       &kp TAB       UNTAB                             
+     &none         U_CUT         U_CPY         U_PST         SS_TARGETED       &none         &kp BSPC      &kp RET       &kp TAB       UNTAB                             
 // ╰─────────────┴─────────────┴─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┴─────────────┴─────────────╯
                                  &trans        &trans        &trans            &trans        &kp SPC       ALFRED
 //                             ╰─────────────┴─────────────┴─────────────╯   ╰─────────────┴─────────────┴─────────────╯

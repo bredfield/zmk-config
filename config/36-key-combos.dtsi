@@ -35,7 +35,7 @@
     COMBO(cut,      U_CUT,        11 21, COL ALT SYM NAV, COMBO_TERM_SLOW)   // r x
     COMBO(copy,     U_CPY,        12 22, COL ALT SYM NAV, COMBO_TERM_SLOW)   // s c
     COMBO(paste,    U_PST,        13 23, COL ALT SYM NAV, COMBO_TERM_SLOW)   // t d 
-        
+
     // common symbols 
     COMBO(at,       &kp AT,       2 3,   COL ALT SYM NAV, COMBO_TERM_NORMAL) // c d
     COMBO(excl,     &kp EXCL,     6 7,   COL ALT SYM NAV, COMBO_TERM_NORMAL) // l u
