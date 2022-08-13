@@ -19,7 +19,7 @@
 #define WIN_FULL    &kp LA(LC(RET))
 #define SELECT_ALL  &kp LG(A)
 #define NEW_TAB     &kp LG(T)
-#define UNTAB       &kp LS(TAB)
+#define FIND        &kp LG(F)
 #define COMMAND     &kp LG(K)
 #define U_UNDO      &kp LG(Z)
 #define U_REDO      &kp LS(LG(Z))
@@ -41,7 +41,7 @@
     continue-list = <BACKSPACE UNDERSCORE MINUS N1 N2 N3 N4 N5 N6 N7 N8 N9 N0>;
 };
 
-&sk {
+&sk { 
   release-after-ms = <60000>;
   quick-release;
 };
@@ -51,14 +51,9 @@
  flavor = "balanced";
 };
 
-/ {
-    conditional_layers {
-        compatible = "zmk,conditional-layers";
-        tri_layer {
-            if-layers = <NAV SYM>;
-            then-layer = <FUN>;
-        };
-    };
+&mt {
+ tapping-term-ms = <150>;
+ flavor = "balanced";
 };
 
 / {
@@ -67,6 +62,12 @@
             wait-ms = <0>;
             tap-ms = <0>;
             bindings = <&macro_tap &kp GRAVE &kp GRAVE &kp GRAVE>;
+        )
+        
+        ZMK_MACRO(func,
+            wait-ms = <0>;
+            tap-ms = <0>;
+            bindings = <&macro_tap &kp EQUAL &kp GT>;
         )
 
         ZMK_MACRO(mo_nav,
@@ -100,15 +101,32 @@
             bindings = <&kp>, <&sk>;
         };
 
-        lal: layer-alpha {
+        lr: layer_repeat {
             compatible = "zmk,behavior-hold-tap";
-            label = "LAYER_ALPHA";
+            label = "LAYER_REPEAT";
             #binding-cells = <2>;
+            tapping_term_ms = <200>;
+            quick-tap-ms = <175>;
             flavor = "balanced";
-            tapping-term-ms = <150>;
-            quick-tap-ms = <100>;
-            global-quick-tap;
-            bindings = <&mo>, <&kp>;
+            bindings = <&mo>, <&key_repeat>;
+        };
+
+        spaceunder: space_under {
+            compatible = "zmk,behavior-mod-morph";
+            label = "SPACE_UNDER";
+            #binding-cells = <0>;
+            bindings = <&kp SPC>, <&kp UNDER>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        ltsu: layer_tap_space_under {
+            compatible = "zmk,behavior-hold-tap";
+            label = "LAYER_TAP_SPACE";
+            #binding-cells = <2>;
+            tapping_term_ms = <200>;
+            quick-tap-ms = <175>;
+            flavor = "balanced";
+            bindings = <&mo>, <&spaceunder>;
         };
     };
 
@@ -125,7 +143,7 @@
 // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
      &kp Z         &kp X         &kp C         &kp D         &kp V             &kp K         &kp H         &kp COMMA     &kp DOT       &kp SLASH              
 // ╰─────────────┴─────────────┴─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┴─────────────┴─────────────╯
-                                 &mo_nav       &lt NAV SPC   &key_repeat       &key_repeat   &sk LSHIFT    &mo_sym 
+                                 &mo_nav       &ltsu NAV SPC &lr FUN 0         &lr FUN 0     &sk LSHIFT    &lt SYM MINUS 
 //                             ╰─────────────┴─────────────┴─────────────╯   ╰─────────────┴─────────────┴─────────────╯
             >;
         };
@@ -135,13 +153,13 @@
             label = "ALT";
             bindings = <
 // ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮   ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮
-     &kp MINUS     &kp W         &kp M         &kp V         &kp Q             &kp Z         &kp Y         &kp O         &kp U         &kp SEMI
+     &kp X         &kp W         &kp F         &kp P         &kp B             &kp J         &kp L         &kp U         &kp Y         &kp SQT
 // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-     &kp R         &kp S         &kp T         &kp H         &kp B             &kp P         &kp N         &kp A         &kp I         &kp L
+     &kp N         &kp R         &kp S         &kp T         &kp G             &kp K         &kp H         &kp A         &kp I         &kp O
 // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-     &kp X         &kp C         &kp G         &kp D         &kp K             &kp J         &kp F         &kp SQT       &kp COMMA     &kp DOT
+     &kp Z         &kp V         &kp C         &kp D         &kp MINS          &kp UNDER     &kp M         &kp COMMA     &kp DOT       &kp SEMI
 // ╰─────────────┴─────────────┴─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┴─────────────┴─────────────╯
-                                 &sk LSHIFT    &lal NAV SPC  &key_repeat       &key_repeat   &mt LSHIFT E  &mo_sym 
+                                 &sk LSHIFT    &ltsu NAV SPC &lr FUN 0         &lr FUN 0   &mt LSHIFT E  &lt SYM MINUS 
 //                             ╰─────────────┴─────────────┴─────────────╯   ╰─────────────┴─────────────┴─────────────╯
             >;
         };
@@ -150,13 +168,13 @@
             label = "NAV";
             bindings = <
 // ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮   ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮
-     &kp ESC       CLOSE         APP_SWAP      ALFRED        NEW_TAB           &kp PG_UP     &kp DEL       &kp UP        DUPLICATE     &kp HOME
+     &kp ESC       CLOSE         NEW_TAB       U_UNDO        U_REDO            COMMAND       &kp DEL       &kp UP        DUPLICATE     WIN_SWAP
 // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-     SK(LGUI)      SK(LALT)      SK(LCTRL)     SK(LSHFT)     SS_TARGETED       &kp PG_DN     &kp LEFT      &kp DOWN      &kp RIGHT     &kp END         
+     SK(LGUI)      SK(LALT)      SK(LCTRL)     SK(LSHFT)     SELECT_ALL        FIND          &kp LEFT      &kp DOWN      &kp RIGHT     APP_SWAP        
 // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-     U_UNDO        U_CPY         U_CUT         U_PST         U_REDO            COMMAND       &kp BSPC      &kp RET       &kp TAB       UNTAB                             
+     &none         U_CPY         U_CUT         U_PST         &none             &none         &kp BSPC      &kp RET       &kp TAB       UNTAB                             
 // ╰─────────────┴─────────────┴─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┴─────────────┴─────────────╯
-                                 &trans        &trans        &trans             &trans       &kp SPC       &trans
+                                 &trans        &trans        &trans            &trans        &kp SPC       ALFRED
 //                             ╰─────────────┴─────────────┴─────────────╯   ╰─────────────┴─────────────┴─────────────╯
             >;
         };
@@ -165,11 +183,11 @@
             label = "SYM";
             bindings = <
 // ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮   ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮
-     &kp EQUAL      &kp N7        &kp N8        &kp N9       &none             &none         &kp AMPS      &kp PIPE      &kp GRAVE     &kp TILDE
-// ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼──────────────┼─────────────┼────────────┼─────────────┤
-     &kp PLUS       &kp N4        &kp N5        &kp N6       &kp COMMA         &kp STAR      SK(RSHFT)     SK(RCTRL)     SK(RALT)      SK(RGUI)
-// ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-     &none          &kp N1        &kp N2        &kp N3       &kp DOT           &kp BSLH      &kp HASH      &kp SEMI      &kp COLON     &none                 
+     &kp GRAVE      &kp N7        &kp N8        &kp N9       &none             &codeblock    &kp PLUS      &kp UNDER     &kp PIPE      &kp TILDE
+// ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼──────────────┼─────────────┼───────────┼─────────────┤
+     &kp EQUAL      &kp N4        &kp N5        &kp N6       &kp COMMA         &func         SK(RSHFT)     SK(RCTRL)     SK(RALT)      SK(RGUI)
+// ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼────────────┼─────────────┤
+     &none          &kp N1        &kp N2        &kp N3       &kp DOT           &none         &kp COLON     &kp SEMI      &kp BSLH      &none                 
 // ╰─────────────┴─────────────┴─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┴─────────────┴─────────────╯
                                   &trans        &kp N0       &trans            &trans        &trans        &trans
 //                             ╰─────────────┴─────────────┴─────────────╯   ╰─────────────┴─────────────┴─────────────╯

@@ -37,24 +37,6 @@
 
 #define SK(KEY) &nk KEY KEY
 
-&caps_word {
-    continue-list = <BACKSPACE UNDERSCORE MINUS N1 N2 N3 N4 N5 N6 N7 N8 N9 N0>;
-};
-
-&sk {
-  release-after-ms = <60000>;
-  quick-release;
-};
-
-&lt {
- tapping-term-ms = <150>;
- flavor = "balanced";
-};
-
-&mt {
- tapping-term-ms = <150>;
- flavor = "balanced";
-};
 
 / { 
     behaviors {
