@@ -19,6 +19,7 @@
 #define WIN_FULL    &kp LA(LC(RET))
 #define SELECT_ALL  &kp LG(A)
 #define NEW_TAB     &kp LG(T)
+#define UNTAB       &kp LS(TAB)
 #define FIND        &kp LG(F)
 #define COMMAND     &kp LG(K)
 #define U_UNDO      &kp LG(Z)
