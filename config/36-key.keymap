@@ -162,7 +162,7 @@
                                  &sk LSHIFT    &ltsu NAV SPC &lr FUN 0         &lr FUN 0   &mt LSHIFT E  &lt SYM MINUS 
 //                             ╰─────────────┴─────────────┴─────────────╯   ╰─────────────┴─────────────┴─────────────╯
             >;
-        };
+   };
 
         nav_layer {
             label = "NAV";
