@@ -25,6 +25,8 @@
     // missing alphas 
     COMBO(q,        &kp Q,        21 22, COL ALT SYM NAV, COMBO_TERM_NORMAL) // w f
     COMBO(z,        &kp Z,        22 23, COL ALT SYM NAV, COMBO_TERM_NORMAL) // v c
+    COMBO(b,        &kp B,        2 3,   COL ALT SYM NAV, COMBO_TERM_NORMAL) // c d
+    COMBO(j,        &kp J,        1 2,   COL ALT SYM NAV, COMBO_TERM_NORMAL) // c d
 
     // functions + clipboard + history
     COMBO(repeat,   &key_repeat,  1 3,   COL ALT SYM NAV, COMBO_TERM_SLOW)   // h ,
@@ -35,14 +37,13 @@
     COMBO(cut,      U_CUT,        11 21, COL ALT SYM NAV, COMBO_TERM_SLOW)   // r x
     COMBO(copy,     U_CPY,        12 22, COL ALT SYM NAV, COMBO_TERM_SLOW)   // s c
     COMBO(paste,    U_PST,        13 23, COL ALT SYM NAV, COMBO_TERM_SLOW)   // t d 
-
-    // common symbols 
-    COMBO(at,       &kp AT,       2 3,   COL ALT SYM NAV, COMBO_TERM_NORMAL) // c d
+    
+    // common symbols
     COMBO(excl,     &kp EXCL,     6 7,   COL ALT SYM NAV, COMBO_TERM_NORMAL) // l u
     COMBO(qmark,    &kp QMARK,    7 8,   COL ALT SYM NAV, COMBO_TERM_NORMAL) // u y
     COMBO(colon,    &kp COLON,    16 26, COL ALT SYM NAV, COMBO_TERM_NORMAL) // n h
     COMBO(semi,     &kp SEMI,     17 27, COL ALT SYM NAV, COMBO_TERM_NORMAL) // , e
-    COMBO(minus,    &kp MINUS,    26 27, COL SYM NAV, COMBO_TERM_NORMAL) // h ,
+    // COMBO(minus,    &kp MINUS,    26 27, COL SYM NAV, COMBO_TERM_NORMAL) // h ,
     COMBO(slash,    &kp SLASH,    27 28, COL ALT SYM NAV, COMBO_TERM_NORMAL) // , .
  
     // brackets 
