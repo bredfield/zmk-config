@@ -15,8 +15,8 @@
             layers = <LAYERS>; \
         };
 
-#define COMBO_TERM_NORMAL 15
-#define COMBO_TERM_SLOW 40
+#define COMBO_TERM_NORMAL 20
+#define COMBO_TERM_SLOW 50
 / {
   combos {
     compatible = "zmk,combos"; 
