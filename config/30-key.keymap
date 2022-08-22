@@ -68,6 +68,14 @@
 
 
 / { 
+    conditional_layers {
+    compatible = "zmk,conditional-layers";
+    tri_layer {
+            if-layers = <2 3>;
+            then-layer = <4>;
+        };
+    };
+
     behaviors {
         ZMK_MACRO(codeblock,
             wait-ms = <0>;
@@ -222,12 +230,12 @@
 //                             ╰─────────────┴─────────────┴─────────────╯   ╰─────────────┴─────────────┴─────────────╯
             >;
         };
-        
+
         sym_layer { 
             label = "SYM";
             bindings = <
 // ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮   ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮
-     &kp GRAVE      &kp N7        &kp N8        &kp N9       &kp COMMA         &codeblock    &kp PLUS      &kp UNDER     &kp PIPE      &kp TILDE
+     &kp GRAVE      &kp N7        &kp N8        &kp N9       &kp COMMA         &codeblock    &kp PLUS      &kp AMPS      &kp PIPE      &kp TILDE
 // ├─────────────┼─────────────┼─────────────┼─────────────┼ ────────────┤   ├──────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
      &kp EQUAL      &kp N4        &kp N5        &kp N6       &kp DOT           &func         SK(RSHFT)     SK(RCTRL)     SK(RALT)      SK(RGUI)
 // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
