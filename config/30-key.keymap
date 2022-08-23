@@ -114,7 +114,7 @@
             label = "HOME_ROW_LEFT";
             #binding-cells = <2>;
             flavor = "balanced";
-            tapping-term-ms = <280>;
+            tapping-term-ms = <250>;
             quick-tap-ms = <175>;                // double tapping same key allows for repeating
             global-quick-tap-ms = <150>;         // without PR #1387 use global-quick-tap instead
             bindings = <&kp>, <&kp>;
@@ -127,7 +127,7 @@
             label = "HOME_ROW_RIGHT";
             #binding-cells = <2>;
             flavor = "balanced";
-            tapping-term-ms = <280>;
+            tapping-term-ms = <250>;
             quick-tap-ms = <175>;                // double tapping same key allows for repeating
             global-quick-tap-ms = <150>;         // without PR #1387 use global-quick-tap instead
             bindings = <&kp>, <&kp>;
@@ -204,13 +204,13 @@
             label = "ALT";
             bindings = <
 // ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮   ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮
-     &kp W         &kp F         &kp M         &kp P         &kp B             &kp COMMA     &kp X         &kp SQT       &kp J         &kp K
+     &kp X         &kp C         &kp M         &kp P         &kp B             &kp J         &kp K         &kp SQT       &kp COMMA     &kp DOT
+// ├──── ─────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
+     &hml LGUI R   &hml LALT S   &hml LCTRL N  &hml LSHFT T  &kp G             &kp V         &hmr RSHFT H  &hmr RCTRL A  &hmr RALT I   &hmr RGUI L     
 // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-     &kp R         &kp S         &kp N         &kp T         &kp G             &kp DOT       &kp A         &kp E         &kp I         &kp H
-// ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-                   &kp C         &kp L         &kp D                                         &kp U         &kp O         &kp Y
+                   &kp W         &kp F         &kp D                                         &kp U         &kp O         &kp Y             
 // ╰─────────────┴─────────────┴─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┴─────────────┴─────────────╯
-                                               &lr FUN 0     &ltsu NAV 0       &mt LSHIFT E  &lt SYM MINUS 
+                                               &mo NAV       &kp SPACE         &kp E         &mo SYM 
 //                             ╰─────────────┴─────────────┴─────────────╯   ╰─────────────┴─────────────┴─────────────╯
             >;
 

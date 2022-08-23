@@ -29,7 +29,7 @@
     // functions + clipboard + history
     COMBO(ret,      &kp RET,      1 3,   MAIN ALT SYM NAV, COMBO_TERM_SLOW)  
     COMBO(bspc,     &kp BSPC,     4 14,  MAIN ALT SYM NAV, COMBO_TERM_SLOW)  
-    COMBO(capsword, &caps_word,   13 16, MAIN ALT SYM NAV, COMBO_TERM_SLOW)         
+    COMBO(capsword, &caps_word,   13 16, MAIN ALT SYM NAV, COMBO_TERM_FAST)         
     COMBO(cut,      U_CUT,        11 20, MAIN ALT SYM NAV, COMBO_TERM_SLOW)  
     COMBO(copy,     U_CPY,        12 21, MAIN ALT SYM NAV, COMBO_TERM_SLOW)  
     COMBO(paste,    U_PST,        13 22, MAIN ALT SYM NAV, COMBO_TERM_SLOW)   
