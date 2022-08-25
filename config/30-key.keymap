@@ -116,7 +116,7 @@
             flavor = "balanced";
             tapping-term-ms = <280>;
             quick-tap-ms = <175>;                // double tapping same key allows for repeating
-            global-quick-tap-ms = <150>;         // without PR #1387 use global-quick-tap instead
+            global-quick-tap-ms = <125>;         // without PR #1387 use global-quick-tap instead
             bindings = <&kp>, <&kp>;
             hold-trigger-key-positions = <KEYS_R THUMBS>;
             hold-trigger-on-release;             // requires PR #1423
@@ -129,7 +129,7 @@
             flavor = "balanced";
             tapping-term-ms = <280>;
             quick-tap-ms = <175>;                // double tapping same key allows for repeating
-            global-quick-tap-ms = <150>;         // without PR #1387 use global-quick-tap instead
+            global-quick-tap-ms = <125>;         // without PR #1387 use global-quick-tap instead
             bindings = <&kp>, <&kp>;
             hold-trigger-key-positions = <KEYS_L THUMBS>;
             hold-trigger-on-release;             // requires PR #1423
@@ -181,11 +181,11 @@
         main_layer {
             label = "MAIN";
             bindings = <
-//    [Z]                 [/]
+//    [Q]                 [/]
 //   X C M P B        J K , . '
-//   R S N T G        ; H A I O
+//   N R S T G        ; H A I O
 //     W F D            L U Y 
-//    [V][Q]
+//    [Z]
 //                    E
 
 // ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮   ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮
@@ -200,20 +200,25 @@
             >;
         };   
 
+//   [q]
+// x w f p b  j m u y '
+// n r s t g  k h a i o
+//   v c d      l , .
+//   [z]
+//            e
         alt_layer {
             label = "ALT";
             bindings = <
 // ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮   ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮
-     &kp X         &kp C         &kp M         &kp P         &kp B             &kp J         &kp K         &kp SQT       &kp COMMA     &kp DOT
+     &kp X         &kp W         &kp F         &kp P         &kp B             &kp J         &kp M         &kp U         &kp Y         &kp SQT
 // ├──── ─────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-     &hml LGUI R   &hml LALT S   &hml LCTRL N  &hml LSHFT T  &kp G             &kp V         &hmr RSHFT H  &hmr RCTRL A  &hmr RALT I   &hmr RGUI L     
+     &hml LGUI N   &hml LALT R   &hml LCTRL S  &hml LSHFT T  &kp G             &kp K         &hmr RSHFT H  &hmr RCTRL A  &hmr RALT I   &hmr RGUI O     
 // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-                   &kp W         &kp F         &kp D                                         &kp U         &kp O         &kp Y             
+                   &kp V         &kp C         &kp D                                         &kp L         &kp COMMA     &kp DOT         
 // ╰─────────────┴─────────────┴─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┴─────────────┴─────────────╯
                                                &mo NAV       &kp SPACE         &kp E         &mo SYM 
 //                             ╰─────────────┴─────────────┴─────────────╯   ╰─────────────┴─────────────┴─────────────╯
             >;
-
         };   
 
         nav_layer {
