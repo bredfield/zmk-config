@@ -68,13 +68,13 @@
 
 
 / { 
-    conditional_layers {
-    compatible = "zmk,conditional-layers";
-    tri_layer {
-            if-layers = <2 3>;
-            then-layer = <4>;
-        };
-    };
+    // conditional_layers {
+    // compatible = "zmk,conditional-layers";
+    // tri_layer {
+    //         if-layers = <2 3>;
+    //         then-layer = <4>;
+    //     };
+    // };
 
     behaviors {
         ZMK_MACRO(codeblock,
@@ -146,6 +146,16 @@
             bindings = <&kp>, <&sk>;
         };
 
+        lst: layer_sticky_tap {
+            compatible = "zmk,behavior-hold-tap";
+            label = "LAYER_STICKY_TAP";
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+            quick_tap_ms = <0>;
+            flavor = "tap-preferred";
+            bindings = <&mo>, <&sk>;
+        };
+
         lr: layer_repeat {
             compatible = "zmk,behavior-hold-tap";
             label = "LAYER_REPEAT";
@@ -181,12 +191,6 @@
         main_layer {
             label = "MAIN";
             bindings = <
-//    [Q]                 [/]
-//   X W M P B        J K , . '
-//   N R S T G        V H A I O
-//     C F D            L U Y 
-//    [Z]
-//                    E
 // ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮   ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮
      &kp W         &kp F         &kp G         &kp D         &kp B             &kp X         &kp L         &kp U         &kp Y         &kp SQT
 // ├──── ─────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
@@ -194,31 +198,25 @@
 // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
                    &kp C         &kp M         &kp P                                         &kp V         &kp COMMA     &kp DOT
 // ╰─────────────┴─────────────┴─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┴─────────────┴─────────────╯
-                                               &mo NAV       &kp SPACE         &mt LSHFT E   &mo SYM 
+                                               &lr FUN 0     &lt NAV SPACE     &lt SYM E     &sk LSHFT
 //                             ╰─────────────┴─────────────┴─────────────╯   ╰─────────────┴─────────────┴─────────────╯
             >;
-        };   
+        };
 
-// w f g d b  x l u y '
-// r s t h k  j n a i o
-//   c m p      v , . 
-//            e 
-
-// w c m p k  x v , . '
-// r s t h b  j n a i o
-//   f g d      l u y 
-//            e 
+// v c m p k         x w , . rpt
+// r s t h b         j n a i o
+//   f g d             l u y 
         alt_layer {
             label = "ALT";
             bindings = <
 // ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮   ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮
-     &kp V         &kp C         &kp M         &kp P         &kp K             &kp X         &kp W         &kp COMMA     &kp DOT       &kp SQT
+     &kp W         &kp C         &kp M         &kp P         &kp K             &kp X         &kp V         &kp COMMA     &kp DOT       &kp SQT
 // ├──── ─────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
      &hml LGUI R   &hml LALT S   &hml LCTRL T  &hml LSHFT H  &kp B             &kp J         &hmr RSHFT N  &hmr RCTRL A  &hmr RALT I   &hmr RGUI O     
 // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
                    &kp F         &kp G         &kp D                                         &kp L         &kp U         &kp Y
 // ╰─────────────┴─────────────┴─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┴─────────────┴─────────────╯
-                                               &lr FUN 0     &lt NAV SPACE     &mt LSHFT E   &mo SYM 
+                                               &lr FUN 0     &lt NAV SPACE     &lt SYM E     &sk LSHFT
 //                             ╰─────────────┴─────────────┴─────────────╯   ╰─────────────┴─────────────┴─────────────╯
             >;
         };
