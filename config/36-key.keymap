@@ -117,18 +117,14 @@
     main_layer {
             label = "MAIN";
             bindings = <
-//   ; W F P -        _ L U Y '
-//   N R S T G        K H A I O
-//   X V C D B        J M , . /
-//    [Q][Z]
 // ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮   ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮
-     &kp SEMI      &kp W         &kp F         &kp P         &kp MINUS         &kp UNDER     &kp L         &kp U         &kp Y         &kp SQT
+     &kp W         &kp C         &kp M         &kp P         &none             &none         &kp V         &kp COMMA     &kp DOT       &kp SQT
 // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-     &kp N         &kp R         &kp S         &kp T         &kp G             &kp K         &kp H         &kp A         &kp I         &kp O
+     &kp N         &hml LALT S   &hml LCTRL T  &hml LSHFT H  &kp K             &kp J         &hmr RSHFT N  &hmr RCTRL A  &hmr RALT I   &hmr RGUI O 
 // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-     &kp X         &kp V         &kp C         &kp D         &kp B             &kp J         &kp M         &kp COMMA     &kp DOT       &kp SEMI
+     &none         &kp F         &kp G         &kp           &kp B             &kp X         &kp L         &kp U         &kp Y         &none
 // ╰─────────────┴─────────────┴─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┴─────────────┴─────────────╯
-                                 &sk LSHIFT    &lt NAV SPC   &lr FUN 0         &lr FUN 0     &mt LSHIFT E  &mo_sym 
+                                 &lr FUN 0     &lt NAV SPACE &none             &none         &lt SYM E     &sk LSHFT 
 //                             ╰─────────────┴─────────────┴─────────────╯   ╰─────────────┴─────────────┴─────────────╯
             >;
    };
@@ -136,11 +132,6 @@
     alt_layer {
             label = "ALT";
             bindings = <
-//   - W M P Q        Z K , . ;
-//   R S N T G        V H A I O
-//   X C F D B        J L U Y '
-//                        [/]
-//                    E
 // ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮   ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮
      &kp MINUS     &kp W         &kp M         &kp P         &kp Q             &kp Z         &kp K         &kp COMMA     &kp DOT       &kp SEMI
 // ├────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
@@ -157,13 +148,13 @@
             label = "NAV";
             bindings = <
 // ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮   ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮
-     &kp ESC       CLOSE         NEW_TAB       U_UNDO        U_REDO            COMMAND       &kp DEL       &kp UP        DUPLICATE     WIN_SWAP
+     &kp ESC       CLOSE         NEW_TAB       U_UNDO        &none             &none         &kp DEL       &kp UP        DUPLICATE     WIN_SWAP
 // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-     SK(LGUI)      SK(LALT)      SK(LCTRL)     SK(LSHFT)     SELECT_ALL        FIND          &kp LEFT      &kp DOWN      &kp RIGHT     APP_SWAP        
+     SK(LGUI)      SK(LALT)      SK(LCTRL)     SK(LSHFT)     U_REDO            COMMAND       &kp LEFT      &kp DOWN      &kp RIGHT     APP_SWAP        
 // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-     &none         U_CUT         U_CPY         U_PST         SS_TARGETED       &none         &kp BSPC      &kp RET       &kp TAB       UNTAB                             
+     &none         U_CUT         U_CPY         U_PST         SELECT_ALL        FIND          &kp BSPC      &kp RET       &kp TAB       &none                             
 // ╰─────────────┴─────────────┴─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┴─────────────┴─────────────╯
-                                 &trans        &trans        &trans            &trans        &kp SPC       ALFRED
+                                 &trans        &trans        &trans            &trans        ALFRED        &trans
 //                             ╰─────────────┴─────────────┴─────────────╯   ╰─────────────┴─────────────┴─────────────╯
             >;
         };
@@ -172,13 +163,13 @@
             label = "SYM";
             bindings = <
 // ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮   ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮
-     &kp GRAVE      &kp N7        &kp N8        &kp N9       &none             &codeblock    &kp PLUS      &kp UNDER     &kp PIPE      &kp TILDE
+     &kp GRAVE      &kp N7        &kp N8        &kp N9       &none             &none         &kp HASH      &kp AMPS      &kp PIPE      &kp TILDE
 // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼──────────────┼─────────────┼────────────┼─────────────┤
-     &kp EQUAL      &kp N4        &kp N5        &kp N6       &kp COMMA         &func         SK(RSHFT)     SK(RCTRL)     SK(RALT)      SK(RGUI)
+     &kp EQUAL      &kp N4        &kp N5        &kp N6       &kp STAR          &codeblock    &hmr RSHFT MINUS &hmr RCTRL UNDER &hmr RALT COLON &hmr RGUI SEMI
 // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-     &none          &kp N1        &kp N2        &kp N3       &kp DOT           &none         &kp COLON     &kp SEMI      &kp BSLH      &none                 
+     &none          &kp N1        &kp N2        &kp N3       &kp PLUS          &func         &kp BSLH       &kp COMMA     &kp DOT      &none                 
 // ╰─────────────┴─────────────┴─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┴─────────────┴─────────────╯
-                                  &kp N0        &trans       &trans            &trans        &trans        &trans
+                                  &trans        &kp N0       &trans            &trans        &trans        &trans
 //                             ╰─────────────┴─────────────┴─────────────╯   ╰─────────────┴─────────────┴─────────────╯
             >;
         };
