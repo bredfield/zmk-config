@@ -6,10 +6,10 @@
 // Layer aliases
 #define MAIN 0
 #define ALT  1
-#define NAV 2
-#define SYM 3
-#define FUN 4
-#define KEY 5
+#define NAV  2
+#define SYM  3
+#define FUN  4
+#define KEY  5
 
 // Desktop and tab navigation shortcuts
 #define SS_TARGETED &kp LG(LS(N4))
@@ -19,7 +19,6 @@
 #define WIN_FULL    &kp LA(LC(RET))
 #define SELECT_ALL  &kp LG(A)
 #define NEW_TAB     &kp LG(T)
-#define UNTAB       &kp LS(TAB)
 #define FIND        &kp LG(F)
 #define COMMAND     &kp LG(K)
 #define U_UNDO      &kp LG(Z)
@@ -34,11 +33,19 @@
 #define ALFRED      &kp LG(SPC)
 #define DUPLICATE   &kp LG(D)
 
-#define SK(KEY) &nk KEY KEY
+
 #include "36-key-combos.dtsi"
 
-&caps_word {
-    continue-list = <BACKSPACE UNDERSCORE MINUS N1 N2 N3 N4 N5 N6 N7 N8 N9 N0>;
+#define SK(KEY) &nk KEY KEY
+
+/* Key Position Groups */
+#define KEYS_L 0 1 2 3 4 10 11 12 13 14 20 21 22 23 24  // left-hand keys
+#define KEYS_R 5 6 7 8 9 15 16 17 18 19 25 26 27 28 29  // right-hand keys
+#define THUMBS 30 31 32 33 34 35                        // thumb keys
+
+/* Behavior Settings */
+&sl {
+  release-after-ms = <250>;
 };
 
 &sk { 
@@ -46,17 +53,29 @@
   quick-release;
 };
 
+&caps_word {
+    continue-list = <BACKSPACE UNDERSCORE MINUS N1 N2 N3 N4 N5 N6 N7 N8 N9 N0>;
+};
+
 &lt {
- tapping-term-ms = <150>;
+ tapping-term-ms = <175>;
  flavor = "balanced";
 };
 
 &mt {
- tapping-term-ms = <150>;
+ tapping-term-ms = <175>;
  flavor = "balanced";
 };
 
-/ {
+/ { 
+    // conditional_layers {
+    // compatible = "zmk,conditional-layers";
+    // tri_layer {
+    //         if-layers = <2 3>;
+    //         then-layer = <4>;
+    //     };
+    // };
+
     behaviors {
         ZMK_MACRO(codeblock,
             wait-ms = <0>;
@@ -90,59 +109,115 @@
             , <&macro_release &mo SYM>;
         )
 
+          hml: home-row-left {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HOME_ROW_LEFT";
+            #binding-cells = <2>;
+            flavor = "balanced";
+            tapping-term-ms = <280>;
+            quick-tap-ms = <175>;                // double tapping same key allows for repeating
+            global-quick-tap-ms = <125>;         // without PR #1387 use global-quick-tap instead
+            bindings = <&kp>, <&kp>;
+            hold-trigger-key-positions = <KEYS_R THUMBS>;
+            hold-trigger-on-release;             // requires PR #1423
+        };
+
+        hmr: home-row-right {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HOME_ROW_RIGHT";
+            #binding-cells = <2>;
+            flavor = "balanced";
+            tapping-term-ms = <280>;
+            quick-tap-ms = <175>;                // double tapping same key allows for repeating
+            global-quick-tap-ms = <125>;         // without PR #1387 use global-quick-tap instead
+            bindings = <&kp>, <&kp>;
+            hold-trigger-key-positions = <KEYS_L THUMBS>;
+            hold-trigger-on-release;             // requires PR #1423
+        };
+
         // Sticky key on tap, normal key on hold
         // Useful for modifier-clicking without the modifier remaining active
         nk: not_so_sticky_key {
             compatible = "zmk,behavior-hold-tap";
             label = "NOT_SO_STICKY_KEY";
             #binding-cells = <2>;
-            tapping_term_ms = <150>;
-            flavor = "balanced";
+            tapping_term_ms = <200>;
+            flavor = "tap-preferred";
             bindings = <&kp>, <&sk>;
+        };
+
+        lst: layer_sticky_tap {
+            compatible = "zmk,behavior-hold-tap";
+            label = "LAYER_STICKY_TAP";
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+            quick_tap_ms = <0>;
+            flavor = "tap-preferred";
+            bindings = <&mo>, <&sk>;
         };
 
         lr: layer_repeat {
             compatible = "zmk,behavior-hold-tap";
             label = "LAYER_REPEAT";
             #binding-cells = <2>;
-            tapping_term_ms = <150>;
+            tapping_term_ms = <200>;
+            quick-tap-ms = <175>;
             flavor = "balanced";
             bindings = <&mo>, <&key_repeat>;
+        };
+
+        spaceunder: space_under {
+            compatible = "zmk,behavior-mod-morph";
+            label = "SPACE_UNDER";
+            #binding-cells = <0>;
+            bindings = <&kp SPC>, <&kp UNDER>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        ltsu: layer_tap_space_under {
+            compatible = "zmk,behavior-hold-tap";
+            label = "LAYER_TAP_SPACE";
+            #binding-cells = <2>;
+            tapping_term_ms = <200>;
+            quick-tap-ms = <175>;
+            flavor = "balanced";
+            bindings = <&mo>, <&spaceunder>;
         };
     };
 
     keymap {
         compatible = "zmk,keymap";    
 
-    main_layer {
+        main_layer {
             label = "MAIN";
             bindings = <
 // ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮   ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮
-     &kp W         &kp C         &kp M         &kp P         &none             &none         &kp V         &kp COMMA     &kp DOT       &kp SQT
+     &kp W         &kp F         &kp M         &kp P         &none             &kp J         &kp V         &kp COMMA     &kp DOT       &kp SQT
 // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-     &kp N         &hml LALT S   &hml LCTRL T  &hml LSHFT H  &kp K             &kp J         &hmr RSHFT N  &hmr RCTRL A  &hmr RALT I   &hmr RGUI O 
+     &hml LGUI R   &hml LALT S   &hml LCTRL T  &hml LSHFT H  &kp B             &kp X         &hmr RSHFT N  &hmr RCTRL A  &hmr RALT I   &hmr RGUI O      
 // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-     &none         &kp F         &kp G         &kp           &kp B             &kp X         &kp L         &kp U         &kp Y         &none
+     &none         &kp C         &kp G         &kp D         &kp K             &none         &kp L         &kp U         &kp Y         &none   
 // ╰─────────────┴─────────────┴─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┴─────────────┴─────────────╯
-                                 &lr FUN 0     &lt NAV SPACE &none             &none         &lt SYM E     &sk LSHFT 
+                                               &lr FUN 0     &lt NAV SPACE     &lt SYM E     &sk LSHFT
 //                             ╰─────────────┴─────────────┴─────────────╯   ╰─────────────┴─────────────┴─────────────╯
             >;
-   };
+        };
 
-    alt_layer {
+
+        alt_layer {
             label = "ALT";
             bindings = <
 // ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮   ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮
-     &kp MINUS     &kp W         &kp M         &kp P         &kp Q             &kp Z         &kp K         &kp COMMA     &kp DOT       &kp SEMI
-// ├────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-     &kp R         &kp S         &kp N         &kp T         &kp G             &kp V         &kp H         &kp A         &kp I         &kp O
+     &kp V         &kp W         &kp F         &kp P         &none             &none         &kp M         &kp COMMA     &kp DOT       &kp SQT
+// ├──── ─────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
+     &hml LGUI R   &hml LALT S   &hml LCTRL T  &hml LSHFT H  &kp B             &kp J         &hmr RSHFT N  &hmr RCTRL A  &hmr RALT I   &hmr RGUI O     
 // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-     &kp X         &kp C         &kp F         &kp D         &kp B             &kp J         &kp L         &kp U         &kp Y         &kp SQT
+     &none         &kp C         &kp G         &kp D         &kp K             &kp X         &kp L         &kp U         &kp Y         &none
 // ╰─────────────┴─────────────┴─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┴─────────────┴─────────────╯
-                                 &sk LSHIFT    &lt NAV SPC   &lr FUN 0         &lr FUN 0     &mt LSHIFT E  &mo_sym 
+                                               &lr FUN 0     &lt NAV SPACE     &lt SYM E     &sk LSHFT
 //                             ╰─────────────┴─────────────┴─────────────╯   ╰─────────────┴─────────────┴─────────────╯
             >;
-   };
+        };
 
         nav_layer {
             label = "NAV";

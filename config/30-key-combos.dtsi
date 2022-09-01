@@ -34,7 +34,6 @@
     COMBO(at,       &kp AT,       2 3,   MAIN ALT SYM NAV, COMBO_TERM_NORMAL)
     COMBO(dqt,      &kp DQT,      7 8,   MAIN ALT SYM NAV, COMBO_TERM_NORMAL)
     COMBO(slash,    &kp SLASH,    6 7,   MAIN ALT SYM NAV, COMBO_TERM_NORMAL)
-    COMBO(hash,     &kp HASH,     21 22, MAIN ALT SYM NAV, COMBO_TERM_NORMAL)
     COMBO(excl,     &kp EXCL,     23 24, MAIN ALT SYM NAV, COMBO_TERM_NORMAL)
     COMBO(qmark,    &kp QMARK,    24 25, MAIN ALT SYM NAV, COMBO_TERM_NORMAL)
 

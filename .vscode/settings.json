@@ -1,0 +1,7 @@
+{
+  "files.associations": {
+    "*.keymap": "c",
+    "*.overlay": "c",
+    "*.dtsi": "c"
+  }
+}

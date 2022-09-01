@@ -22,30 +22,28 @@
   combos {
     compatible = "zmk,combos";
 
+    // missing alphas 
+    COMBO(q,        &kp Q,        1 2,   MAIN ALT SYM NAV, COMBO_TERM_NORMAL)
+    COMBO(z,        &kp Z,        21 22, MAIN ALT SYM NAV, COMBO_TERM_NORMAL)
+
     // functions + clipboard + history
-    COMBO(repeat,   &key_repeat,  1 3,   MAIN ALT SYM NAV, COMBO_TERM_SLOW)   // h ,
-    COMBO(capsword, &caps_word,   13 16, MAIN ALT SYM NAV, COMBO_TERM_SLOW)   // t n       
-    COMBO(cut,      U_CUT,        11 21, MAIN ALT SYM NAV, COMBO_TERM_SLOW)   // r x
-    COMBO(copy,     U_CPY,        12 22, MAIN ALT SYM NAV, COMBO_TERM_SLOW)   // s c
-    COMBO(paste,    U_PST,        13 23, MAIN ALT SYM NAV, COMBO_TERM_SLOW)   // t d 
-  
-    // common symbols
-    COMBO(dqt,      &kp DQT,      1 2,   MAIN ALT SYM NAV, COMBO_TERM_NORMAL) // w f
-    COMBO(at,       &kp AT,       2 3,   MAIN ALT SYM NAV, COMBO_TERM_NORMAL) // v c
-    COMBO(eql,      &kp EQL,      6 7,   MAIN ALT SYM NAV, COMBO_TERM_NORMAL) // h ,
-    COMBO(slash,    &kp SLASH,    7 8,   MAIN ALT SYM NAV, COMBO_TERM_NORMAL) // , .
-    COMBO(colon,    &kp COLON,    16 26, MAIN ALT SYM NAV, COMBO_TERM_NORMAL) // n h
-    COMBO(semi,     &kp SEMI,     17 27, MAIN ALT SYM NAV, COMBO_TERM_NORMAL) // , e
-    COMBO(hash,     &kp HASH,     22 23, MAIN ALT SYM NAV, COMBO_TERM_NORMAL) // w f
-    COMBO(excl,     &kp EXCL,     26 27, MAIN ALT SYM NAV, COMBO_TERM_NORMAL) // l u
-    COMBO(qmark,    &kp QMARK,    27 28, MAIN ALT SYM NAV, COMBO_TERM_NORMAL) // u y
- 
+    COMBO(bspc,     &kp BSPC,     14 24,  MAIN ALT SYM NAV, COMBO_TERM_SLOW)  
+    COMBO(capslock, &kp CAPS,     1 3,   MAIN ALT SYM NAV, COMBO_TERM_SLOW)  
+    COMBO(capsword, &caps_word,   6 8,   MAIN ALT SYM NAV, COMBO_TERM_SLOW)         
+
+    // common symbols  
+    COMBO(at,       &kp AT,       2 3,   MAIN ALT SYM NAV, COMBO_TERM_NORMAL)
+    COMBO(dqt,      &kp DQT,      7 8,   MAIN ALT SYM NAV, COMBO_TERM_NORMAL)
+    COMBO(slash,    &kp SLASH,    6 7,   MAIN ALT SYM NAV, COMBO_TERM_NORMAL)
+    COMBO(excl,     &kp EXCL,     26 27, MAIN ALT SYM NAV, COMBO_TERM_NORMAL)
+    COMBO(qmark,    &kp QMARK,    27 28, MAIN ALT SYM NAV, COMBO_TERM_NORMAL)
+
     // brackets 
-    COMBO(lbkt,     &kp LBKT,     1 11,  MAIN ALT SYM NAV, COMBO_TERM_NORMAL) // w r
-    COMBO(lpar,     &kp LPAR,     2 12,  MAIN ALT SYM NAV, COMBO_TERM_NORMAL) // p t
-    COMBO(lbrc,     &kp LBRC,     3 13,  MAIN ALT SYM NAV, COMBO_TERM_NORMAL) // s f
-    COMBO(rbrc,     &kp RBRC,     6 16,  MAIN ALT SYM NAV, COMBO_TERM_NORMAL) // u e
-    COMBO(rpar,     &kp RPAR,     7 17,  MAIN ALT SYM NAV, COMBO_TERM_NORMAL) // l n
-    COMBO(rbkt,     &kp RBKT,     8 18,  MAIN ALT SYM NAV, COMBO_TERM_NORMAL) // y i
+    COMBO(lbkt,     &kp LBKT,     1 11,  MAIN ALT SYM NAV, COMBO_TERM_NORMAL)
+    COMBO(lpar,     &kp LPAR,     2 12,  MAIN ALT SYM NAV, COMBO_TERM_NORMAL)
+    COMBO(lbrc,     &kp LBRC,     3 13,  MAIN ALT SYM NAV, COMBO_TERM_NORMAL)
+    COMBO(rbrc,     &kp RBRC,     6 16,  MAIN ALT SYM NAV, COMBO_TERM_NORMAL)
+    COMBO(rpar,     &kp RPAR,     7 17,  MAIN ALT SYM NAV, COMBO_TERM_NORMAL)
+    COMBO(rbkt,     &kp RBKT,     8 18,  MAIN ALT SYM NAV, COMBO_TERM_NORMAL)
   };
 };
