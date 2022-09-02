@@ -116,7 +116,7 @@
             flavor = "balanced";
             tapping-term-ms = <280>;
             quick-tap-ms = <175>;                // double tapping same key allows for repeating
-            global-quick-tap-ms = <125>;         // without PR #1387 use global-quick-tap instead
+            global-quick-tap-ms = <100>;         // without PR #1387 use global-quick-tap instead
             bindings = <&kp>, <&kp>;
             hold-trigger-key-positions = <KEYS_R THUMBS>;
             hold-trigger-on-release;             // requires PR #1423
@@ -129,7 +129,7 @@
             flavor = "balanced";
             tapping-term-ms = <280>;
             quick-tap-ms = <175>;                // double tapping same key allows for repeating
-            global-quick-tap-ms = <125>;         // without PR #1387 use global-quick-tap instead
+            global-quick-tap-ms = <100>;         // without PR #1387 use global-quick-tap instead
             bindings = <&kp>, <&kp>;
             hold-trigger-key-positions = <KEYS_L THUMBS>;
             hold-trigger-on-release;             // requires PR #1423
@@ -208,11 +208,11 @@
             label = "ALT";
             bindings = <
 // ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮   ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮
-     &kp V         &kp W         &kp F         &kp P         &none             &none         &kp M         &kp COMMA     &kp DOT       &kp SQT
+     &kp X         &kp W          &kp F         &kp P         &none             &none         &kp V         &kp COMMA     &kp DOT       &kp SQT
 // ├──── ─────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-     &hml LGUI R   &hml LALT S   &hml LCTRL T  &hml LSHFT H  &kp B             &kp J         &hmr RSHFT N  &hmr RCTRL A  &hmr RALT I   &hmr RGUI O     
+     &hml LGUI R   &hml LALT S    &hml LCTRL T  &hml LSHFT H  &kp B             &kp M         &hmr RSHFT N  &hmr RCTRL A  &hmr RALT I   &hmr RGUI O     
 // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-     &none         &kp C         &kp G         &kp D         &kp K             &kp X         &kp L         &kp U         &kp Y         &none
+     &none         &kp C          &kp G         &kp D         &kp K             &kp J         &kp L         &kp U         &kp Y         &none
 // ╰─────────────┴─────────────┴─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┴─────────────┴─────────────╯
                                   &lr FUN 0     &lt NAV SPACE &sk LSHFT         &sk LSHFT     &lt SYM E     &lr FUN 0
 //                             ╰─────────────┴─────────────┴─────────────╯   ╰─────────────┴─────────────┴─────────────╯
