@@ -193,10 +193,6 @@
 //   c g d             l u y 
 //                   e    
 
-// v f m p b         j x , . '
-// r s t h K         w n a i o
-//   c g d             l u y 
-//                   e
         main_layer {
             label = "MAIN";
             bindings = <
@@ -212,6 +208,10 @@
             >;
         };
 
+// x w f p b         j v , . '
+// r s t h K         m n a i o
+//   c g d             l u y 
+//                   e
         alt_layer {
             label = "ALT";
             bindings = <

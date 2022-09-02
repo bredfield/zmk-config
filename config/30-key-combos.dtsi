@@ -7,16 +7,18 @@
   ╰───────────╮ 26  27 │ │ 28  29 ╭───────────╯
               ╰────────╯ ╰────────╯            */
 
-#define COMBO(NAME, BINDINGS, KEYPOS, LAYERS, TERM) \
-        combo_##NAME { \
-            timeout-ms = <TERM>; \
-            bindings = <BINDINGS>; \
-            key-positions = <KEYPOS>; \
-            layers = <LAYERS>; \
-        };
+#define COMBO(NAME, BINDINGS, KEYPOS, LAYERS) \
+  combo_##NAME { \
+    bindings = <BINDINGS>; \
+    timeout-ms = <30>; \
+    key-positions = <KEYPOS>; \
+    layers = <LAYERS>; \
+    global-quick-tap-ms = <150>; \
+  };
 
 #define COMBO_TERM_NORMAL 20
-#define COMBO_TERM_SLOW 50
+#define COMBO_TERM_SLOW 35
+
 / {
   combos {
     compatible = "zmk,combos"; 
@@ -29,6 +31,8 @@
     COMBO(bspc,     &kp BSPC,     4 14,  MAIN ALT SYM NAV, COMBO_TERM_SLOW)  
     COMBO(capslock, &kp CAPS,     1 3,   MAIN ALT SYM NAV, COMBO_TERM_SLOW)  
     COMBO(capsword, &caps_word,   6 8,   MAIN ALT SYM NAV, COMBO_TERM_SLOW)         
+    COMBO(repeatl,  &repeat,      12 13, MAIN ALT SYM NAV, COMBO_TERM_SLOW)         
+    COMBO(repeatr,  &repeat,      16 17, MAIN ALT SYM NAV, COMBO_TERM_SLOW)         
 
     // common symbols  
     COMBO(at,       &kp AT,       2 3,   MAIN ALT SYM NAV, COMBO_TERM_NORMAL)
