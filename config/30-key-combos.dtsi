@@ -7,10 +7,10 @@
   ╰───────────╮ 26  27 │ │ 28  29 ╭───────────╯
               ╰────────╯ ╰────────╯            */
 
-#define COMBO(NAME, BINDINGS, KEYPOS, LAYERS) \
+#define COMBO(NAME, BINDINGS, KEYPOS, LAYERS, TIMEOUT) \
   combo_##NAME { \
     bindings = <BINDINGS>; \
-    timeout-ms = <30>; \
+    timeout-ms = <TIMEOUT>; \
     key-positions = <KEYPOS>; \
     layers = <LAYERS>; \
     global-quick-tap-ms = <150>; \
