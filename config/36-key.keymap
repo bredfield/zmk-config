@@ -203,7 +203,6 @@
             >;
         };
 
-
         alt_layer {
             label = "ALT";
             bindings = <
