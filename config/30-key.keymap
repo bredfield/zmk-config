@@ -116,7 +116,7 @@
             flavor = "balanced";
             tapping-term-ms = <280>;
             quick-tap-ms = <175>;                // double tapping same key allows for repeating
-            global-quick-tap-ms = <125>;         // without PR #1387 use global-quick-tap instead
+            global-quick-tap-ms = <80>;         // without PR #1387 use global-quick-tap instead
             bindings = <&kp>, <&kp>;
             hold-trigger-key-positions = <KEYS_R THUMBS>;
             hold-trigger-on-release;             // requires PR #1423
@@ -129,7 +129,7 @@
             flavor = "balanced";
             tapping-term-ms = <280>;
             quick-tap-ms = <175>;                // double tapping same key allows for repeating
-            global-quick-tap-ms = <125>;         // without PR #1387 use global-quick-tap instead
+            global-quick-tap-ms = <80>;         // without PR #1387 use global-quick-tap instead
             bindings = <&kp>, <&kp>;
             hold-trigger-key-positions = <KEYS_L THUMBS>;
             hold-trigger-on-release;             // requires PR #1423
@@ -188,18 +188,18 @@
     keymap {
         compatible = "zmk,keymap";
 
-// v f m p b         j x , . '
-// r s t h K         w n a i o
+// x w f p b         j v , . '
+// r s t h K         m n a i o 
 //   c g d             l u y 
-//                   e    
+//                   e
 
         main_layer {
             label = "MAIN";
             bindings = <
 // ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮   ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮
-     &kp W         &kp F         &kp M         &kp P         &kp B             &kp J         &kp V         &kp COMMA     &kp DOT       &kp SQT
+     &kp X         &kp W         &kp F         &kp P         &kp B             &kp J         &kp V         &kp COMMA     &kp DOT       &kp SQT
 // ├──── ─────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-     &hml LGUI R   &hml LALT S   &hml LCTRL T  &hml LSHFT H  &kp K             &kp X         &hmr RSHFT N  &hmr RCTRL A  &hmr RALT I   &hmr RGUI O     
+     &hml LGUI R   &hml LALT S   &hml LCTRL T  &hml LSHFT H  &kp K             &kp M         &hmr RSHFT N  &hmr RCTRL A  &hmr RALT I   &hmr RGUI O     
 // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
                    &kp C         &kp G         &kp D                                         &kp L         &kp U         &kp Y
 // ╰─────────────┴─────────────┴─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┴─────────────┴─────────────╯
@@ -208,18 +208,17 @@
             >;
         };
 
-// x w f p b         j v , . '
-// r s t h K         m n a i o 
+// v f m p b         j x , . '
+// r s t h K         w n a i o
 //   c g d             l u y 
-//                   e
-
+//                   e    
         alt_layer {
             label = "ALT";
             bindings = <
 // ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮   ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮
-     &kp X         &kp W         &kp F         &kp P         &kp B             &kp J         &kp V         &kp COMMA     &kp DOT       &kp SQT
+     &kp W         &kp F         &kp M         &kp P         &kp B             &kp J         &kp V         &kp COMMA     &kp DOT       &kp SQT
 // ├──── ─────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-     &hml LGUI R   &hml LALT S   &hml LCTRL T  &hml LSHFT H  &kp K             &kp M         &hmr RSHFT N  &hmr RCTRL A  &hmr RALT I   &hmr RGUI O     
+     &hml LGUI R   &hml LALT S   &hml LCTRL T  &hml LSHFT H  &kp K             &kp X         &hmr RSHFT N  &hmr RCTRL A  &hmr RALT I   &hmr RGUI O     
 // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
                    &kp C         &kp G         &kp D                                         &kp L         &kp U         &kp Y
 // ╰─────────────┴─────────────┴─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┴─────────────┴─────────────╯
@@ -234,11 +233,11 @@
 // ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮   ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮
      &kp ESC       CLOSE         NEW_TAB       U_UNDO        U_REDO            COMMAND       &kp DEL       &kp UP        DUPLICATE     WIN_SWAP
 // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-     SK(LGUI)      SK(LALT)      SK(LCTRL)     SK(LSHFT)     ALFRED            FIND          &kp LEFT      &kp DOWN      &kp RIGHT     APP_SWAP        
+     SK(LGUI)      SK(LALT)      SK(LCTRL)     SK(LSHFT)     SELECT_ALL        FIND          &kp LEFT      &kp DOWN      &kp RIGHT     APP_SWAP        
 // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
                    U_CUT         U_CPY         U_PST                                         &kp BSPC      &kp RET       &kp TAB                           
 // ╰─────────────┴─────────────┴─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┴─────────────┴─────────────╯
-                                               &trans        &trans            &kp MINUS     &trans
+                                               &trans        &trans            ALFRED        &trans
 //                             ╰─────────────┴─────────────┴─────────────╯   ╰─────────────┴─────────────┴─────────────╯
             >;
         };
