@@ -26,11 +26,14 @@
     // missing alphas 
     COMBO(q,        &kp Q,        1 2,   MAIN ALT SYM NAV, COMBO_TERM_NORMAL)
     COMBO(z,        &kp Z,        20 21, MAIN ALT SYM NAV, COMBO_TERM_NORMAL)
+    
+    // common *grams
+    COMBO(you,      &you,         21 22, MAIN ALT SYM NAV, COMBO_TERM_NORMAL)
 
     // functions + clipboard + history
     COMBO(bspc,     &kp BSPC,     4 14,  MAIN ALT SYM NAV, COMBO_TERM_SLOW)  
-    COMBO(capslock, &kp CAPS,     11 13,   MAIN ALT SYM NAV, COMBO_TERM_SLOW)  
-    COMBO(capsword, &caps_word,   16 18,   MAIN ALT SYM NAV, COMBO_TERM_SLOW)         
+    COMBO(capslock, &kp CAPS,     11 13, MAIN ALT SYM NAV, COMBO_TERM_SLOW)  
+    COMBO(capsword, &caps_word,   16 18, MAIN ALT SYM NAV, COMBO_TERM_SLOW)         
     COMBO(shiftl,   &sk LSHFT,    12 13, MAIN ALT SYM NAV, COMBO_TERM_SLOW)
     COMBO(shiftr,   &sk LSHFT,    16 17, MAIN ALT SYM NAV, COMBO_TERM_SLOW)         
 

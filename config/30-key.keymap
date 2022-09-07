@@ -33,8 +33,6 @@
 #define ALFRED      &kp LG(SPC)
 #define DUPLICATE   &kp LG(D)
 
-#include "30-key-combos.dtsi"
-
 #define SK(KEY) &nk KEY KEY
 
 /* Key Position Groups */
@@ -87,6 +85,12 @@
             wait-ms = <0>;
             tap-ms = <0>;
             bindings = <&macro_tap &kp EQUAL &kp GT>;
+        )
+        
+        ZMK_MACRO(you,
+            wait-ms = <0>;
+            tap-ms = <0>;
+            bindings = <&macro_tap &kp Y &kp O &kp U>;
         )
 
         ZMK_MACRO(mo_nav,
@@ -188,11 +192,12 @@
     keymap {
         compatible = "zmk,keymap";
 //   [q]
-// x w f p b         j v , . '
+// v w f p b         j x , . '
 // r s t h k         m n a i o 
 //   c g d             l u y 
 //   [z]  
 //                   e
+
 
         main_layer {
             label = "MAIN";
@@ -289,3 +294,5 @@
         };
     };
 };
+
+#include "30-key-combos.dtsi"
