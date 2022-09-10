@@ -229,11 +229,13 @@
 //                             ╰─────────────┴─────────────┴─────────────╯   ╰─────────────┴─────────────┴─────────────╯
             >;
         };
-
+//   [q]
 // w f m p g         , v x j k
 // r s n t b         . h a i rpt
 //   c l d             u o y 
-//                   e
+//   [z]                   
+// ['/fun][spc/nav]  ['e/sym][oss]
+
         alt2_layer {
             label = "ALT2";
             bindings = <
