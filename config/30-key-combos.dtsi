@@ -26,6 +26,7 @@
     // missing alphas 
     COMBO(q,        &kp Q,        1 2,   MAIN ALT SYM NAV, COMBO_TERM_NORMAL)
     COMBO(z,        &kp Z,        20 21, MAIN ALT SYM NAV, COMBO_TERM_NORMAL)
+    COMBO(z,        &kp Z,        20 22, MAIN ALT SYM NAV, COMBO_TERM_NORMAL)
     
     // common *grams
     COMBO(you,      &you,         21 22, MAIN ALT SYM NAV, COMBO_TERM_NORMAL)
