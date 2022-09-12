@@ -207,6 +207,13 @@
             >;
         };
 
+
+// w f m p v     j v , . '
+// r s n t g     k h a i rpt
+// q c l d b     z u o y k         
+
+// ['/fun][spc/nav]  [e/sym][oss]
+
         alt_layer {
             label = "ALT";
             bindings = <
