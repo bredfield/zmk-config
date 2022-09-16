@@ -192,24 +192,18 @@
     keymap {
         compatible = "zmk,keymap";
 
-// w f m p b         j v , . '
-// r s t h k         m n a i o 
+// v w m p b         j m , . '
+// r s t h k         x n a i o 
 //   c g d             l u y 
 //                   e
 
-
-// v w y p b         j k , . x
-// r s t h g         m n a i rpt 
-//   c f d             l o u 
-//                   e
-// ['/fun][spc/nav]  [e/sym][oss]
-        main_layer {
+    main_layer {
             label = "MAIN";
             bindings = <
 // ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮   ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮
-     &kp X         &kp W         &kp F         &kp P         &kp B             &kp J         &kp V         &kp COMMA     &kp DOT       &kp SQT
+     &kp V         &kp W         &kp M         &kp P         &kp B             &kp J         &kp M         &kp COMMA     &kp DOT       &kp SQT
 // ├──── ─────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-     &hml LGUI R   &hml LALT S   &hml LCTRL T  &hml LSHFT H  &kp K             &kp M         &hmr RSHFT N  &hmr RCTRL A  &hmr RALT I   &hmr RGUI O     
+     &hml LGUI R   &hml LALT S   &hml LCTRL T  &hml LSHFT H  &kp K             &kp X         &hmr RSHFT N  &hmr RCTRL A  &hmr RALT I   &hmr RGUI O     
 // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
                    &kp C         &kp G         &kp D                                         &kp L         &kp U         &kp Y
 // ╰─────────────┴─────────────┴─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┴─────────────┴─────────────╯
