@@ -21,3 +21,5 @@ include:
     shield: berylline_left
   - board: nice_nano_v2
     shield: berylline_right
+  - board: seeeduino_xiao
+    shield: hummingbird
