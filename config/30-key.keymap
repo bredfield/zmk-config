@@ -192,7 +192,10 @@
     keymap {
         compatible = "zmk,keymap";
         
-
+// x w f p b         j m , . '
+// r s t h k         v n a i o 
+//   c g d             l u y 
+//                   e
     main_layer {
             label = "MAIN";
             bindings = <
