@@ -27,23 +27,21 @@
     COMBO(q,        &kp Q,        1 2,   MAIN ALT SYM NAV, COMBO_TERM_NORMAL)
     COMBO(z,        &kp Z,        20 21, MAIN ALT SYM NAV, COMBO_TERM_NORMAL)
     COMBO(v,        &kp V,        20 22, MAIN ALT SYM NAV, COMBO_TERM_NORMAL)
-    
-    // common *grams
+
+    // common *gram
 
     // functions + clipboard + history
     COMBO(bspc,     &kp BSPC,     4 14,  MAIN ALT SYM NAV, COMBO_TERM_SLOW)  
     COMBO(capslock, &kp CAPS,     1 3,   MAIN ALT SYM NAV, COMBO_TERM_SLOW)  
-    COMBO(capsword, &caps_word,   6 8,   MAIN ALT SYM NAV, COMBO_TERM_SLOW)         
-    // COMBO(shiftl,   &sk LSHFT,    12 13, MAIN ALT SYM NAV, COMBO_TERM_SLOW)
-    // COMBO(shiftr,   &sk LSHFT,    16 17, MAIN ALT SYM NAV, COMBO_TERM_SLOW)         
+    COMBO(capsword, &caps_word,   6 8,   MAIN ALT SYM NAV, COMBO_TERM_SLOW)                  
     COMBO(grave,    &kp GRAVE,    21 22, MAIN ALT SYM NAV, COMBO_TERM_NORMAL)
-  
+
     // common symbols  
     COMBO(at,       &kp AT,       2 3,   MAIN ALT SYM NAV, COMBO_TERM_NORMAL)
-    COMBO(dqt,      &kp DQT,      7 8,   MAIN ALT SYM NAV, COMBO_TERM_NORMAL)
-    COMBO(slash,    &kp SLASH,    6 7,   MAIN ALT SYM NAV, COMBO_TERM_NORMAL)
-    COMBO(excl,     &kp EXCL,     23 24, MAIN ALT SYM NAV, COMBO_TERM_NORMAL)
-    COMBO(qmark,    &kp QMARK,    24 25, MAIN ALT SYM NAV, COMBO_TERM_NORMAL)
+    COMBO(dqt,      &kp DQT,      24 25, MAIN ALT SYM NAV, COMBO_TERM_NORMAL)
+    COMBO(slash,    &kp SLASH,    23 24, MAIN ALT SYM NAV, COMBO_TERM_NORMAL)
+    COMBO(excl,     &kp EXCL,     6 7,   MAIN ALT SYM NAV, COMBO_TERM_NORMAL)
+    COMBO(qmark,    &kp QMARK,    7 8,   MAIN ALT SYM NAV, COMBO_TERM_NORMAL)
 
     // brackets 
     COMBO(lbkt,     &kp LBKT,     1 11,  MAIN ALT SYM NAV, COMBO_TERM_SLOW)
