@@ -1,1 +1,7 @@
 #include "../../../30-key.keymap"
+
+/ {
+    chosen {
+        zmk,kscan = &kscan_facedown;
+    };
+};
