@@ -139,6 +139,24 @@
             hold-trigger-on-release;             // requires PR #1423
         };
 
+        as: alpha_shift {
+            compatible = "zmk,behavior-hold-tap";
+            label = "ALPHA_SFT";
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+            quick-tap-ms = <150>;
+            flavor = "tap-preferred";
+            bindings = <&kp>, <&kp>;
+        };
+
+        tdyou: tap_dance_you {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TAP_DANCE_YOU";
+            #binding-cells = <0>;
+            tapping-term-ms = <100>;
+            bindings = <&kp Y>, <&you>;
+        };
+
         // Sticky key on tap, normal key on hold
         // Useful for modifier-clicking without the modifier remaining active
         nk: not_so_sticky_key {
@@ -169,24 +187,6 @@
             flavor = "balanced";
             bindings = <&mo>, <&key_repeat>;
         };
-
-        spaceunder: space_under {
-            compatible = "zmk,behavior-mod-morph";
-            label = "SPACE_UNDER";
-            #binding-cells = <0>;
-            bindings = <&kp SPC>, <&kp UNDER>;
-            mods = <(MOD_LSFT|MOD_RSFT)>;
-        };
-
-        ltsu: layer_tap_space_under {
-            compatible = "zmk,behavior-hold-tap";
-            label = "LAYER_TAP_SPACE";
-            #binding-cells = <2>;
-            tapping_term_ms = <200>;
-            quick-tap-ms = <175>;
-            flavor = "balanced";
-            bindings = <&mo>, <&spaceunder>;
-        };
     };
 
     keymap {
@@ -202,7 +202,7 @@
 // ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮   ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮
      &kp X         &kp W         &kp F         &kp P         &kp B             &kp J         &kp L         &kp U         &kp Y         &kp SQT
 // ├──── ─────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-     &hml LGUI R   &hml LALT S   &hml LCTRL T  &hml LSHFT H  &kp K             &kp V         &hmr RSHFT N  &hmr RCTRL A  &hmr RALT I   &hmr RGUI O     
+     &hml LGUI R   &hml LALT S   &hml LCTRL T  &as H         &kp K             &kp V         &as N         &hmr RCTRL A  &hmr RALT I   &hmr RGUI O     
 // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
                    &kp C         &kp G         &kp D                                         &kp M         &kp COMMA     &kp DOT
 // ╰─────────────┴─────────────┴─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┴─────────────┴─────────────╯
@@ -223,7 +223,7 @@
 // ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮   ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮
      &kp W         &kp F         &kp M         &kp P         &kp G             &kp COMMA      &kp V        &kp SQT     &kp J         &kp K
 // ├──── ─────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-     &hml LGUI R   &hml LALT S   &hml LCTRL N  &hml LSHFT T  &kp B             &kp DOT       &hmr RSHFT A  &hmr RCTRL E  &hmr RALT I   &hmr RGUI H    
+     &hml LGUI R   &hml LALT S   &hml LCTRL N  &as T         &kp B             &kp DOT       &as A         &hmr RCTRL E  &hmr RALT I   &hmr RGUI H    
 // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
                    &kp C         &kp L         &kp D                                         &kp U         &kp O         &kp Y
 // ╰─────────────┴─────────────┴─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┴─────────────┴─────────────╯
