@@ -38,10 +38,10 @@
 
     // common symbols  
     COMBO(at,       &kp AT,       2 3,   MAIN ALT SYM NAV, COMBO_TERM_NORMAL)
-    COMBO(dqt,      &kp DQT,      24 25, MAIN ALT SYM NAV, COMBO_TERM_NORMAL)
+    COMBO(dqt,      &kp DQT,      7 8,   MAIN ALT SYM NAV, COMBO_TERM_NORMAL)
     COMBO(slash,    &kp SLASH,    23 24, MAIN ALT SYM NAV, COMBO_TERM_NORMAL)
     COMBO(excl,     &kp EXCL,     6 7,   MAIN ALT SYM NAV, COMBO_TERM_NORMAL)
-    COMBO(qmark,    &kp QMARK,    7 8,   MAIN ALT SYM NAV, COMBO_TERM_NORMAL)
+    COMBO(qmark,    &kp QMARK,    24 25,   MAIN ALT SYM NAV, COMBO_TERM_NORMAL)
 
     // brackets 
     COMBO(lbkt,     &kp LBKT,     1 11,  MAIN ALT SYM NAV, COMBO_TERM_SLOW)
