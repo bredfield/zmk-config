@@ -24,24 +24,26 @@
     compatible = "zmk,combos"; 
 
     // missing alphas 
-    COMBO(q,        &kp Z,        1 2,   MAIN ALT SYM NAV, COMBO_TERM_NORMAL)
-    COMBO(z,        &kp Q,        20 22, MAIN ALT SYM NAV, COMBO_TERM_NORMAL)
-    COMBO(v,        &kp V,        20 21, MAIN ALT SYM NAV, COMBO_TERM_NORMAL)
+    COMBO(z,        &kp Z,        20 21, MAIN ALT SYM NAV, COMBO_TERM_NORMAL)
+    COMBO(q,        &kp Q,        20 22, MAIN ALT SYM NAV, COMBO_TERM_NORMAL)
+    COMBO(v,        &kp V,        21 22, MAIN ALT SYM NAV, COMBO_TERM_NORMAL)
 
     // common *gram
+    COMBO(you,      &you,         1 3,   MAIN ALT SYM NAV, COMBO_TERM_NORMAL)
 
     // functions + clipboard + history
     COMBO(bspc,     &kp BSPC,     4 14,  MAIN ALT SYM NAV, COMBO_TERM_SLOW)  
-    COMBO(capslock, &kp CAPS,     1 3,   MAIN ALT SYM NAV, COMBO_TERM_SLOW)  
+    COMBO(ret,      &kp RET,      2 13,  MAIN ALT SYM NAV, COMBO_TERM_SLOW)  
+    COMBO(capslock, &kp CAPS,     6 7 8, MAIN ALT SYM NAV, COMBO_TERM_SLOW)  
     COMBO(capsword, &caps_word,   6 8,   MAIN ALT SYM NAV, COMBO_TERM_SLOW)                  
-    COMBO(grave,    &kp GRAVE,    21 22, MAIN ALT SYM NAV, COMBO_TERM_NORMAL)
+    // COMBO(grave,    &kp GRAVE,    21 22, MAIN ALT SYM NAV, COMBO_TERM_NORMAL)
 
     // common symbols  
     COMBO(at,       &kp AT,       2 3,   MAIN ALT SYM NAV, COMBO_TERM_NORMAL)
     COMBO(dqt,      &kp DQT,      7 8,   MAIN ALT SYM NAV, COMBO_TERM_NORMAL)
     COMBO(slash,    &kp SLASH,    23 24, MAIN ALT SYM NAV, COMBO_TERM_NORMAL)
     COMBO(excl,     &kp EXCL,     6 7,   MAIN ALT SYM NAV, COMBO_TERM_NORMAL)
-    COMBO(qmark,    &kp QMARK,    24 25,   MAIN ALT SYM NAV, COMBO_TERM_NORMAL)
+    COMBO(qmark,    &kp QMARK,    24 25, MAIN ALT SYM NAV, COMBO_TERM_NORMAL)
 
     // brackets 
     COMBO(lbkt,     &kp LBKT,     1 11,  MAIN ALT SYM NAV, COMBO_TERM_SLOW)

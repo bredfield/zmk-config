@@ -149,14 +149,6 @@
             bindings = <&kp>, <&kp>;
         };
 
-        tdyou: tap_dance_you {
-            compatible = "zmk,behavior-tap-dance";
-            label = "TAP_DANCE_YOU";
-            #binding-cells = <0>;
-            tapping-term-ms = <100>;
-            bindings = <&kp Y>, <&you>;
-        };
-
         // Sticky key on tap, normal key on hold
         // Useful for modifier-clicking without the modifier remaining active
         nk: not_so_sticky_key {
@@ -196,11 +188,12 @@
 // r s t h k         v n a i o 
 //   c g d             m , .
 //                   e
+
     main_layer {
             label = "MAIN";
             bindings = <
 // ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮   ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮
-     &kp X         &kp W         &kp F         &kp P         &kp B             &kp J         &kp L         &kp U         &tdyou        &kp SQT
+     &kp X         &kp W         &kp F         &kp P         &kp B             &kp J         &kp L         &kp U         &kp Y         &kp SQT
 // ├──── ─────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
      &hml LGUI R   &hml LALT S   &hml LCTRL T  &as LSHFT H   &kp K             &kp V         &as RSHFT N   &hmr RCTRL A  &hmr RALT I   &hmr RGUI O     
 // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
