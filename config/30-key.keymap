@@ -192,6 +192,11 @@
 //   c g d             m , .
 //                   e
 
+// ⟳ w f p b         x v , . '
+// r s t h k         m n a i o 
+//   c g d             l u y 
+//                   e
+
 
     main_layer {
             label = "MAIN";
@@ -277,8 +282,8 @@
         function_layer { 
             label = "MOUSE";
             bindings = <
-     &none         &none   &none  &mkp MB2           &none            &none         &kp PG_DN  &mmv MOVE_UP  &kp PG_UP   &none
 // ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮   ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮
+     &none         &none   &none  &mkp MB2           &none            &none         &kp PG_DN  &mmv MOVE_UP  &kp PG_UP   &none
 // ├─────────────┼───────────┼─────────────┼───────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
      &none         &none   &mkp MB3      &mkp MB1          &none             &none         &mmv MOVE_LEFT &mmv MOVE_DOWN &mmv MOVE_RIGHT &none
 // ├─────────────┼───────────┼─────────────┼───────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
