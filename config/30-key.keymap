@@ -277,12 +277,12 @@
         function_layer { 
             label = "MOUSE";
             bindings = <
-     &none         &kp PG_UP   &mwh SCROLL_UP &mkp MB2           &none            &none         &none         &mmv MOVE_UP  &none         &none
+     &none         &none   &none  &mkp MB2           &none            &none         &kp PG_DN  &mmv MOVE_UP  &kp PG_UP   &none
 // ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮   ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮
 // ├─────────────┼───────────┼─────────────┼───────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-     &none         &kp PG_DN &mwh SCROLL_DOWN &mkp MB1          &none             &none         &mmv MOVE_LEFT &mmv MOVE_DOWN &mmv MOVE_RIGHT &none
+     &none         &none   &mkp MB3      &mkp MB1          &none             &none         &mmv MOVE_LEFT &mmv MOVE_DOWN &mmv MOVE_RIGHT &none
 // ├─────────────┼───────────┼─────────────┼───────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-                   &none       &none          &none                                          &none         &none         &none                     
+                   &none       &none          &none                                           &mwh SCROLL_UP         &none         &mwh SCROLL_DOWN                    
 // ├─────────────┼─────────────┼─────────────┴─────────────┴─────────────╯   ├─────────────┼─────────────┼─────────────┴─────────────┴─────────────╯
                                                &trans        &trans            &trans        &trans             
 //                             ╰─────────────┴─────────────┴─────────────╯   ╰─────────────┴─────────────┴─────────────╯
