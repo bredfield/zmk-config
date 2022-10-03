@@ -186,7 +186,7 @@
 
     keymap {
         compatible = "zmk,keymap";
-    
+
 // ⟳ w f p b         x l u y '
 // r s t h k         v n a i o 
 //   c g d             m , .
@@ -212,8 +212,8 @@
 //   c g d             l u y 
 //                   e
 
-    main_layer {
-            label = "MAIN";
+    alt_layer {
+            label = "ALT";
             bindings = <
 // ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮   ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮
      &key_repeat   &kp W         &kp F         &kp P         &kp B             &kp X         &kp V         &kp COMMA     &kp DOT         &kp SQT
@@ -233,13 +233,7 @@
 //   c l d             u o y 
 //   [z]                   
 // ['/fun][spc/nav]  [oss/sym][oss]
-
-// p b h g v         , x ' j w
-// c s n t k         . a e i m
-//   f l d             u o y 
-//   [z][q]                
-//                    r  
-// ['/fun][spc/nav]  [r/sym][oss]
+// 
 //         alt_layer {
 //             label = "ALT";
 //             bindings = <
