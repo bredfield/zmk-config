@@ -221,9 +221,9 @@
             label = "NAV";
             bindings = <
 // ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮   ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮
-     &kp ESC       CLOSE         NEW_TAB       U_UNDO        U_REDO            COMMAND       &kp DEL       &kp UP        DUPLICATE     WIN_SWAP
+     &kp ESC       CLOSE         NEW_TAB       U_UNDO        U_REDO            &kp PG_UP      &kp DEL       &kp UP        DUPLICATE     WIN_SWAP
 // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-     SK(LGUI)      SK(LALT)      SK(LCTRL)     SK(LSHFT)     SELECT_ALL        FIND          &kp LEFT      &kp DOWN      &kp RIGHT     APP_SWAP        
+     SK(LGUI)      SK(LALT)      SK(LCTRL)     SK(LSHFT)     SELECT_ALL        &kp PG_DN      &kp LEFT      &kp DOWN      &kp RIGHT     APP_SWAP        
 // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
                    U_CUT         U_CPY         U_PST                                         &kp BSPC      &kp RET       &kp TAB                           
 // ╰─────────────┴─────────────┴─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┴─────────────┴─────────────╯
