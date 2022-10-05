@@ -177,7 +177,7 @@
     keymap {
         compatible = "zmk,keymap";
 
-// ⟳ w f p b         x l u y '
+// ⟳ w f p b         x l u y /
 // r s t h k         v n a i o 
 //   c g d             m , .
 //                   e
@@ -197,7 +197,7 @@
             >;
         };
 
-// ⟳ w f p b         j v , . x
+// ⟳ w f p b         j x , . /
 // r s t h k         m n a i o 
 //   c g d             l u y 
 //       '             e
@@ -207,7 +207,7 @@
             label = "ALT";
             bindings = <
 // ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮   ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮
-     &key_repeat   &kp W         &kp F         &kp P         &kp B             &kp J         &kp V         &kp COMMA     &kp DOT       &kp X
+     &key_repeat   &kp W         &kp F         &kp P         &kp B             &kp J         &kp V         &kp COMMA     &kp DOT       &kp SLASH
 // ├──── ─────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
      &hml LGUI R   &hml LALT S   &hml LCTRL T  &as LSHFT H   &kp K             &kp M         &as RSHFT N   &hmr RCTRL A  &hmr RALT I   &hmr RGUI O     
 // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
