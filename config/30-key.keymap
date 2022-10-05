@@ -201,6 +201,7 @@
 // r s t h k         m n a i o 
 //   c g d             l u y 
 //       '             e
+// combos: v, q, z
 
     alt_layer {
             label = "ALT";

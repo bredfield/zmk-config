@@ -26,18 +26,18 @@
     // missing alphas 
     COMBO(z,        &kp Z,        20 21, MAIN ALT SYM NAV FUN, COMBO_TERM_NORMAL)
     COMBO(q,        &kp Q,        20 22, MAIN ALT SYM NAV FUN, COMBO_TERM_NORMAL)
-    COMBO(j,        &kp J,        21 22, MAIN SYM NAV FUN, COMBO_TERM_NORMAL)
-    COMBO(v,        &kp V,        21 22, ALT, COMBO_TERM_NORMAL)
+    COMBO(j,        &kp J,        1 2,   MAIN SYM NAV FUN, COMBO_TERM_NORMAL)
+    COMBO(v,        &kp V,        1 2,   ALT, COMBO_TERM_NORMAL)
 
     // common *gram
-    COMBO(you,      &you,         1 3,   MAIN ALT SYM NAV FUN, COMBO_TERM_NORMAL)
+    COMBO(you,      &you,         6 8,   MAIN ALT SYM NAV FUN, COMBO_TERM_NORMAL)
 
     // functions + clipboard + history
     COMBO(bspc,     &kp BSPC,     4 14,  MAIN ALT SYM NAV FUN, COMBO_TERM_SLOW)  
     COMBO(ret,      &kp RET,      12 22, MAIN ALT SYM NAV FUN, COMBO_TERM_SLOW)  
     COMBO(capslock, &kp CAPS,     6 7 8, MAIN ALT SYM NAV FUN, COMBO_TERM_SLOW)  
-    COMBO(capsword, &caps_word,   6 8,   MAIN ALT SYM NAV FUN, COMBO_TERM_SLOW)                  
-    COMBO(grave,    &kp GRAVE,    1 2,   MAIN ALT SYM NAV FUN, COMBO_TERM_NORMAL)
+    COMBO(caps,     &caps_word,   16 17 18,MAIN ALT SYM NAV FUN, COMBO_TERM_SLOW)                  
+    COMBO(grave,    &kp GRAVE,    21 22, MAIN ALT SYM NAV FUN, COMBO_TERM_NORMAL)
 
     // common symbols  
     COMBO(at,       &kp AT,       2 3,   MAIN ALT SYM NAV FUN, COMBO_TERM_NORMAL)
