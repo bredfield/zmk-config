@@ -189,7 +189,7 @@
 // r s t h k         m n a i o 
 //   c g d             l u y 
 //     '               e
-// combos: v, q, z
+// combos: j, q, z
 
     main_layer {
             label = "MAIN";
@@ -207,21 +207,21 @@
     };
 
 
-// ⟳ w f p b         x h , . /
+// ⟳ w f p b         x l u y /
 // c r s t k         m n a i o 
-//   v g d             l u y 
+//   v g d             h , . 
 //     '               e
-// combos: v, q, z
+// combos: j, q, z
 
     alt_layer {
             label = "ALT";
             bindings = <
 // ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮   ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮
-     &key_repeat   &kp W         &kp F         &kp P         &kp B             &kp X         &kp H         &kp COMMA     &kp DOT       &kp SLASH
+     &key_repeat   &kp W         &kp F         &kp P         &kp B             &kp X         &kp L         &kp U         &kp Y         &kp SLASH
 // ├──── ─────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
      &hml LGUI C   &hml LALT R   &hml LCTRL S  &as LSHFT T   &kp K             &kp M         &as RSHFT N   &hmr RCTRL A  &hmr RALT I   &hmr RGUI O     
 // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-                   &kp V         &kp G         &kp D                                         &kp L         &kp U         &kp Y 
+                   &kp V         &kp G         &kp D                                         &kp H         &kp COMMA     &kp DOT 
 // ╰─────────────┴─────────────┴─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┴─────────────┴─────────────╯
                                                &lt FUN SQT   &lt NAV SPACE     &lt SYM E     &lst FUN LSHFT
 //                             ╰─────────────┴─────────────┴─────────────╯   ╰─────────────┴─────────────┴─────────────╯
