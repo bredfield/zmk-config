@@ -207,8 +207,8 @@
     };
 
 
-// ⟳ w f p b    x v , . /
-// n r s t k    m h a i o
+// ⟳ w m p b    x v , . /
+// n r s t k    f h a i o
 //   c g d        l u y 
 //     '            e
 
@@ -216,9 +216,9 @@
             label = "ALT";
             bindings = <
 // ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮   ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮
-     &key_repeat   &kp W         &kp F         &kp P         &kp B             &kp X         &kp V         &kp COMMA     &kp DOT       &kp SLASH
+     &key_repeat   &kp W         &kp M         &kp P         &kp B             &kp X         &kp V         &kp COMMA     &kp DOT       &kp SLASH
 // ├──── ─────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-     &hml LGUI N   &hml LALT R   &hml LCTRL S  &as LSHFT T   &kp K             &kp M         &as RSHFT H   &hmr RCTRL A  &hmr RALT I   &hmr RGUI O     
+     &hml LGUI N   &hml LALT R   &hml LCTRL S  &as LSHFT T   &kp K             &kp F         &as RSHFT H   &hmr RCTRL A  &hmr RALT I   &hmr RGUI O     
 // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
                    &kp C         &kp G         &kp D                                         &kp L         &kp U         &kp Y 
 // ╰─────────────┴─────────────┴─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┴─────────────┴─────────────╯
