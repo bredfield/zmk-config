@@ -185,33 +185,25 @@
     keymap {
         compatible = "zmk,keymap";
 
-// ⟳ w f p b         x v , . /
+// ⟳ w f p b         x v , . '
 // r s t h k         m n a i o 
 //   c g d             l u y 
-//     '               e
-// combos: j, q, z
+//                     e
 
     main_layer {
             label = "MAIN";
             bindings = <
 // ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮   ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮
-     &key_repeat   &kp W         &kp F         &kp P         &kp B             &kp X         &kp V         &kp COMMA     &kp DOT       &kp SLASH
+     &key_repeat   &kp W         &kp F         &kp P         &kp B             &kp X         &kp V         &kp COMMA     &kp DOT       &kp SQT
 // ├──── ─────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
      &hml LGUI R   &hml LALT S   &hml LCTRL T  &as LSHFT H   &kp K             &kp M         &as RSHFT N   &hmr RCTRL A  &hmr RALT I   &hmr RGUI O     
 // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
                    &kp C         &kp G         &kp D                                         &kp L         &kp U         &kp Y 
 // ╰─────────────┴─────────────┴─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┴─────────────┴─────────────╯
-                                               &lt FUN SQT   &lt NAV SPACE     &lt SYM E     &lst FUN LSHFT
+                                               &lst FUN LSHFT &lt NAV SPACE     &lt SYM E     &lst FUN LSHFT
 //                             ╰─────────────┴─────────────┴─────────────╯   ╰─────────────┴─────────────┴─────────────╯
         >;
     };
-
-
-// w m y p b    x v , . '
-// r s t h k    f n a i ⟳
-//   c g d        l o u  
-//                  e
-
 
 // w f y p b    x v , . '
 // r s t h k    m n a i ⟳
