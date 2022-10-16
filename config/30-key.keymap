@@ -245,7 +245,7 @@
             label = "SYM";
             bindings = <
 // ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮   ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮
-     &key_repeat    &kp EQUAL     &kp MINUS    &kp UNDER      &kp STAR         &kp BSLH      &kp HASH       &kp COMMA     &kp DOT       &kp TILDE
+     &kp GRAVE      &kp EQUAL     &kp MINUS    &kp UNDER      &kp STAR         &kp BSLH      &kp HASH       &kp COMMA     &kp DOT       &kp TILDE
 // ├─────────────┼─────────────┼─────────────┼─────────────┼ ────────────┤   ├──────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
      &hml LGUI N6   &hml LALT N4  &hml LCTRL N0 &hml LSHFT N2 &kp PLUS         &kp PIPE      &hmr RSHFT N3  &hmr RCTRL N1 &hmr RALT N5  &hmr RGUI N7
 // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
