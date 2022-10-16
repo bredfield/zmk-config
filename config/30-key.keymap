@@ -260,13 +260,13 @@
             label = "BRK";
             bindings = <
 // ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮   ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮
-     &none         &none          &none        &none         &none             &none         &none          &none        &none         &none
+     &kp GT        &none          &none        &none         &none             &none         &none          &none        &none         &none
 // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-     &hml LGUI LT  &hml LALT LBKT &hml LCTRL LPAR &as LSHFT LBRC &none         &none       &as RSHFT RBRC   &hmr RCTRL RPAR &hmr RALT RBKT &hmr RGUI GT     
+     &hml LGUI LT  &hml LALT LBKT &hml LCTRL LPAR &as LSHFT LBRC &none         &none         &as RSHFT RBRC &hmr RCTRL RPAR &hmr RALT RBKT &hmr RGUI GT     
 // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-                   &none          &none          &none                                          &none          &none        &none                              
+                   &kp LBKT       &kp LPAR    &kp LBRC                                       &none          &none        &none                              
 // ╰─────────────┴─────────────┴─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┴─────────────┴─────────────╯
-                                               &trans        &trans            ALFRED        &trans
+                                               &trans        &trans            &trans        &trans
 //                             ╰─────────────┴─────────────┴─────────────╯   ╰─────────────┴─────────────┴─────────────╯
             >;
         };
