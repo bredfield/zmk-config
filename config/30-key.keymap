@@ -181,13 +181,13 @@
             bindings = <&kp DOT>, <&kp EXCL>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
-    };
+    };.
 
     keymap {
         compatible = "zmk,keymap";
 
-// w f m p b         - x , . '
-// r s t h k         v n a i o 
+// v f m p b         / w , . '
+// r s t h k         x n a i o 
 //   c g d             l u y 
 //                     e 
 
@@ -195,9 +195,9 @@
             label = "MAIN";
             bindings = <
 // ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮   ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮
-     &kp W         &kp F         &kp M         &kp P         &kp B             &kp MINUS     &kp X         &kp COMMA     &kp DOT       &kp SQT
+     &kp V         &kp F         &kp M         &kp P         &kp B             &kp SLASH     &kp W         &kp COMMA     &kp DOT       &kp SQT
 // ├──── ─────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-     &hml LGUI R   &hml LALT S   &hml LCTRL T  &as LSHFT H   &kp K             &kp V         &as RSHFT N   &hmr RCTRL A  &hmr RALT I   &hmr RGUI O     
+     &hml LGUI R   &hml LALT S   &hml LCTRL T  &as LSHFT H   &kp K             &kp X         &as RSHFT N   &hmr RCTRL A  &hmr RALT I   &hmr RGUI O     
 // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
                    &kp C         &kp G         &kp D                                         &kp L         &kp U         &kp Y 
 // ╰─────────────┴─────────────┴─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┴─────────────┴─────────────╯
@@ -205,11 +205,10 @@
 //                             ╰─────────────┴─────────────┴─────────────╯   ╰─────────────┴─────────────┴─────────────╯
         >;
     };
-
+    
 // w f m p b  , x ' j k
 // r s n t g  . a e i h
 //   c l d      u o y 
-//              e 
 
     alt_layer {
             label = "ALT";
