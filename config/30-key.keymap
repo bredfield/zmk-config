@@ -181,7 +181,7 @@
             bindings = <&kp DOT>, <&kp EXCL>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
-    };.
+    };
 
     keymap {
         compatible = "zmk,keymap";
