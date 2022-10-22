@@ -186,8 +186,8 @@
     keymap {
         compatible = "zmk,keymap";
 
-// v f m p b         / w , . '
-// r s t h k         x n a i o 
+// v f m p b         / x , . '
+// r s t h k         w n a i o 
 //   c g d             l u y 
 //                     e 
 
@@ -195,9 +195,9 @@
             label = "MAIN";
             bindings = <
 // ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮   ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮
-     &kp V         &kp F         &kp M         &kp P         &kp B             &kp SLASH     &kp W         &kp COMMA     &kp DOT       &kp SQT
+     &kp V         &kp F         &kp M         &kp P         &kp B             &kp SLASH     &kp X         &kp COMMA     &kp DOT       &kp SQT
 // ├──── ─────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-     &hml LGUI R   &hml LALT S   &hml LCTRL T  &as LSHFT H   &kp K             &kp X         &as RSHFT N   &hmr RCTRL A  &hmr RALT I   &hmr RGUI O     
+     &hml LGUI R   &hml LALT S   &hml LCTRL T  &as LSHFT H   &kp K             &kp W         &as RSHFT N   &hmr RCTRL A  &hmr RALT I   &hmr RGUI O     
 // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
                    &kp C         &kp G         &kp D                                         &kp L         &kp U         &kp Y 
 // ╰─────────────┴─────────────┴─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┴─────────────┴─────────────╯
