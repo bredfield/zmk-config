@@ -27,3 +27,7 @@ include:
     shield: wizzades_left
   - board: nice_nano_v2
     shield: wizzades_right
+  - board: nice_nano_v2
+    shield: corne_left
+  - board: nice_nano_v2
+    shield: corne_right
