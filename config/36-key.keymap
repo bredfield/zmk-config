@@ -186,6 +186,10 @@
     keymap {
         compatible = "zmk,keymap";    
 
+// v f m p -     / x , . '
+// r s t h b     w n a i o
+// ⟳ c g d k     j l u y ⟳
+
         main_layer {
             label = "MAIN";
             bindings = <
@@ -196,11 +200,11 @@
 // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
      &key_repeat   &kp C         &kp G         &kp D         &kp K             &kp J         &kp L         &kp U         &kp Y         &key_repeat   
 // ╰─────────────┴─────────────┴─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┴─────────────┴─────────────╯
-                                 &none         &lr FUN 0     &lt NAV SPACE     &lt SYM E     &lst BRK LSHFT &none
+                                 &none         &lst FUN LSHFT &lt NAV SPACE    &lt SYM E     &lst BRK LSHFT &none
 //                             ╰─────────────┴─────────────┴─────────────╯   ╰─────────────┴─────────────┴─────────────╯
             >;
         };
-        
+
 // w f m p v     j v , . '
 // r s n t g     k h a i rpt
 // q c l d b     z u o y k         
