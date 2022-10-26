@@ -186,8 +186,8 @@
     keymap {
         compatible = "zmk,keymap";    
 
-// v f m p -     / x , . '
-// r s t h b     w n a i o
+// w f m p -     / x , . '
+// r s t h b     v n a i o
 // ⟳ c g d k     j l u y ⟳
 
         main_layer {
@@ -215,13 +215,13 @@
             label = "ALT";
             bindings = <
 // ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮   ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮
-     &kp W         &kp F          &kp M         &kp P         &none             &none         &kp V         &kp COMMA     &kp DOT       &kp SQT
-// ├──── ─────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-     &hml LGUI R   &hml LALT S    &hml LCTRL N  &hml LSHFT T  &kp B             &kp M         &hmr RSHFT N  &hmr RCTRL A  &hmr RALT I   &hmr RGUI O     
+     &kp W         &kp F         &kp M         &kp P         &none             &kp SLASH     &kp X         &kp COMMA     &kp DOT       &kp SQT
 // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-     &none         &kp C          &kp G         &kp D         &kp K             &kp J         &kp L         &kp U         &kp Y         &none
+     &hml LGUI R   &hml LALT S   &hml LCTRL T  &hml LSHFT H  &kp B             &kp V         &hmr RSHFT N  &hmr RCTRL A  &hmr RALT I   &hmr RGUI O      
+// ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
+     &key_repeat   &kp C         &kp G         &kp D         &kp K             &kp J         &kp L         &kp U         &kp Y         &key_repeat   
 // ╰─────────────┴─────────────┴─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┴─────────────┴─────────────╯
-                                  &lr FUN 0     &lt NAV SPACE &sk LSHFT         &sk LSHFT     &lt SYM E     &lr FUN 0
+                                 &none         &lst FUN LSHFT &lt NAV SPACE    &lt SYM E     &lst BRK LSHFT &none
 //                             ╰─────────────┴─────────────┴─────────────╯   ╰─────────────┴─────────────┴─────────────╯
             >;
         };
