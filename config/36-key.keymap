@@ -215,9 +215,9 @@
             label = "ALT";
             bindings = <
 // ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮   ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮
-     &kp W         &kp F         &kp M         &kp P         &none             &kp SLASH     &kp X         &kp COMMA     &kp DOT       &kp SQT
+     &kp V         &kp W         &kp F         &kp P         &none             &kp SLASH     &kp X         &kp COMMA     &kp DOT       &kp SQT
 // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-     &hml LGUI R   &hml LALT S   &hml LCTRL T  &hml LSHFT H  &kp B             &kp V         &hmr RSHFT N  &hmr RCTRL A  &hmr RALT I   &hmr RGUI O      
+     &hml LGUI R   &hml LALT S   &hml LCTRL T  &hml LSHFT H  &kp B             &kp M         &hmr RSHFT N  &hmr RCTRL A  &hmr RALT I   &hmr RGUI O      
 // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
      &key_repeat   &kp C         &kp G         &kp D         &kp K             &kp J         &kp L         &kp U         &kp Y         &key_repeat   
 // ╰─────────────┴─────────────┴─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┴─────────────┴─────────────╯
