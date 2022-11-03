@@ -186,16 +186,16 @@
     keymap {
         compatible = "zmk,keymap";
 
-// v w f p b         / x , . '
-// r s t h g         v n a i o 
-//   c m d k           l u y 
+// x w f p b         / v , . '
+// r s t h k         m n a i o 
+//   c g d             l u y 
 //                     e 
 
     main_layer {
             label = "MAIN";
             bindings = <
 // ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮   ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮
-     &kp V         &kp W         &kp F         &kp P         &kp B             &kp SLASH     &kp X         &kp COMMA     &kp DOT       &kp SQT
+     &kp X         &kp W         &kp F         &kp P         &kp B             &kp SLASH     &kp V         &kp COMMA     &kp DOT       &kp SQT
 // ├──── ─────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
      &hml LGUI R   &hml LALT S   &hml LCTRL T  &as LSHFT H   &kp K             &kp M         &as RSHFT N   &hmr RCTRL A  &hmr RALT I   &hmr RGUI O     
 // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
@@ -206,22 +206,22 @@
         >;
     };
     
-// j w f p k  x l u y '
-// c r s t b  m n a i o
-// ~ v g d ~  ~ h , . ~
+// w f m p g         , x ' j k
+// r s n t b         . a e i h
+//   c l d             u o y 
 
     alt_layer {
             label = "ALT";
             bindings = <
 // ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮   ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮
-     &key_repeat   &kp W         &kp F         &kp P         &kp B             &kp X         &kp L         &kp U         &kp Y         &kp SQT
+     &kp W         &kp F         &kp M         &kp P         &kp B             &kp COMMA     &kp X         &kp SQT       &kp J         &kp K
 // ├──── ─────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-     &hml LGUI C   &hml LALT R   &hml LCTRL S  &as LSHFT T   &kp K             &kp M         &as RSHFT N   &hmr RCTRL A  &hmr RALT I   &hmr RGUI O     
+     &hml LGUI R   &hml LALT S   &hml LCTRL N  &hml LSHFT T  &kp G             &kp DOT       &hmr RSHFT A  &hmr RCTRL E  &hmr RALT I   &hmr RGUI H     
 // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-                   &kp V         &kp G         &kp D                                         &kp H         &kp COMMA     &kp DOT 
+                   &kp C         &kp L         &kp D                                         &kp U         &kp O         &kp Y
 // ╰─────────────┴─────────────┴─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┴─────────────┴─────────────╯
-                                               &lst FUN LSHFT &lt NAV SPACE     &lt SYM E     &lst BRK LSHFT
-//                             ╰─────────────┴─────────────┴─────────────╯   ╰─────────────┴─────────────┴─────────────╯
+                                               &lr FUN 0     &lt NAV SPACE     &lst SYM LSHFT &lr FUN 0
+//  
         >;
     };
         nav_layer {
