@@ -210,6 +210,10 @@
 // r s n t b         . a e i h
 //   c l d             u o y 
 
+// x w f p b         m l u y '
+// a r s t g         k n e i o
+//   v c d             h , . 
+
     alt_layer {
             label = "ALT";
             bindings = <
