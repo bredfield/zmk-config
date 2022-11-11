@@ -62,7 +62,7 @@
 
 &mt {
  tapping-term-ms = <175>;
- flavor = "balanced";
+ flavor = "tap-preferred";
 };
 
 #include "30-key-combos.dtsi"
@@ -186,28 +186,28 @@
     keymap {
         compatible = "zmk,keymap";
 
-// x w f p b         / v , . '
-// r s t h k         m n a i o 
-//   c g d             l u y 
+// x w f p b         / l u y '
+// r s t h k         v n a i o 
+//   c g d             m , . 
 //                     e 
 
     main_layer {
             label = "MAIN";
             bindings = <
 // ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮   ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮
-     &kp X         &kp W         &kp F         &kp P         &kp B             &kp SLASH     &kp V         &kp COMMA     &kp DOT       &kp SQT
+     &kp X         &kp W         &kp F         &kp P         &kp B             &kp SLASH     &kp L         &kp U         &kp Y         &kp SQT
 // ├──── ─────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-     &hml LGUI R   &hml LALT S   &hml LCTRL T  &as LSHFT H   &kp K             &kp M         &as RSHFT N   &hmr RCTRL A  &hmr RALT I   &hmr RGUI O     
+     &hml LGUI R   &hml LALT S   &hml LCTRL T  &as LSHFT H   &kp K             &kp V         &as RSHFT N   &hmr RCTRL A  &hmr RALT I   &hmr RGUI O     
 // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-                   &kp C         &kp G         &kp D                                         &kp L         &kp U         &kp Y 
+                   &kp C         &kp G         &kp D                                         &kp M         &kp COMMA     &kp DOT
 // ╰─────────────┴─────────────┴─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┴─────────────┴─────────────╯
-                                               &lst FUN LSHFT &lt NAV SPACE     &lt SYM E     &lst BRK LSHFT
+                                               &lst FUN LSHFT &lt NAV SPACE     &mt LSHFT E  &lr SYM 0
 //                             ╰─────────────┴─────────────┴─────────────╯   ╰─────────────┴─────────────┴─────────────╯
         >;
     };
 
 // w f m p g         , x ' j k
-// r s n t b         . a e i h
+// r s n t b         . a e i hc
 //   c l d             u o y 
 
 // x w f p b         m l u y '
@@ -218,9 +218,9 @@
             label = "ALT";
             bindings = <
 // ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮   ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮
-     &kp W         &kp F         &kp M         &kp P         &kp G             &kp COMMA     &kp X         &kp SQT       &kp J         &kp K
+     &kp W         &kp F         &kp M         &kp P         &kp B             &kp COMMA     &kp X         &kp SQT       &kp J         &kp K
 // ├──── ─────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-     &hml LGUI R   &hml LALT S   &hml LCTRL N  &hml LSHFT T  &kp B             &kp DOT       &hmr RSHFT A  &hmr RCTRL E  &hmr RALT I   &hmr RGUI H     
+     &hml LGUI R   &hml LALT S   &hml LCTRL N  &hml LSHFT T  &kp G             &kp DOT       &hmr RSHFT A  &hmr RCTRL E  &hmr RALT I   &hmr RGUI H     
 // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
                    &kp C         &kp L         &kp D                                         &kp U         &kp O         &kp Y
 // ╰─────────────┴─────────────┴─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┴─────────────┴─────────────╯
