@@ -40,6 +40,10 @@
     COMBO(caps_l,   &caps_word,   11 12 13,MAIN ALT SYM NAV FUN, COMBO_TERM_SLOW)                  
     COMBO(caps_r,   &caps_word,   16 17 18,MAIN ALT SYM NAV FUN, COMBO_TERM_SLOW)                  
     COMBO(grave,    &kp GRAVE,    21 22, MAIN ALT SYM NAV FUN, COMBO_TERM_NORMAL)
+    COMBO(ss,       SS_TARGETED,  0 10, MAIN ALT SYM NAV FUN, COMBO_TERM_NORMAL)
+    COMBO(mouse1,   &mkp MB1,     2 13, MAIN ALT SYM NAV FUN, COMBO_TERM_NORMAL) 
+    COMBO(mouse2,   &mkp MB2,     1 12, MAIN ALT SYM NAV FUN, COMBO_TERM_NORMAL) 
+    COMBO(mouse4,   &mkp MB4,     11 2, MAIN ALT SYM NAV FUN, COMBO_TERM_NORMAL) 
 
     // common symbols  
     COMBO(at,       &kp AT,       2 3,   MAIN ALT SYM NAV FUN, COMBO_TERM_NORMAL)
