@@ -208,29 +208,26 @@
         >;
     };
 
-// w f m p g         , x ' j k
-// r s n t b         . a e i hc
-//   c l d             u o y 
-
-// x w f p b         m l u y '
-// a r s t g         k n e i o
-//   v c d             h , . 
-
+// j w f p b         x l u y '
+// c r s t k         m n a i o
+//   v g d             h , . 
+//                   e
     alt_layer {
             label = "ALT";
             bindings = <
 // ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮   ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮
-     &kp X         &kp F         &kp M         &kp P         &kp B             &kp COMMA     &kp X         &kp SQT       &kp J         &kp K
+     &kp J         &kp F         &kp M         &kp P         &kp B             &kp X         &kp L         &kp U         &kp Y         &kp SQT
 // ├──── ─────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-     &hml LGUI A   &hml LALT S   &hml LCTRL N  &hml LSHFT T  &kp G             &kp DOT       &hmr RSHFT A  &hmr RCTRL E  &hmr RALT I   &hmr RGUI H     
+     &hml LGUI C   &hml LALT S   &hml LCTRL N  &hml LSHFT T  &kp K             &kp M         &hmr RSHFT N  &hmr RCTRL A  &hmr RALT I   &hmr RGUI O     
 // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-                   &kp C         &kp L         &kp D                                         &kp U         &kp O         &kp Y
+                   &kp V         &kp L         &kp D                                         &kp H         &kp COMMA     &kp DOT
 // ╰─────────────┴─────────────┴─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┴─────────────┴─────────────╯
-                                               &lr FUN 0     &lt NAV SPACE     &lst SYM LSHFT &lr FUN 0
+                                               SK(LSHFT)     &lt NAV SPACE     &lt SYM E     &lr FUN 0
 //                             ╰─────────────┴─────────────┴─────────────╯   ╰─────────────┴─────────────┴─────────────╯
         >;
     };
-        nav_layer {
+
+    nav_layer {
             label = "NAV";
             bindings = <
 // ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮   ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮
