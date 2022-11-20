@@ -29,7 +29,7 @@
     COMBO(j,        &kp J,        1 2,   MAIN ALT SYM NAV FUN, COMBO_TERM_NORMAL)
 
     // common *gram
-    COMBO(you,      &you,         6 8,   MAIN SYM NAV FUN, COMBO_TERM_NORMAL)
+    COMBO(you,      &you,         6 8,   MAIN ALT SYM NAV FUN, COMBO_TERM_NORMAL)
 
     // functions + clipboard + history
     COMBO(bspc,     &kp BSPC,     4 14,  MAIN ALT SYM NAV FUN, COMBO_TERM_SLOW)  
