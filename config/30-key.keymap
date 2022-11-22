@@ -209,8 +209,8 @@
     };
 
 // ⟳ w f p k         x l u y '
-// c r s t b         m n a i o
-//   v g d             h , . 
+// c r s t b         v n a i o
+//   m g d             h , . 
 //                   e
     alt_layer {
             label = "ALT";
