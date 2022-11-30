@@ -192,8 +192,8 @@
 // c r s t b         v n a i o
 //   m g d             h , . 
 //                   e
-    alt_layer {
-            label = "ALT";
+    main_layer {
+            label = "MAIN";
             bindings = <
 // ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮   ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮
      &key_repeat   &kp W         &kp F         &kp P         &kp K             &kp X          &kp L         &kp U         &kp Y         &kp SQT

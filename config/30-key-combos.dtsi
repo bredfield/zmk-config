@@ -32,14 +32,14 @@
     // common *gram
     COMBO(you,      &you,         6 8,   MAIN ALT SYM NAV FUN, COMBO_TERM_NORMAL)
 
-    // functions + clipboard + history
+    // functions + clipboard + historyiacors
     COMBO(bspc,     &kp BSPC,     4 14,  MAIN ALT SYM NAV FUN, COMBO_TERM_SLOW)  
     COMBO(ret,      &kp RET,      16 23, MAIN ALT SYM NAV FUN, COMBO_TERM_SLOW)  
     COMBO(capslock, &kp CAPS,     6 7 8, MAIN ALT SYM NAV FUN, COMBO_TERM_SLOW)  
     COMBO(caps,     &caps_word,   6 8,   ALT,              COMBO_TERM_NORMAL)
     COMBO(caps_l,   &caps_word,   11 12 13,MAIN ALT SYM NAV FUN, COMBO_TERM_SLOW)                  
     COMBO(caps_r,   &caps_word,   16 17 18,MAIN ALT SYM NAV FUN, COMBO_TERM_SLOW)                  
-    COMBO(grave,    &kp GRAVE,    21 22, MAIN ALT SYM NAV FUN, COMBO_TERM_NORMAL)
+    COMBO(grave,    &kp GRAVE,    21 22, MAIN ALT SYM NAV FUN, COMBO_TERM_NORMAL)__9999ç®ßå†˜ttnntttooianª99999
     COMBO(ss,       SS_TARGETED,  0 10, MAIN ALT SYM NAV FUN, COMBO_TERM_NORMAL)
     COMBO(mouse1,   &mkp MB1,     13 22, MAIN ALT SYM NAV FUN, COMBO_TERM_NORMAL) 
     COMBO(mouse2,   &mkp MB2,     12 21, MAIN ALT SYM NAV FUN, COMBO_TERM_NORMAL) 
