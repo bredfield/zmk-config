@@ -188,22 +188,21 @@
     keymap {
         compatible = "zmk,keymap";
 
-// ⟳ w f p b         x l u y '
-// r s t h k         v n a i o 
-//   c g d             m , . 
-//                     e 
-
-    main_layer {
-            label = "MAIN";
+// ⟳ w f p k         x l u y '
+// c r s t b         v n a i o
+//   m g d             h , . 
+//                   e
+    alt_layer {
+            label = "ALT";
             bindings = <
 // ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮   ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮
-     &key_repeat   &kp W         &kp F         &kp P         &kp B             &kp X         &kp L         &kp U         &kp Y         &kp SQT
+     &key_repeat   &kp W         &kp F         &kp P         &kp K             &kp X          &kp L         &kp U         &kp Y         &kp SQT
 // ├──── ─────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-     &hml LGUI R   &hml LALT S   &hml LCTRL T  &as LSHFT H   &kp K             &kp V         &as RSHFT N   &hmr RCTRL A  &hmr RALT I   &hmr RGUI O     
+     &hml LGUI C   &hml LALT R   &hml LCTRL S  &hml LSHFT T  &kp B             &kp V         &hmr RSHFT N  &hmr RCTRL A  &hmr RALT I   &hmr RGUI O     
 // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-                   &kp C         &kp G         &kp D                                         &kp M         &kp COMMA     &kp DOT
+                   &kp M         &kp G         &kp D                                          &kp H         &kp COMMA     &kp DOT
 // ╰─────────────┴─────────────┴─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┴─────────────┴─────────────╯
-                                               SK(LSHFT)     &lt NAV SPACE     &lt SYM E    &lr FUN 0
+                                               &lt FUN ESC   &lt NAV SPACE      &mt LSHFT E   &sl SYM
 //                             ╰─────────────┴─────────────┴─────────────╯   ╰─────────────┴─────────────┴─────────────╯
         >;
     };
@@ -228,7 +227,6 @@
         >;
     };
 
-
     nav_layer {
             label = "NAV";
             bindings = <
@@ -252,7 +250,7 @@
 // ├─────────────┼─────────────┼─────────────┼─────────────┼ ────────────┤   ├──────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
      &hml LGUI N6   &hml LALT N4  &hml LCTRL N0 &hml LSHFT N2 &kp PLUS         &kp BSLH      &hmr RSHFT N3 &hmr RCTRL N1 &hmr RALT N5  &hmr RGUI N7
 // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-                    &kp COLON     &kp SEMI     &kp N8                                        &kp N9        &kp COMMA      &kp DOT                 
+                    &kp COLON     &kp SEMI     &kp N8                                        &kp N9        &kp COMMA     &kp DOT                 
 // ╰─────────────┴─────────────┴─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┴─────────────┴─────────────╯
                                                 &kp BSPC     &trans            &trans        &trans
 //                             ╰─────────────┴─────────────┴─────────────╯   ╰─────────────┴─────────────┴─────────────╯
