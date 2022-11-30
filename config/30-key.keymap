@@ -208,9 +208,10 @@
         >;
     };
 
+
 // ⟳ w f p k         x l u y '
-// c r s t b         v n a i o
-//   m g d             h , . 
+// c r s t b         m n a i o
+//   v g d             h , . 
 //                   e
     alt_layer {
             label = "ALT";
@@ -218,11 +219,11 @@
 // ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮   ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮
      &key_repeat   &kp W         &kp F         &kp P         &kp K             &kp X          &kp L         &kp U         &kp Y         &kp SQT
 // ├──── ─────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-     &hml LGUI C   &hml LALT R   &hml LCTRL S  &hml LSHFT T  &kp B             &kp V         &hmr RSHFT N  &hmr RCTRL A  &hmr RALT I   &hmr RGUI O     
+     &hml LGUI C   &hml LALT R   &hml LCTRL S  &hml LSHFT T  &kp B             &kp M         &hmr RSHFT N  &hmr RCTRL A  &hmr RALT I   &hmr RGUI O     
 // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-                   &kp M         &kp G         &kp D                                          &kp H         &kp COMMA     &kp DOT
+                   &kp V         &kp G         &kp D                                          &kp H         &kp COMMA     &kp DOT
 // ╰─────────────┴─────────────┴─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┴─────────────┴─────────────╯
-                                               &sl FUN       &lt NAV SPACE      &mt LSHFT E   &sl SYM
+                                               &lt FUN ESC   &lt NAV SPACE      &mt LSHFT E   &sl SYM
 //                             ╰─────────────┴─────────────┴─────────────╯   ╰─────────────┴─────────────┴─────────────╯
         >;
     };
@@ -247,11 +248,11 @@
             label = "SYM";
             bindings = <
 // ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮   ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮
-     &kp GRAVE      &kp EQUAL     &kp MINUS    &kp UNDER      &kp STAR         &kp COMMA     &kp HASH      &kp PIPE      &kp BSLH      &kp TILDE
+     &kp GRAVE      &kp EQUAL     &kp MINUS    &kp UNDER      &kp STAR         &kp DOLLAR    &kp HASH      &kp PIPE      &kp AMPS      &kp TILDE
 // ├─────────────┼─────────────┼─────────────┼─────────────┼ ────────────┤   ├──────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-     &hml LGUI N6   &hml LALT N4  &hml LCTRL N0 &hml LSHFT N2 &kp PLUS         &kp DOT       &hmr RSHFT N3 &hmr RCTRL N1 &hmr RALT N5  &hmr RGUI N7
+     &hml LGUI N6   &hml LALT N4  &hml LCTRL N0 &hml LSHFT N2 &kp PLUS         &kp BSLH      &hmr RSHFT N3 &hmr RCTRL N1 &hmr RALT N5  &hmr RGUI N7
 // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-                    &kp COLON     &kp SEMI     &kp N8                                        &kp N9         &kp AMPS      &codeblock                 
+                    &kp COLON     &kp SEMI     &kp N8                                        &kp N9        &kp COMMA      &kp DOT                 
 // ╰─────────────┴─────────────┴─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┴─────────────┴─────────────╯
                                                 &kp BSPC     &trans            &trans        &trans
 //                             ╰─────────────┴─────────────┴─────────────╯   ╰─────────────┴─────────────┴─────────────╯
