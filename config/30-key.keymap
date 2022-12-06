@@ -208,17 +208,17 @@
     };
 
 
-// w g d f b         x l u o y
-// r s t h k         v n a i o
+// w g d f b         j l u o y
+// r s t h k         x n e a i
 //   c m p             , . ' 
 //                   e
     alt_layer {
             label = "ALT";
             bindings = <
 // ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮   ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮
-     &kp W         &kp G         &kp D         &kp F         &kp B             &kp X         &kp L         &kp U         &kp O         &kp Y 
+     &kp W         &kp G         &kp D         &kp F         &kp B             &kp J         &kp L         &kp U         &kp O         &kp Y 
 // ├────────────┼─────────────┼─────────────┼─────────────┼─────────────┤    ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-     &hml LGUI R   &hml LALT S   &hml LCTRL T  &hml LSHFT H  &kp K             &kp V         &hmr RSHFT N  &hmr RCTRL E  &hmr RALT A   &hmr RGUI I     
+     &hml LGUI R   &hml LALT S   &hml LCTRL T  &hml LSHFT H  &kp K             &kp X         &hmr RSHFT N  &hmr RCTRL E  &hmr RALT A   &hmr RGUI I     
 // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
                    &kp C         &kp M         &kp P                                         &kp COMMA     &kp DOT       &kp SQT
 // ╰─────────────┴─────────────┴─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┴─────────────┴─────────────╯
