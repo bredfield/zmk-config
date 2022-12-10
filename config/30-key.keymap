@@ -9,8 +9,8 @@
 #define MAIN  0
 #define ALT   1
 #define NAV   2
-#define SYM   3
-#define BRK   4
+#define NUM   3
+#define SYM   4
 #define FUN   5
 #define KEY   6
 
@@ -65,6 +65,16 @@
 &mt {
  tapping-term-ms = <175>;
  flavor = "tap-preferred";
+};
+
+/ {
+    conditional_layers {
+        compatible = "zmk,conditional-layers";
+        tri_layer {
+            if-layers = <3 4>;
+            then-layer = <5>;
+        };
+    };
 };
 
 #include "30-key-combos.dtsi"
@@ -202,7 +212,7 @@
 // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
                    &kp M         &kp G         &kp D                                          &kp H         &kp COMMA     &kp DOT
 // ╰─────────────┴─────────────┴─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┴─────────────┴─────────────╯
-                                               &lt FUN ESC   &lt NAV SPACE      &mt LSHFT E   &sl SYM
+                                               &sl SYM       &lt NAV SPACE     &mt LSHFT E   &sl NUM
 //                             ╰─────────────┴─────────────┴─────────────╯   ╰─────────────┴─────────────┴─────────────╯
         >;
     };
@@ -242,32 +252,32 @@
             >;
         };
 
-        sym_layer { 
-            label = "SYM";
+        num_layer { 
+            label = "NUM";
             bindings = <
 // ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮   ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮
-     &kp GRAVE      &kp EQUAL     &kp MINUS    &kp UNDER      &kp STAR         &kp DOLLAR    &kp HASH      &kp PIPE      &kp AMPS      &kp TILDE
+     &kp COMMA      &kp N7        &kp N8       &kp N9        &kp STAR          &kp BSLH      &kp HASH      &kp AMPS      &kp PIPE      &kp TILDE
 // ├─────────────┼─────────────┼─────────────┼─────────────┼ ────────────┤   ├──────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-     &hml LGUI N6   &hml LALT N4  &hml LCTRL N0 &hml LSHFT N2 &kp PLUS         &kp BSLH      &hmr RSHFT N3 &hmr RCTRL N1 &hmr RALT N5  &hmr RGUI N7
+     &hml LGUI DOT  &hml LALT N1  &hml LCTRL N2 &hml LSHFT N3 &kp PLUS         &kp CARET     &hmr RSHFT MINUS &hmr RCTRL UNDER &hmr RALT DOLLAR &hmr RGUI EQUALS
 // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-                    &kp COLON     &kp SEMI     &kp N8                                        &kp N9        &kp COMMA     &kp DOT                 
+                    &kp N4        &kp N5       &kp N6                                        &kp COLON     &kp SEMI      &kp PERCENT                 
 // ╰─────────────┴─────────────┴─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┴─────────────┴─────────────╯
-                                                &kp BSPC     &trans            &trans        &trans
+                                                &kp N0       &trans            &trans        &trans
 //                             ╰─────────────┴─────────────┴─────────────╯   ╰─────────────┴─────────────┴─────────────╯
             >;
         };
 
-        bracket_layer {
-            label = "BRK";
+        sym_layer {
+            label = "SYM";
             bindings = <
 // ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮   ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮
-     &kp GT        &none          &none        &none         &none             &none         &none          &none        &none         &none
+     &kp GT         &kp RBKT      &kp RPAR     &kp RBRC       &kp STAR          &kp BSLH      &kp HASH      &kp AMPS      &kp PIPE      &kp TILDE
+// ├─────────────┼─────────────┼─────────────┼─────────────┼ ────────────┤   ├──────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
+     &hml LGUI LT   &hml LALT LBKT &hml LCTRL LPAR &hml LSHFT LBRC &kp PLUS         &kp CARET     &hmr RSHFT MINUS &hmr RCTRL UNDER &hmr RALT DOLLAR &hmr RGUI EQUALS
 // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-     &hml LGUI LT  &hml LALT LBKT &hml LCTRL LPAR &as LSHFT LBRC &none         &none         &as RSHFT RBRC &hmr RCTRL RPAR &hmr RALT RBKT &hmr RGUI GT     
-// ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-                   &kp RBKT       &kp RPAR    &kp RBRC                                       &none          &none        &none                              
+                    &none         &none        &none                                         &kp COLON     &kp SEMI      &kp PERCENT                 
 // ╰─────────────┴─────────────┴─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┴─────────────┴─────────────╯
-                                               &trans        &trans            &trans        &trans
+                                                &trans       &trans            &trans        &trans
 //                             ╰─────────────┴─────────────┴─────────────╯   ╰─────────────┴─────────────┴─────────────╯
             >;
         };
