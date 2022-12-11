@@ -258,7 +258,7 @@
 // ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮   ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮
      &kp COMMA      &kp N7        &kp N8       &kp N9        &kp STAR          &kp BSLH      &kp HASH      &kp AMPS      &kp PIPE      &kp TILDE
 // ├─────────────┼─────────────┼─────────────┼─────────────┼ ────────────┤   ├──────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-     &hml LGUI DOT  &hml LALT N1  &hml LCTRL N2 &hml LSHFT N3 &kp PLUS         &kp CARET     &hmr RSHFT MINUS &hmr RCTRL UNDER &hmr RALT DOLLAR &hmr RGUI EQUALS
+     &hml LGUI DOT  &hml LALT N1  &hml LCTRL N2 &hml LSHFT N3 &kp PLUS         &kp CARET     &hmr RSHFT MINUS &hmr RCTRL UNDER &hmr RALT DOLLAR &hmr RGUI EQUAL
 // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
                     &kp N4        &kp N5       &kp N6                                        &kp COLON     &kp SEMI      &kp PERCENT                 
 // ╰─────────────┴─────────────┴─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┴─────────────┴─────────────╯
