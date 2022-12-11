@@ -273,7 +273,7 @@
 // ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮   ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮
      &kp GT         &kp RBKT      &kp RPAR     &kp RBRC       &kp STAR          &kp BSLH      &kp HASH      &kp AMPS      &kp PIPE      &kp TILDE
 // ├─────────────┼─────────────┼─────────────┼─────────────┼ ────────────┤   ├──────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-     &hml LGUI LT   &hml LALT LBKT &hml LCTRL LPAR &hml LSHFT LBRC &kp PLUS         &kp CARET     &hmr RSHFT MINUS &hmr RCTRL UNDER &hmr RALT DOLLAR &hmr RGUI EQUALS
+     &hml LGUI LT   &hml LALT LBKT &hml LCTRL LPAR &hml LSHFT LBRC &kp PLUS     &kp CARET     &hmr RSHFT MINUS &hmr RCTRL UNDER &hmr RALT DOLLAR &hmr RGUI EQUAL
 // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
                     &none         &none        &none                                         &kp COLON     &kp SEMI      &kp PERCENT                 
 // ╰─────────────┴─────────────┴─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┴─────────────┴─────────────╯
