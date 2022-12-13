@@ -35,6 +35,7 @@
 
     // functions + clipboard + historyiacors
     COMBO(bspc,     &kp BSPC,     4 14,  MAIN ALT SYM NAV FUN, COMBO_TERM_SLOW)  
+    COMPO(esc,      &kp ESC,      2 13,  MAIN ALT SYM NAV FUN, COMBO_TERM_SLOW)
     COMBO(ret,      &kp RET,      16 23, MAIN ALT SYM NAV FUN, COMBO_TERM_SLOW)  
     COMBO(capslock, &kp CAPS,     6 7 8, MAIN ALT SYM NAV FUN, COMBO_TERM_SLOW)  
     COMBO(caps_l,   &caps_word,   11 12 13,MAIN ALT SYM NAV FUN, COMBO_TERM_SLOW)                  
