@@ -186,6 +186,16 @@
             bindings = <&mo>, <&key_repeat>;
         };
 
+        lc: layer_caps {
+            compatible = "zmk,behavior-hold-tap";
+            label = "LAYER_CAPS";
+            #binding-cells = <2>;
+            tapping_term_ms = <200>;
+            quick-tap-ms = <175>;
+            flavor = "balanced";
+            bindings = <&mo>, <&caps_word>;
+        };
+
         dotexcl: dot_excl {
             compatible = "zmk,behavior-mod-morph";
             label = "DOT_EXCL";
@@ -218,20 +228,21 @@
     };
 
 
-// j c y p b         x l o u '
-// r s t h k         w n e a i
-//   f g d             m , . 
+// j c y d k     x l o u '
+// r s t h b     w n e a i
+//   f g p         m , . 
+
     alt_layer {
             label = "ALT";
             bindings = <
 // ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮   ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮
-     &kp J         &kp C         &kp Y         &kp P         &kp B             &kp X         &kp L         &kp O         &kp U         &kp SQT
+     &kp J         &kp C         &kp Y         &kp D         &kp K             &kp X         &kp L         &kp O         &kp U         &key_repeat
 // ├────────────┼─────────────┼─────────────┼─────────────┼─────────────┤    ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-     &hml LGUI R   &hml LALT S   &hml LCTRL T  &hml LSHFT H  &kp K             &kp W         &hmr RSHFT N  &hmr RCTRL E  &hmr RALT A   &hmr RGUI I     
+     &hml LGUI R   &hml LALT S   &hml LCTRL T  &hml LSHFT H  &kp B             &kp W         &hmr RSHFT N  &hmr RCTRL E  &hmr RALT A   &hmr RGUI I     
 // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-                   &kp F         &kp G         &kp D                                         &kp M         &kp COMMA     &kp DOT
+                   &kp F         &kp G         &kp P                                         &kp M         &kp COMMA     &kp DOT
 // ╰─────────────┴─────────────┴─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┴─────────────┴─────────────╯
-                                               &lt KEY SQT   &lt NAV SPACE     &lst NUM LSHFT  &lr FUN 0
+                                               &lt KEY SQT   &lt NAV SPACE     &lst NUM LSHFT  &lc FUN 0 
 //                             ╰─────────────┴─────────────┴─────────────╯   ╰─────────────┴─────────────┴─────────────╯
         >;
     };
