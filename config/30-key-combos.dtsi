@@ -43,7 +43,7 @@
     COMBO(ss_r,     SK(LSHIFT),   16 17, MAIN ALT NUM NAV FUN, COMBO_TERM_FAST)                  
     COMBO(caps_l,   &caps_word,   11 12, MAIN ALT NUM NAV FUN, COMBO_TERM_FAST)                  
     COMBO(caps_r,   &caps_word,   17 18, MAIN ALT NUM NAV FUN, COMBO_TERM_FAST)                  
-    COMBO(slash,    &kp SLASH,    23 25, MAIN ALT NUM NAV FUN, COMBO_TERM_NORMAL)
+    COMBO(what,     &kp SLASH,    23 25, MAIN ALT NUM NAV FUN, COMBO_TERM_NORMAL)
     COMBO(grave,    &kp GRAVE,    21 22, MAIN ALT NUM NAV FUN, COMBO_TERM_NORMAL)
     COMBO(ss,       SS_TARGETED,  0 10,  MAIN ALT NUM NAV FUN, COMBO_TERM_NORMAL)
     COMBO(mouse1,   &mkp MB1,     13 22, MAIN ALT NUM NAV FUN, COMBO_TERM_NORMAL) 
