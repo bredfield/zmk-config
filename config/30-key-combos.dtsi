@@ -29,7 +29,6 @@
     COMBO(q,        &kp Q,        20 22, MAIN ALT NUM NAV FUN, COMBO_TERM_NORMAL)
     COMBO(j,        &kp J,          1 2, MAIN NUM NAV FUN, COMBO_TERM_NORMAL)
     COMBO(v,        &kp V,          1 2, ALT, COMBO_TERM_NORMAL)
-    COMBO(MINUS,    &kp MINUS,      6 7, MAIN ALT NUM NAV FUN, COMBO_TERM_NORMAL)
 
     // common *gram
     COMBO(you,      &you,         6 8,   MAIN ALT NUM NAV FUN, COMBO_TERM_NORMAL)
@@ -43,16 +42,17 @@
     COMBO(ss_r,     SK(LSHIFT),   16 17, MAIN NUM NAV FUN, COMBO_TERM_FAST)                  
     COMBO(caps_l,   &caps_word,   11 12, MAIN NUM NAV FUN, COMBO_TERM_FAST)                  
     COMBO(caps_r,   &caps_word,   17 18, MAIN NUM NAV FUN, COMBO_TERM_FAST)                  
-    COMBO(slash,    &kp SLASH,    23 25, MAIN ALT NUM NAV FUN, COMBO_TERM_NORMAL)
-    COMBO(grave,    &kp GRAVE,    21 22, MAIN ALT NUM NAV FUN, COMBO_TERM_NORMAL)
     COMBO(ss,       SS_TARGETED,  0 10,  MAIN ALT NUM NAV FUN, COMBO_TERM_NORMAL)
     COMBO(mouse1,   &mkp MB1,     13 22, MAIN ALT NUM NAV FUN, COMBO_TERM_NORMAL) 
     COMBO(mouse2,   &mkp MB2,     12 21, MAIN ALT NUM NAV FUN, COMBO_TERM_NORMAL) 
     COMBO(mouse4,   &mkp MB4,     11 20, MAIN ALT NUM NAV FUN, COMBO_TERM_NORMAL) 
 
     // common symbols  
+    COMBO(MINUS,    &kp MINUS,    6 7,   MAIN ALT NUM NAV FUN, COMBO_TERM_NORMAL)
     COMBO(at,       &kp AT,       2 3,   MAIN ALT NUM NAV FUN, COMBO_TERM_NORMAL)
     COMBO(dqt,      &kp DQT,      7 8,   MAIN ALT NUM NAV FUN, COMBO_TERM_NORMAL)
+    COMBO(slash,    &kp SLASH,    23 25, MAIN ALT NUM NAV FUN, COMBO_TERM_NORMAL)
+    COMBO(grave,    &kp GRAVE,    21 22, MAIN ALT NUM NAV FUN, COMBO_TERM_NORMAL)
     COMBO(excl,     &kp EXCL,     23 24, MAIN ALT NUM NAV FUN, COMBO_TERM_NORMAL)
     COMBO(qmark,    &kp QMARK,    24 25, MAIN ALT NUM NAV FUN, COMBO_TERM_NORMAL)
 

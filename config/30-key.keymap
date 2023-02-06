@@ -227,18 +227,16 @@
         >;
     };
 
-
-// j c y d k     x l o u '
-// r s t h b     w n e a i
+// x c y d k     j l o u '  
+// r s t h b     w n e iai
 //   f g p         m , . 
-
     alt_layer {
             label = "ALT";
             bindings = <
 // ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮   ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮
-     &kp J         &kp C         &kp Y         &kp D         &kp K             &kp X         &kp L         &kp O         &kp U         &kp caps_word
+     &kp X         &kp C         &kp Y         &kp D         &kp K             &kp J         &kp L         &kp O         &kp U         &kp QUO
 // ├────────────┼─────────────┼─────────────┼─────────────┼─────────────┤    ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-     &hml LGUI R   &hml LALT S   &hml LCTRL T  &hml LSHFT H  &kp B             &kp W         &hmr RSHFT N  &hmr RCTRL E  &hmr RALT A   &hmr RGUI I     
+     &hml LGUI R   &hml LALT S   &hml LCTRL T  &hml LSHFT H  &kp B             &kp W         &hmr RSHFT N  &hmr RCTRL E  &hmr RALT I   &hmr RGUI A     
 // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
                    &kp F         &kp G         &kp P                                         &kp M         &kp COMMA     &kp DOT
 // ╰─────────────┴─────────────┴─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┴─────────────┴─────────────╯
