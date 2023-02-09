@@ -208,21 +208,21 @@
     keymap {
         compatible = "zmk,keymap";
 
-// v w f p b         x l u o '
-// r s t h k         / n e a i
+// x w f p b         / l u o '
+// r s t h k         v n e a i
 //   c g d             m , . 
 //                   e
     main_layer {
             label = "MAIN";
             bindings = <
 // ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮   ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮
-     &kp V         &kp W         &kp F         &kp P         &kp B             &kp X         &kp L         &kp U         &kp Y         &kp SQT
+     &kp X         &kp W         &kp F         &kp P         &kp B             &kp SLASH     &kp L         &kp U         &kp Y         &kp SQT
 // ├────────────┼─────────────┼─────────────┼─────────────┼─────────────┤    ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-     &hml LGUI R   &hml LALT S   &hml LCTRL T  &hml LSHFT H  &kp K             &kp SLASH     &hmr RSHFT N  &hmr RCTRL A  &hmr RALT I   &hmr RGUI O     
+     &hml LGUI R   &hml LALT S   &hml LCTRL T  &hml LSHFT H  &kp K             &kp V         &hmr RSHFT N  &hmr RCTRL A  &hmr RALT I   &hmr RGUI O     
 // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
                    &kp C         &kp G         &kp D                                         &kp M         &kp COMMA     &kp DOT
 // ╰─────────────┴─────────────┴─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┴─────────────┴─────────────╯
-                                               &lst KEY LSHFT  &lt NAV SPACE      &lt NUM E     &lr FUN 0
+                                               &lst KEY LSHFT  &lt NAV SPACE   &lt NUM E     &lr FUN 0
 //                             ╰─────────────┴─────────────┴─────────────╯   ╰─────────────┴─────────────┴─────────────╯
         >;
     }; 
