@@ -99,6 +99,12 @@
             bindings = <&macro_tap &kp Y &kp O &kp U>;
         )
 
+        ZMK_MACRO(yeah,
+            wait-ms = <0>;
+            tap-ms = <0>;
+            bindings = <&macro_tap &kp Y &kp E &kp A &kp H>;
+        )
+
         ZMK_MACRO(mo_nav,
             wait-ms = <0>;
             tap-ms = <0>;

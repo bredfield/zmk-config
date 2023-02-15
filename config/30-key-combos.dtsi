@@ -27,11 +27,12 @@
     // missing alphas 
     COMBO(z,        &kp Z,        20 21, MAIN ALT NUM NAV FUN, COMBO_TERM_NORMAL)
     COMBO(q,        &kp Q,        20 22, MAIN ALT NUM NAV FUN, COMBO_TERM_NORMAL)
-    COMBO(j,        &kp J,          1 2, MAIN NUM NAV FUN, COMBO_TERM_NORMAL)
-    COMBO(v,        &kp V,          1 2, ALT, COMBO_TERM_NORMAL)
+    COMBO(j,        &kp J,          1 2, MAIN ALT NUM NAV FUN, COMBO_TERM_NORMAL)
+    /* COMBO(v,        &kp V,          1 2, ALT, COMBO_TERM_NORMAL) */
 
     // common *gram
-    COMBO(you,      &you,         6 8,   MAIN ALT NUM NAV FUN, COMBO_TERM_NORMAL)
+    COMBO(you,      &you,         6 8,   MAIN NUM NAV FUN, COMBO_TERM_NORMAL)
+    COMBO(yeah,     &yeah,        6 8,   ALT, COMBO_TERM_NORMAL)
 
     // functions + clipboard + history
     COMBO(bspc,     &kp BSPC,     4 14,  MAIN ALT NUM NAV FUN, COMBO_TERM_SLOW)  
