@@ -227,21 +227,37 @@
         >;
     }; 
 
-// x c y d k     j l o u '  
-// r s t h b     w n e i a
-//   c g p         m , . 
+// ONE
+// x c y d k  / l o u '     x c y d k j l o u ' 
+// r s t h b  w n e i a      r s t h b w n e i a 
+//   f g p      m , .         f g p v z q m , . 
+
+// TWO
+// x c d l k  p y o u '     x c d l k j y o u '
+// r s t h v  w n e i a      r s t h v p n e i a 
+//   g b m      f , .         g b m q z w f , . 
+
+// THREE
+// x c l d k  / y o u '     x c l d k j y o u '
+// r s h t b  p n e i a      r s h t v p n e i a 
+//   g m w      f , .         g m w b z q f , . 
+
+// FOUR
+// v c l d k  x y o u '     v c l d k j y o u '
+// r s n t b  p h e i a      r s n t b p h e i a
+//   g m w      f , .         g m w q z x f , .
 
     alt_layer {
             label = "ALT";
             bindings = <
 // ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮   ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮
-     &kp X         &kp C         &kp Y         &kp D         &kp K             &kp J         &kp L         &kp O         &kp U         &kp SQT
+     &kp V         &kp C         &kp L         &kp D         &kp K             &kp X         &kp Y         &kp O         &kp U         &kp SQT
 // ├────────────┼─────────────┼─────────────┼─────────────┼─────────────┤    ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-     &hml LGUI R   &hml LALT S   &hml LCTRL T  &hml LSHFT H  &kp B             &kp W         &hmr RSHFT N  &hmr RCTRL E  &hmr RALT I   &hmr RGUI A     
+     &hml LGUI R   &hml LALT S   &hml LCTRL N  &hml LSHFT T  &kp B             &kp P         &hmr RSHFT H  &hmr RCTRL E  &hmr RALT I   &hmr RGUI A     
 // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-                   &kp F         &kp G         &kp P                                         &kp M         &kp COMMA     &kp DOT
+                   &kp G         &kp M         &kp W                                         &kp F         &kp COMMA     &kp DOT
 // ╰─────────────┴─────────────┴─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┴─────────────┴─────────────╯
-                                               &lt KEY SQT   &lt NAV SPACE     &lst NUM LSHFT  &lr FUN 0 
+                                               &lr KEY 0     &lt NAV SPACE     &lst NUM LSHFT  &lr FUN 0 
 //                             ╰─────────────┴─────────────┴─────────────╯   ╰─────────────┴─────────────┴─────────────╯
         >;
     };
