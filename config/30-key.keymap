@@ -222,9 +222,9 @@
             label = "MAIN";
             bindings = <
 // ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮   ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮
-     &kp X         &kp W         &kp F         &kp P         &kp B             &kp SLASH     &kp L         &kp U         &kp Y         &kp SQT
+     &kp X         &kp W         &kp F         &kp P         &kp B             &kp V         &kp L         &kp U         &kp Y         &kp SQT
 // ├────────────┼─────────────┼─────────────┼─────────────┼─────────────┤    ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-     &hml LGUI R   &hml LALT S   &hml LCTRL T  &hml LSHFT H  &kp K             &kp V         &hmr RSHFT N  &hmr RCTRL A  &hmr RALT I   &hmr RGUI O     
+     &hml LGUI R   &hml LALT S   &hml LCTRL T  &hml LSHFT H  &kp K             &kp SLASH     &hmr RSHFT N  &hmr RCTRL A  &hmr RALT I   &hmr RGUI O     
 // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
                    &kp C         &kp G         &kp D                                         &kp M         &kp COMMA     &kp DOT
 // ╰─────────────┴─────────────┴─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┴─────────────┴─────────────╯
@@ -249,9 +249,14 @@
 //   g m w      f , .         g m w b z q f , . 
 
 // FOUR
-// v c l d k  x y o u '     v c l d k j y o u '
-// r s n t b  p h e i a      r s n t b p h e i a
-//   g m w      f , .         g m w q z x f , .
+// v c l d k  x y o u '     v c l d q j y o u '
+// r s n t b  p h e i a      r s n t k p h e i a
+//   g m w      f , .         g m w b z x f , .
+
+// FIVE
+// w c l d g  j u o y k     w c l d v  j u o y '
+// r s n t b  / a e i h      r s n t g  p a e i h k
+//   f m p      x , .         f m p b z  x f , .
 
     alt_layer {
             label = "ALT";
@@ -289,9 +294,9 @@
 // ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮   ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮
      &kp COMMA      &kp N7        &kp N8       &kp N9        &kp STAR          &kp BSLH      &kp HASH      &kp AMPS      &kp PIPE      &kp TILDE
 // ├─────────────┼─────────────┼─────────────┼─────────────┼ ────────────┤   ├──────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-     &hml LGUI DOT  &hml LALT N1  &hml LCTRL N2 &hml LSHFT N3 &kp PLUS         &kp SLASH     &hmr RSHFT MINUS &hmr RCTRL UNDER &hmr RALT EQUAL &hmr RGUI DOLLAR
+     &hml LGUI DOT  &hml LALT N4  &hml LCTRL N5 &hml LSHFT N6 &kp PLUS         &kp SLASH     &hmr RSHFT MINUS &hmr RCTRL UNDER &hmr RALT EQUAL &hmr RGUI DOLLAR
 // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-                    &kp N4        &kp N5       &kp N6                                        &kp COLON     &kp SEMI      &kp PERCENT                 
+                    &kp N1        &kp N2       &kp N3                                        &kp COLON     &kp SEMI      &kp PERCENT                 
 // ╰─────────────┴─────────────┴─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┴─────────────┴─────────────╯
                                                 &kp N0       &kp SPACE         &trans        &trans
 //                             ╰─────────────┴─────────────┴─────────────╯   ╰─────────────┴─────────────┴─────────────╯
