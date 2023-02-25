@@ -214,15 +214,15 @@
     keymap {
         compatible = "zmk,keymap";
 
-// x w f p b         / l u o '
-// r s t h k         v n e a i
+// x w f p b         v l u y '
+// r s t h k         / n a i o
 //   c g d             m , . 
 //                   e
     main_layer {
             label = "MAIN";
             bindings = <
 // ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮   ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮
-     &kp X         &kp W         &kp F         &kp P         &kp B             &kp V         &kp L         &kp U         &kp Y         &kp SQT
+     &kp X         &kp W         &kp F         &kp P         &kp B             &kp J         &kp L         &kp U         &kp Y         &kp SQT
 // ├────────────┼─────────────┼─────────────┼─────────────┼─────────────┤    ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
      &hml LGUI R   &hml LALT S   &hml LCTRL T  &hml LSHFT H  &kp K             &kp SLASH     &hmr RSHFT N  &hmr RCTRL A  &hmr RALT I   &hmr RGUI O     
 // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
@@ -251,7 +251,7 @@
 // FOUR
 // v c l d k  x y o u '     v c l d q j y o u '
 // r s n t b  p h e i a      r s n t k p h e i a
-//   g m w      f , .         g m w b z x f , .
+//   w m g      f , .         w m g b z x f , .
 
 // FIVE
 // w c l d g  j u o y k     w c l d v  j u o y '
