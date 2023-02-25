@@ -25,7 +25,7 @@
     compatible = "zmk,combos"; 
 
     // missing alphas 
-    COMBO(z,        &kp Z,        11 12, MAIN ALT NUM NAV FUN, COMBO_TERM_NORMAL)
+    COMBO(z,        &kp Z,        20 21, MAIN ALT NUM NAV FUN, COMBO_TERM_NORMAL)
     COMBO(q,        &kp Q,        20 22, MAIN ALT NUM NAV FUN, COMBO_TERM_NORMAL)
     /* COMBO(j,        &kp J,          1 2, MAIN ALT NUM NAV FUN, COMBO_TERM_NORMAL) */
     COMBO(v,        &kp V,          21 22, MAIN, COMBO_TERM_NORMAL)

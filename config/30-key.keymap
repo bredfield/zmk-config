@@ -214,7 +214,7 @@
     keymap {
         compatible = "zmk,keymap";
 
-// x w f p b         v l u y '
+// x w f p b         j l u y '
 // r s t h k         / n a i o
 //   c g d             m , . 
 //                   e
