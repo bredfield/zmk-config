@@ -28,7 +28,7 @@
     COMBO(z,        &kp Z,        20 21, MAIN ALT NUM NAV FUN, COMBO_TERM_NORMAL)
     COMBO(q,        &kp Q,        20 22, MAIN ALT NUM NAV FUN, COMBO_TERM_NORMAL)
     /* COMBO(j,        &kp J,          1 2, MAIN ALT NUM NAV FUN, COMBO_TERM_NORMAL) */
-    COMBO(v,        &kp V,          21 22, MAIN, COMBO_TERM_NORMAL)
+    COMBO(v,        &kp V,          1 2, MAIN, COMBO_TERM_NORMAL)
 
     // common *gram
     COMBO(you,      &you,         6 8,   MAIN NUM NAV FUN, COMBO_TERM_NORMAL)
@@ -52,7 +52,7 @@
     COMBO(at,       &kp AT,       2 3,   MAIN ALT NUM NAV FUN, COMBO_TERM_NORMAL)
     COMBO(dqt,      &kp DQT,      7 8,   MAIN ALT NUM NAV FUN, COMBO_TERM_NORMAL)
     COMBO(slash,    &kp SLASH,    23 25, MAIN ALT NUM NAV FUN, COMBO_TERM_NORMAL)
-    COMBO(grave,    &kp GRAVE,    1 2, MAIN ALT NUM NAV FUN, COMBO_TERM_NORMAL)
+    COMBO(grave,    &kp GRAVE,    21 22, MAIN ALT NUM NAV FUN, COMBO_TERM_NORMAL)
     COMBO(excl,     &kp EXCL,     23 24, MAIN ALT NUM NAV FUN, COMBO_TERM_NORMAL)
     COMBO(qmark,    &kp QMARK,    24 25, MAIN ALT NUM NAV FUN, COMBO_TERM_NORMAL)
 
