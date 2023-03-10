@@ -67,15 +67,15 @@
  flavor = "tap-preferred";
 };
 
-// / {
-//     conditional_layers {
-//         compatible = "zmk,conditional-layers";
-//         tri_layer {
-//             if-layers = <3 4>;
-//             then-layer = <5>;
-//         };
-//     };
-// };
+/ {
+    conditional_layers {
+        compatible = "zmk,conditional-layers";
+        tri_layer {
+            if-layers = <3 4>;
+            then-layer = <5>;
+        };
+    };
+};
 
 #include "30-key-combos.dtsi"
 
@@ -228,11 +228,10 @@
 // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
                    &kp C         &kp G         &kp D                                         &kp M         &kp COMMA     &kp DOT
 // ╰─────────────┴─────────────┴─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┴─────────────┴─────────────╯
-                                               &lst KEY LSHFT  &lt NAV SPACE   &lt NUM E     &lr FUN 0
+                                               &lc FUN 0     &lt NAV SPACE     &mt LSHIFT E  &sl NUM
 //                             ╰─────────────┴─────────────┴─────────────╯   ╰─────────────┴─────────────┴─────────────╯
         >;
-    }; 
-
+    };
 // ONE
 // x c y d k  / l o u '     x c y d k j l o u ' 
 // r s t h b  w n e i a      r s t h b w n e i a 
