@@ -211,7 +211,7 @@
 
     keymap {
         compatible = "zmk,keymap";
-// q w f p b         j l u y '
+// / w f p b         j l u y '
 // r s t h k         x n a i o
 // ⟳ c g d v         - m , . ⟳
 //                   e
@@ -265,11 +265,11 @@
             label = "NUM";
             bindings = <
 // ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮   ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮
-     &kp COMMA      &kp N7        &kp N8       &kp N9        &kp STAR          &kp BSLH      &kp HASH      &kp AMPS      &kp PIPE      &kp TILDE
+     &trans         &kp N7        &kp N8       &kp N9        &kp STAR          &kp BSLH      &kp HASH      &kp AMPS      &kp PIPE      &kp TILDE
 // ├─────────────┼─────────────┼─────────────┼─────────────┼ ────────────┤   ├──────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-     &hml LGUI DOT  &hml LALT N4  &hml LCTRL N5 &hml LSHFT N6 &kp PLUS         &kp SLASH     &hmr RSHFT MINUS &hmr RCTRL UNDER &hmr RALT EQUAL &hmr RGUI DOLLAR
+     &hml LGUI SEMICOLON &hml LALT N4  &hml LCTRL N5 &hml LSHFT N6 &kp PLUS         &kp PERCENT   &hmr RSHFT MINUS &hmr RCTRL UNDER &hmr RALT EQUAL &hmr RGUI DOLLAR
 // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-     &none          &kp N1        &kp N2       &kp N3        &none             &none         &kp COLON     &kp SEMI      &kp PERCENT   &none        
+     &trans         &kp N1        &kp N2       &kp N3        &none             &none         &kp COLON     &trans        &traS         &trans        
 // ╰─────────────┴─────────────┴─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┴─────────────┴─────────────╯
                                                 &kp N0       &kp SPACE         &trans        &trans
 //                             ╰─────────────┴─────────────┴─────────────╯   ╰─────────────┴─────────────┴─────────────╯
