@@ -213,8 +213,9 @@
         compatible = "zmk,keymap";
 // q w f p b         j l u y '
 // r s t h k         x n a i o
-// / c g d v         z m , . -
+// ⟳ c g d v         z m , . ⟳
 //                   e
+
     main_layer {
             label = "MAIN";
             bindings = <
@@ -223,7 +224,7 @@
 // ├────────────┼─────────────┼─────────────┼─────────────┼─────────────┤    ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
      &hml LGUI R   &hml LALT S   &hml LCTRL T  &hml LSHFT H  &kp K             &kp X         &hmr RSHFT N  &hmr RCTRL A  &hmr RALT I   &hmr RGUI O     
 // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-     &kp SLASH     &kp C         &kp G         &kp D         &kp V             &kp Z         &kp M         &kp COMMA     &kp DOT       &kp MINUS
+     &key_repeat   &kp C         &kp G         &kp D         &kp V             &kp Z         &kp M         &kp COMMA     &kp DOT       &key_repeat
 // ╰─────────────┴─────────────┴─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┴─────────────┴─────────────╯
                                                &lst KEY LSHFT  &lt NAV SPACE   &lt NUM E     &lc FUN 0
 //                             ╰─────────────┴─────────────┴─────────────╯   ╰─────────────┴─────────────┴─────────────╯

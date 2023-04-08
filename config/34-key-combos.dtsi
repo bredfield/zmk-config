@@ -47,14 +47,14 @@
     COMBO(mouse2,   &mkp MB2,     12 21, MAIN ALT NUM NAV FUN, COMBO_TERM_NORMAL) 
     COMBO(mouse4,   &mkp MB4,     11 20, MAIN ALT NUM NAV FUN, COMBO_TERM_NORMAL) 
 
-    // common symbols  
+    // common symbols 
     COMBO(MINUS,    &kp MINUS,    6 7,   MAIN ALT NUM NAV FUN, COMBO_TERM_NORMAL)
     COMBO(at,       &kp AT,       2 3,   MAIN ALT NUM NAV FUN, COMBO_TERM_NORMAL)
     COMBO(dqt,      &kp DQT,      7 8,   MAIN ALT NUM NAV FUN, COMBO_TERM_NORMAL)
     COMBO(slash,    &kp SLASH,    23 25, MAIN ALT NUM NAV FUN, COMBO_TERM_NORMAL)
-    COMBO(grave,    &kp GRAVE,    21 22, MAIN ALT NUM NAV FUN, COMBO_TERM_NORMAL)
-    COMBO(excl,     &kp EXCL,     23 24, MAIN ALT NUM NAV FUN, COMBO_TERM_NORMAL)
-    COMBO(qmark,    &kp QMARK,    24 25, MAIN ALT NUM NAV FUN, COMBO_TERM_NORMAL)
+    COMBO(grave,    &kp GRAVE,    22 23, MAIN ALT NUM NAV FUN, COMBO_TERM_NORMAL)
+    COMBO(excl,     &kp EXCL,     26 27, MAIN ALT NUM NAV FUN, COMBO_TERM_NORMAL)
+    COMBO(qmark,    &kp QMARK,    27 28, MAIN ALT NUM NAV FUN, COMBO_TERM_NORMAL)
 
     // brackets 
     COMBO(lt,       &kp LT,        0 10,  MAIN ALT NUM NAV FUN, COMBO_TERM_NORMAL)
