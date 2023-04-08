@@ -39,9 +39,9 @@
 #define SK(KEY) &nk KEY KEY
 
 /* Key Position Groups */
-#define KEYS_L 0 1 2 3 4 10 11 12 13 14 20 21 22  // left-hand keys
-#define KEYS_R 5 6 7 8 9 15 16 17 18 19 23 24 25  // right-hand keys
-#define THUMBS 26 27 28 29                        // thumb keys
+#define KEYS_L 0 1 2 3 4 10 11 12 13 14 20 21 22 23 24  // left-hand keys
+#define KEYS_R 5 6 7 8 9 15 16 17 18 19 25 26 27 28 29  // right-hand keys
+#define THUMBS 30 31 32 33                    // thumb keys
 
 /* Behavior Settings */
 &sl {
@@ -213,60 +213,36 @@
 
     keymap {
         compatible = "zmk,keymap";
-// ~ w f p b         j l u y '
+// q w f p b         j l u y '
 // r s t h k         x n a i o
-//   c g d             m , . 
+// / c g d v         z m , . -
 //                   e
     main_layer {
             label = "MAIN";
             bindings = <
 // ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮   ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮
-     &key_repeat   &kp W         &kp F         &kp P         &kp B             &kp J         &kp L         &kp U         &kp Y         &kp SQT
+     &kp Q         &kp W         &kp F         &kp P         &kp B             &kp J         &kp L         &kp U         &kp Y         &kp SQT
 // ├────────────┼─────────────┼─────────────┼─────────────┼─────────────┤    ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
      &hml LGUI R   &hml LALT S   &hml LCTRL T  &hml LSHFT H  &kp K             &kp X         &hmr RSHFT N  &hmr RCTRL A  &hmr RALT I   &hmr RGUI O     
 // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-                   &kp C         &kp G         &kp D                                         &kp M         &kp COMMA     &kp DOT
+     &kp SLASH     &kp C         &kp G         &kp D         &kp V             &kp Z         &kp M         &kp COMMA     &kp DOT       &kp MINUS
 // ╰─────────────┴─────────────┴─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┴─────────────┴─────────────╯
                                                &lst KEY LSHFT  &lt NAV SPACE   &lt NUM E     &lc FUN 0
 //                             ╰─────────────┴─────────────┴─────────────╯   ╰─────────────┴─────────────┴─────────────╯
         >;
     };
-// ONE
-// x c y d k  / l o u '     x c y d k j l o u ' 
-// r s t h b  w n e i a      r s t h b w n e i a 
-//   f g p      m , .         f g p v z q m , . 
-
-// TWO
-// x c d l k  p y o u '     x c d l k j y o u '
-// r s t h v  w n e i a      r s t h v p n e i a 
-//   g b m      f , .         g b m q z w f , . 
-
-// THREE
-// x c l d k  / y o u '     x c l d k j y o u '
-// r s h t b  p n e i a      r s h t v p n e i a 
-//   g m w      f , .         g m w b z q f , . 
-
-// FOUR
-// v c l d k  x y o u '     v c l d q j y o u '
-// r s n t b  p h e i a      r s n t k p h e i a
-//   w m g      f , .         w m g b z x f , .
-
-// FIVE
-// w c l d g  j u o y k     w c l d v  j u o y '
-// r s n t b  / a e i h      r s n t g  p a e i h k
-//   f m p      x , .         f m p b z  x f , .
 
     alt_layer {
             label = "ALT";
             bindings = <
 // ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮   ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮
-     &kp V         &kp C         &kp L         &kp D         &kp K             &kp X         &kp Y         &kp O         &kp U         &kp SQT
+     &kp Q         &kp W         &kp F         &kp P         &kp B             &kp J         &kp L         &kp U         &kp Y         &kp SQT
 // ├────────────┼─────────────┼─────────────┼─────────────┼─────────────┤    ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-     &hml LGUI R   &hml LALT S   &hml LCTRL N  &hml LSHFT T  &kp B             &kp P         &hmr RSHFT H  &hmr RCTRL E  &hmr RALT I   &hmr RGUI A     
+     &hml LGUI R   &hml LALT S   &hml LCTRL T  &hml LSHFT H  &kp K             &kp X         &hmr RSHFT N  &hmr RCTRL A  &hmr RALT I   &hmr RGUI O     
 // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-                   &kp G         &kp M         &kp W                                         &kp F         &kp COMMA     &kp DOT
+     &kp SLASH     &kp C         &kp G         &kp D         &kp V             &kp Z         &kp M         &kp COMMA     &kp DOT       &kp MINUS
 // ╰─────────────┴─────────────┴─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┴─────────────┴─────────────╯
-                                               &lr KEY 0     &lt NAV SPACE     &lst NUM LSHFT  &lr FUN 0 
+                                               &lst KEY LSHFT  &lt NAV SPACE   &lt NUM E     &lc FUN 0
 //                             ╰─────────────┴─────────────┴─────────────╯   ╰─────────────┴─────────────┴─────────────╯
         >;
     };
@@ -279,7 +255,7 @@
 // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼────────────┤
      SK(LGUI)      SK(LALT)      SK(LCTRL)     SK(LSHFT)     SELECT_ALL        &kp PG_DN     &kp LEFT      &kp DOWN      &kp RIGHT     APP_SWAP        
 // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-                   U_CUT         U_CPY         U_PST                                         &kp BSPC      &kp RET       &kp TAB                           
+     &none         U_CUT         U_CPY         U_PST         &none             &none         &kp BSPC      &kp RET       &kp TAB       &none                    
 // ╰─────────────┴─────────────┴─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┴─────────────┴─────────────╯
                                                &trans        &trans            ALFRED        &trans
 //                             ╰─────────────┴─────────────┴─────────────╯   ╰─────────────┴─────────────┴─────────────╯
@@ -294,7 +270,7 @@
 // ├─────────────┼─────────────┼─────────────┼─────────────┼ ────────────┤   ├──────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
      &hml LGUI DOT  &hml LALT N4  &hml LCTRL N5 &hml LSHFT N6 &kp PLUS         &kp SLASH     &hmr RSHFT MINUS &hmr RCTRL UNDER &hmr RALT EQUAL &hmr RGUI DOLLAR
 // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-                    &kp N1        &kp N2       &kp N3                                        &kp COLON     &kp SEMI      &kp PERCENT                 
+     &none          &kp N1        &kp N2       &kp N3        &none             &none         &kp COLON     &kp SEMI      &kp PERCENT   &none        
 // ╰─────────────┴─────────────┴─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┴─────────────┴─────────────╯
                                                 &kp N0       &kp SPACE         &trans        &trans
 //                             ╰─────────────┴─────────────┴─────────────╯   ╰─────────────┴─────────────┴─────────────╯
@@ -305,11 +281,11 @@
             label = "FUN";
             bindings = <
 // ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮   ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮
-     &kp F10       &kp F7        &kp F8        &kp F9        &kp F12           &kp C_VOL_UP  &kp C_PREV    &kp C_PP      &kp C_NEXT    &to KEY
+     &kp F12       &kp F7        &kp F8        &kp F9        &kp F12           &kp C_VOL_UP  &kp C_PREV    &kp C_PP      &kp C_NEXT    &to KEY
 // ├─────────────┼───────────┼─────────────┼───────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
      &kp F11       &kp F1        &kp F2        &kp F3        SS_TARGETED       &kp C_VOL_DN  SK(RSHFT)     SK(RCTRL)     SK(RALT)      SK(RGUI)
 // ├─────────────┼───────────┼─────────────┼───────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-                   &kp F4        &kp F5        &kp F6                                        &to MAIN      &to ALT       &to KEY                     
+     &kp F10       &kp F4        &kp F5        &kp F6        &none             &none         &to MAIN      &to ALT       &to KEY       &none              
 // ├─────────────┼─────────────┼─────────────┴─────────────┴─────────────╯   ├─────────────┼─────────────┼─────────────┴─────────────┴─────────────╯
                                                &trans        &trans            &trans        &trans             
 //                             ╰─────────────┴─────────────┴─────────────╯   ╰─────────────┴─────────────┴─────────────╯
@@ -324,7 +300,7 @@
 // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼───────────┼─────────────┼───────────────┼─────────────┤
      &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bootloader        &bootloader   &none        &none        &none        &none
 // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼───────────┼─────────────┼───────────────┼─────────────┤
-                   &none         &none         &none                                          &none        &none        &none                     
+     &none         &none         &none         &none         &none              &none         &none        &none        &none          &none           
 // ├─────────────┼─────────────┼─────────────┴─────────────┴─────────────╯   ├─────────────┼─────────────┼─────────────┴─────────────┴─────────────╯
                                                &to MAIN      &trans             &trans        &trans
 //                             ╰─────────────┴─────────────┴─────────────╯   ╰─────────────┴─────────────┴─────────────╯
