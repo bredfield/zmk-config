@@ -77,8 +77,6 @@
 //     };
 // };
 
-#include "30-key-combos.dtsi"
-
 / { 
     behaviors {
         ZMK_MACRO(codeblock,
@@ -308,3 +306,5 @@
         };
     };
 };
+
+#include "34-key-combos.dtsi" 
