@@ -211,40 +211,20 @@
 
     keymap {
         compatible = "zmk,keymap";
-// // / w f p b         j l u y '
-// // r s t h k         x n a i o
-// // ⟳ c g d v         - m , . ⟳
-// //                   e
-//
-//     main_layer {
-//             label = "MAIN";
-//             bindings = <
-// // ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮   ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮
-//      &kp SLASH     &kp W         &kp F         &kp P         &kp B             &kp J         &kp L         &kp U         &kp Y         &kp SQT
-// // ├────────────┼─────────────┼─────────────┼─────────────┼─────────────┤    ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-//      &hml LGUI R   &hml LALT S   &hml LCTRL T  &hml LSHFT H  &kp K             &kp X         &hmr RSHFT N  &hmr RCTRL A  &hmr RALT I   &hmr RGUI O     
-// // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-//      &key_repeat   &kp C         &kp G         &kp D         &kp V             &kp MINUS     &kp M         &kp COMMA     &kp DOT       &key_repeat
-// // ╰─────────────┴─────────────┴─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┴─────────────┴─────────────╯
-//                                                &lst KEY LSHFT  &lt NAV SPACE   &lt NUM E     &lst FUN 0
-// //                             ╰─────────────┴─────────────┴─────────────╯   ╰─────────────┴─────────────┴─────────────╯
-//         >;
-//     };
-
-
-// w c g f k         j l u y '
-// r s t h d         x n a i o
-// ⟳ v b p /         - m , . ⟳
+// / w f p b         j l u y '
+// r s t h k         x n a i o
+// ⟳ c g d v         - m , . ⟳
 //                   e
+
     main_layer {
             label = "MAIN";
             bindings = <
 // ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮   ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮
-     &kp W         &kp C         &kp G         &kp F         &kp K             &kp J         &kp L         &kp U         &kp Y         &kp SQT
+     &kp SLASH     &kp W         &kp F         &kp P         &kp B             &kp J         &kp L         &kp U         &kp Y         &kp SQT
 // ├────────────┼─────────────┼─────────────┼─────────────┼─────────────┤    ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-     &hml LGUI R   &hml LALT S   &hml LCTRL T  &hml LSHFT H  &kp D             &kp X         &hmr RSHFT N  &hmr RCTRL A  &hmr RALT I   &hmr RGUI O     
+     &hml LGUI R   &hml LALT S   &hml LCTRL T  &hml LSHFT H  &kp K             &kp X         &hmr RSHFT N  &hmr RCTRL A  &hmr RALT I   &hmr RGUI O     
 // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-     &key_repeat   &kp V         &kp B         &kp P         &kp SLASH         &kp MINUS     &kp M         &kp COMMA     &kp DOT       &caps_word
+     &key_repeat   &kp C         &kp G         &kp D         &kp V             &kp MINUS     &kp M         &kp COMMA     &kp DOT       &key_repeat
 // ╰─────────────┴─────────────┴─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┴─────────────┴─────────────╯
                                                &lst KEY LSHFT  &lt NAV SPACE   &lt NUM E     &lst FUN 0
 //                             ╰─────────────┴─────────────┴─────────────╯   ╰─────────────┴─────────────┴─────────────╯
