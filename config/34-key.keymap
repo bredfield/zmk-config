@@ -232,21 +232,21 @@
         >;
     };
 
-// w c y f k         j l o u '
-// r s t h d         x n e i o
-// ⟳ v g p b         - m / , .
+// b l d w /         j f o u ,
+// n r t s g         y h a e i
+// ⟳ x m c v         - p . - /
 
     alt_layer {
             label = "ALT";
             bindings = <
 // ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮   ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮
-     &kp X         &kp C         &kp L         &kp F         &kp P             &kp J         &kp Y         &kp O         &kp U         &kp COMMA
+     &kp B         &kp L         &kp D         &kp W         &kp P             &kp J         &kp F         &kp O         &kp U         &kp COMMA
 // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-     &hml LGUI R   &hml LALT S   &hml LCTRL N  &hml LSHFT T  &kp B             &kp K         &hmr RSHFT H  &hmr RCTRL E  &hmr RALT I   &hmr RGUI A      
+     &hml LGUI N   &hml LALT R   &hml LCTRL T  &hml LSHFT S  &kp G             &kp K         &hmr RSHFT H  &hmr RCTRL A  &hmr RALT E   &hmr RGUI I      
 // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-     &key_repeat   &kp W         &kp M         &kp G         &kp V             &kp SLASH     &kp D         &kp SQT       &kp DOT       &key_repeat   
+     &key_repeat   &kp X         &kp M         &kp C         &kp V             &kp SLASH     &kp P         &kp DOT       &kp MINUS     &key_repeat   
 // ╰─────────────┴─────────────┴─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┴─────────────┴─────────────╯
-                                              &lr FUN 0     &lt NAV SPACE      SK(LSHFT)    &lr NUM 0
+                                              &lt FUN SQT    &lt NAV SPACE      SK(LSHFT)    &sl NUM
 //                             ╰─────────────┴─────────────┴─────────────╯   ╰─────────────┴─────────────┴─────────────╯
         >;
     };
