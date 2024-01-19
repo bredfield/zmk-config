@@ -221,13 +221,13 @@
             label = "MAIN";
             bindings = <
 // ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮   ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮
-     &key_repeat   &kp W         &kp F         &kp P         &kp B             &kp J         &kp L         &kp U         &kp Y         &kp SQT
+     &kp X         &kp C         &kp G         &kp D         &kp K             &kp J         &kp L         &kp U         &kp Y         &kp SQT
 // ├────────────┼─────────────┼─────────────┼─────────────┼─────────────┤    ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-     &hml LGUI R   &hml LALT S   &hml LCTRL T  &hml LSHFT H  &kp K             &kp X         &hmr RSHFT N  &hmr RCTRL A  &hmr RALT I   &hmr RGUI O     
+     &hml LGUI R   &hml LALT S   &hml LCTRL T  &hml LSHFT H  &kp P             &kp V         &hmr RSHFT N  &hmr RCTRL A  &hmr RALT I   &hmr RGUI O     
 // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-                   &kp C         &kp G         &kp D                                         &kp M         &kp COMMA     &kp DOT
+                   &kp B         &kp W         &kp F                                         &kp M         &kp COMMA     &kp DOT
 // ╰─────────────┴─────────────┴─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┴─────────────┴─────────────╯
-                                               &lst KEY LSHFT  &lt NAV SPACE   &lt NUM E     &lc FUN 0
+                                               &lst KEY LSHFT  &lt NAV SPACE   &lt NUM E     &lt FUN SLASH
 //                             ╰─────────────┴─────────────┴─────────────╯   ╰─────────────┴─────────────┴─────────────╯
         >;
     };
@@ -256,15 +256,21 @@
 // r s n t b  / a e i h      r s n t g  p a e i h k
 //   f m p      x , .         f m p b z  x f , .
 
+// x c g d k         j l u y '
+// r s t h p         v n a i o
+//   b w f             m , . 
+//                   e
+
+
     alt_layer {
             label = "ALT";
             bindings = <
 // ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮   ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮
-     &kp X         &kp C         &kp G         &kp D         &kp K             &kp J         &kp L         &kp U         &kp Y         &kp SQT
+     &kp V         &kp C         &kp W         &kp P         &kp K             &kp J         &kp L         &kp U         &kp Y         &kp SQT
 // ├────────────┼─────────────┼─────────────┼─────────────┼─────────────┤    ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-     &hml LGUI R   &hml LALT S   &hml LCTRL T  &hml LSHFT H  &kp P             &kp V         &hmr RSHFT N  &hmr RCTRL A  &hmr RALT I   &hmr RGUI O     
+     &hml LGUI R   &hml LALT S   &hml LCTRL T  &hml LSHFT H  &kp B             &kp SLASH         &hmr RSHFT N  &hmr RCTRL A  &hmr RALT I   &hmr RGUI O     
 // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-                   &kp B         &kp W         &kp F                                         &kp M         &kp COMMA     &kp DOT
+                   &kp F         &kp G         &kp D                                         &kp M         &kp COMMA     &kp DOT
 // ╰─────────────┴─────────────┴─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┴─────────────┴─────────────╯
                                                &lst KEY LSHFT  &lt NAV SPACE   &lt NUM E     &lt FUN SLASH
 //                             ╰─────────────┴─────────────┴─────────────╯   ╰─────────────┴─────────────┴─────────────╯
