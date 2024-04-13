@@ -213,21 +213,22 @@
 
     keymap {
         compatible = "zmk,keymap";
-// ~ w f p b         j l u y '
-// r s t h k         x n a i o
-//   c g d             m , . 
-//                   e
-    main_layer {
+// / c f p k  j l u y .
+// r s t h b  x n a i o
+// ~ w g d ~  ~ m , . ~
+          e
+ 
+ main_layer {
             label = "MAIN";
             bindings = <
 // ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮   ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮
-     &kp X         &kp C         &kp G         &kp D         &kp K             &kp J         &kp L         &kp U         &kp Y         &kp SQT
+     &kp SLASH     &kp C         &kp F         &kp P         &kp K             &kp J         &kp L         &kp U         &kp Y         &kp SQT
 // ├────────────┼─────────────┼─────────────┼─────────────┼─────────────┤    ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-     &hml LGUI R   &hml LALT S   &hml LCTRL T  &hml LSHFT H  &kp P             &kp V         &hmr RSHFT N  &hmr RCTRL A  &hmr RALT I   &hmr RGUI O     
+     &hml LGUI R   &hml LALT S   &hml LCTRL T  &hml LSHFT H  &kp B             &kp X         &hmr RSHFT N  &hmr RCTRL A  &hmr RALT I   &hmr RGUI O     
 // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-                   &kp B         &kp W         &kp F                                         &kp M         &kp COMMA     &kp DOT
+                   &kp W         &kp G         &kp D                                         &kp M         &kp COMMA     &kp DOT
 // ╰─────────────┴─────────────┴─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┴─────────────┴─────────────╯
-                                               &lr KEY 0   &lt NAV SPACE   &lt NUM E     &lr FUN 0
+                                               &lr KEY 0     &lt NAV SPACE     &lt NUM E     &lr FUN 0
 //                             ╰─────────────┴─────────────┴─────────────╯   ╰─────────────┴─────────────┴─────────────╯
         >;
     };
