@@ -216,7 +216,7 @@
 // / c f p k  j l u y .
 // r s t h b  x n a i o
 // ~ w g d ~  ~ m , . ~
-          e
+         // e
  
  main_layer {
             label = "MAIN";
@@ -295,7 +295,7 @@
         };
 
         num_layer { 
-            label = "NUM";
+            label = "NUM"; 
             bindings = <
 // ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮   ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮
      &kp COMMA      &kp N7        &kp N8       &kp N9        &kp STAR          &kp BSLH      &kp HASH      &kp AMPS      &kp PIPE      &kp TILDE
