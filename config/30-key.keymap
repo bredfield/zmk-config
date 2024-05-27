@@ -33,7 +33,7 @@
 #define APP_SWAP    &kp LG(TAB)
 #define WIN_SWAP    &kp LG(GRAVE)
 #define ALFRED      &kp LG(SPC)
-#define HOMEROW     &kp LG(LCTRL(SPC))
+#define HOMEROW     &kp LG(LC(SPC))
 #define DUPLICATE   &kp LG(D)
 #define CLIP   &kp LG(LA(DOWN))
 
