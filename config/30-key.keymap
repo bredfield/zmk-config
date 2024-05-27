@@ -33,6 +33,7 @@
 #define APP_SWAP    &kp LG(TAB)
 #define WIN_SWAP    &kp LG(GRAVE)
 #define ALFRED      &kp LG(SPC)
+#define HOMEROW     &kp LG(LCTRL(SPC))
 #define DUPLICATE   &kp LG(D)
 #define CLIP   &kp LG(LA(DOWN))
 
@@ -286,7 +287,7 @@
             label = "NAV";
             bindings = <
 // ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮   ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮
-     &kp RET       CLOSE         NEW_TAB       U_UNDO        U_REDO            &kp PG_UP     &kp DEL       &kp UP        CLIP          WIN_SWAP
+     HOMEROW       CLOSE         NEW_TAB       U_UNDO        U_REDO            &kp PG_UP     &kp DEL       &kp UP        CLIP          WIN_SWAP
 // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼────────────┤
      SK(LGUI)      SK(LALT)      SK(LCTRL)     SK(LSHFT)     SELECT_ALL        &kp PG_DN     &kp LEFT      &kp DOWN      &kp RIGHT     APP_SWAP        
 // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
