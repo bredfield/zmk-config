@@ -33,6 +33,7 @@
 #define APP_SWAP    &kp LG(TAB)
 #define WIN_SWAP    &kp LG(GRAVE)
 #define ALFRED      &kp LG(SPC)
+
 #define HOMEROW     &kp LG(LC(SPC))
 #define DUPLICATE   &kp LG(D)
 #define CLIP   &kp LG(LA(DOWN))
@@ -232,7 +233,7 @@
 // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
                    &kp F         &kp G         &kp D                                         &kp M         &kp COMMA     &kp DOT
 // ╰─────────────┴─────────────┴─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┴─────────────┴─────────────╯
-                                               &lr KEY 0     &lt NAV SPACE     &lt NUM E     &lr FUN 0
+                                               &lr KEY 0     &lt NAV SPACE     &lt NUM E     &lst FUN LSHFT
 //                             ╰─────────────┴─────────────┴─────────────╯   ╰─────────────┴─────────────┴─────────────╯
         >;
     };
@@ -302,9 +303,9 @@
             label = "NUM"; 
             bindings = <
 // ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮   ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮
-     &kp COMMA      &kp N7        &kp N8       &kp N9        &kp STAR          &kp BSLH      &kp HASH      &kp AMPS      &kp PIPE      &kp TILDE
+     &kp COMMA      &kp N7        &kp N8       &kp N9        &kp PLUS          &kp SLASH      &kp HASH      &kp AMPS      &kp PIPE      &kp TILDE
 // ├─────────────┼─────────────┼─────────────┼─────────────┼ ────────────┤   ├──────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-     &hml LGUI DOT  &hml LALT N4  &hml LCTRL N5 &hml LSHFT N6 &kp PLUS         &kp SLASH     &hmr RSHFT MINUS &hmr RCTRL UNDER &hmr RALT EQUAL &hmr RGUI DOLLAR
+     &hml LGUI DOT  &hml LALT N4  &hml LCTRL N5 &hml LSHFT N6 &kp STAR         &kp BSLH     &hmr RSHFT MINUS &hmr RCTRL UNDER &hmr RALT EQUAL &hmr RGUI DOLLAR
 // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
                     &kp N1        &kp N2       &kp N3                                        &kp COLON     &kp SEMI      &kp PERCENT                 
 // ╰─────────────┴─────────────┴─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┴─────────────┴─────────────╯
