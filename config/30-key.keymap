@@ -101,6 +101,18 @@
             bindings = <&macro_tap &kp Y &kp O &kp U>;
         )
 
+        ZMK_MACRO(dbrkl,
+            wait-ms = <0>;
+            tap-ms = <0>;
+            bindings = <&macro_tap &kp LBKT  &kp LBKT>;
+        )
+
+        ZMK_MACRO(dbrkr,
+            wait-ms = <0>;
+            tap-ms = <0>;
+            bindings = <&macro_tap &kp RBKT  &kp RBKT>;
+        )
+
         ZMK_MACRO(yeah,
             wait-ms = <0>;
             tap-ms = <0>;
