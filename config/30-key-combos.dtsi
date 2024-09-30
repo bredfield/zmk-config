@@ -30,7 +30,7 @@
     COMBO(j,        &kp J,        1 2, MAIN NUM NAV FUN, COMBO_TERM_NORMAL)
     //COMBO(slash2,      &kp SLASH,      1 2,   MAIN NUM NAV FUN, COMBO_TERM_NORMAL)
     COMBO(v,      &kp V,      1 2,  ALT, COMBO_TERM_NORMAL)
-    // [[ ]]
+    // [[ ]] 
     COMBO(dbktl,      &dbrkl,         1 3,   MAIN ALT NUM NAV FUN, COMBO_TERM_NORMAL)
     COMBO(dbktr,      &dbrkr,         6 8,   MAIN ALT NUM NAV FUN, COMBO_TERM_NORMAL)
 
@@ -48,7 +48,7 @@
     COMBO(mouse4,   &mkp MB4,     11 20, MAIN ALT NUM NAV FUN, COMBO_TERM_NORMAL) 
 
     // common symbols  
-    COMBO(MINUS,    &kp MINUS,    6 7,   MAIN ALT NUM NAV FUN, COMBO_TERM_NORMAL)
+    COMBO(MINUS,    &kp MINUS,    6 7,   MAIN NUM NAV FUN, COMBO_TERM_NORMAL)
     COMBO(at,       &kp AT,       2 3,   MAIN ALT NUM NAV FUN, COMBO_TERM_NORMAL)
     COMBO(dqt,      &kp DQT,      7 8,   MAIN ALT NUM NAV FUN, COMBO_TERM_NORMAL)
     COMBO(slash,    &kp SLASH,    23 25, MAIN ALT NUM NAV FUN, COMBO_TERM_NORMAL)
