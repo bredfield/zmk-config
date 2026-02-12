@@ -146,10 +146,10 @@
             flavor = "balanced";
             tapping-term-ms = <280>;
             quick-tap-ms = <175>;                // double tapping same key allows for repeating
-            global-quick-tap-ms = <60>;         // without PR #1387 use global-quick-tap instead
+            require-prior-idle-ms = <60>;
             bindings = <&kp>, <&kp>;
             hold-trigger-key-positions = <KEYS_R THUMBS>;
-            hold-trigger-on-release;             // requires PR #1423
+            hold-trigger-on-release;
         };
 
         hmr: home-row-right {
@@ -159,7 +159,7 @@
             flavor = "balanced";
             tapping-term-ms = <280>;
             quick-tap-ms = <175>;                // double tapping same key allows for repeating
-            global-quick-tap-ms = <60>;         // without PR #1387 use global-quick-tap instead
+            require-prior-idle-ms = <60>;
             bindings = <&kp>, <&kp>;
             hold-trigger-key-positions = <KEYS_L THUMBS>;
             hold-trigger-on-release;             // requires PR #1423
@@ -346,7 +346,7 @@
             label = "KEY";
             bindings = <
 // ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮   ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮
-     &bt BT_CLR    &none         &none         &none         &reset             &reset        &none        &none        &none        &none
+     &bt BT_CLR    &none         &none         &none         &sys_reset         &sys_reset    &none        &none        &none        &none
 // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼───────────┼─────────────┼───────────────┼─────────────┤
      &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bootloader        &bootloader   &none        &none        &none        &none
 // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼───────────┼─────────────┼───────────────┼─────────────┤

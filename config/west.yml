@@ -2,13 +2,9 @@ manifest:
   remotes:
     - name: zmkfirmware
       url-base: https://github.com/zmkfirmware
-    - name: urob
-      url-base: https://github.com/urob
-    - name: bredfield
-      url-base: https://github.com/bredfield
   projects:
     - name: zmk
-      remote: bredfield
+      remote: zmkfirmware
       revision: main
       import: app/west.yml
   self:

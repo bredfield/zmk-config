@@ -13,7 +13,7 @@
     timeout-ms = <TIMEOUT>; \
     key-positions = <KEYPOS>; \
     layers = <LAYERS>; \
-    global-quick-tap-ms = <80>; \
+    require-prior-idle-ms = <80>; \
   };
 
 #define COMBO_TERM_FAST 16
