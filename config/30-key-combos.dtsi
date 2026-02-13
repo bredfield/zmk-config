@@ -37,24 +37,24 @@
     // functions + clipboard + history
     COMBO(bspc,     &kp BSPC,     4 14,  MAIN ALT NUM NAV FUN, COMBO_TERM_SLOW)  
     COMBO(esc,      &kp ESC,      2 13,  MAIN ALT NUM NAV FUN, COMBO_TERM_SLOW)
-    COMBO(ret,      &kp RET,      16 7,  MAIN ALT NUM NAV FUN, COMBO_TERM_NORMAL)  
+    /* COMBO(ret,      &kp RET,      16 7,  MAIN ALT NUM NAV FUN, COMBO_TERM_NORMAL)   */
     COMBO(capslock, &kp CAPS,     6 7 8, MAIN ALT NUM NAV FUN, COMBO_TERM_SLOW)  
-    COMBO(ss_r,     &kp TAB,   16 17, MAIN ALT NUM NAV FUN, COMBO_TERM_FAST)                  
-    COMBO(ss_l,     &kp LA(BSPC),   12 13, MAIN ALT NUM NAV FUN, COMBO_TERM_FAST)                  
+    /* COMBO(ss_r,     &kp TAB,   16 17, MAIN ALT NUM NAV FUN, COMBO_TERM_FAST)                   */
+    /* COMBO(ss_l,     &kp LA(BSPC),   12 13, MAIN ALT NUM NAV FUN, COMBO_TERM_FAST)                   */
     COMBO(caps_l,   &caps_word,   11 12, MAIN ALT NUM NAV FUN, COMBO_TERM_SLOW)                  
     COMBO(caps_r,   &caps_word,   17 18, MAIN ALT NUM NAV FUN, COMBO_TERM_FAST)                  
-    COMBO(mouse1,   &mkp MB1,     13 22, MAIN ALT NUM NAV FUN, COMBO_TERM_NORMAL) 
-    COMBO(mouse2,   &mkp MB2,     12 21, MAIN ALT NUM NAV FUN, COMBO_TERM_NORMAL) 
-    COMBO(mouse4,   &mkp MB4,     11 20, MAIN ALT NUM NAV FUN, COMBO_TERM_NORMAL) 
+    /* COMBO(mouse1,   &mkp MB1,     13 22, MAIN ALT NUM NAV FUN, COMBO_TERM_NORMAL)  */
+    /* COMBO(mouse2,   &mkp MB2,     12 21, MAIN ALT NUM NAV FUN, COMBO_TERM_NORMAL)  */
+    /* COMBO(mouse4,   &mkp MB4,     11 20, MAIN ALT NUM NAV FUN, COMBO_TERM_NORMAL)  */
 
     // common symbols  
-    COMBO(MINUS,    &kp MINUS,    6 7,   MAIN NUM NAV FUN, COMBO_TERM_NORMAL)
+    /* COMBO(MINUS,    &kp MINUS,    6 7,   MAIN NUM NAV FUN, COMBO_TERM_NORMAL) */
     COMBO(at,       &kp AT,       2 3,   MAIN ALT NUM NAV FUN, COMBO_TERM_NORMAL)
     COMBO(dqt,      &kp DQT,      7 8,   MAIN ALT NUM NAV FUN, COMBO_TERM_NORMAL)
     COMBO(slash,    &kp SLASH,    23 25, MAIN ALT NUM NAV FUN, COMBO_TERM_NORMAL)
     COMBO(grave,    &kp GRAVE,    21 22, MAIN ALT NUM NAV FUN, COMBO_TERM_NORMAL)
     COMBO(excl,     &kp EXCL,     23 24, MAIN ALT NUM NAV FUN, COMBO_TERM_NORMAL)
-    COMBO(qmark,    &kp QMARK,    24 25, MAIN ALT NUM NAV FUN, COMBO_TERM_NORMAL)
+    COMBO(qmark,    &kp QMARK,    24 25, MAIN ALT NUM NAV FUN, COMBO_TERM_SLOW)
 
     // brackets 
     COMBO(lt,       &kp LT,        0 10,  MAIN ALT NUM NAV FUN, COMBO_TERM_NORMAL)
