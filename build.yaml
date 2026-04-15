@@ -8,7 +8,7 @@
 # shield: [ "corne_left", "corne_right" ]
 # include:
 #   - board: bdn9
-#   - board: nice_nano@1//zmk
+#   - board: nice_nano//zmk
 #     shield: reviung41
 #
 ---
